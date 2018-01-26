@@ -7,7 +7,7 @@ body {
 }
 header{
     background-color: #FCEE21;
-    margin: -30px -10px 0 -10px;
+    margin: -30px 0 0 0;
 }
 h1 {
     padding-top: 5px;
@@ -65,8 +65,7 @@ hr {
 footer {
     text-align: left;
     background-color: #FCEE21;
-    padding:10px 0 10px 0;
-    margin: 0 -10px 0 -10px;
+    padding:10px 0;
 }
 div {
     font-family: Spectral;
