@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Raleway:400,600');
+/* Add a link to GOOGLE FONTS LINK at the top! THis should be the first line of your stylesheet.*/
+
+/* ----------------------------------------
+Base Styles
+------------------------------------------- */
+/* Note: Makes sure that padding and the border are included in the width for each element. */
+/* Don't add anything else under the * selector! */
+* {
+	box-sizing: border-box;
+}
+
+/*Note: fix so that images will scale with their containers. We'll chat about this more when we cover responsive design*/
+img {
+	max-width: 100%;
+}
+
+body {
+	margin: 0 auto;
+	text-align: center;
+	font-family: Raleway, sans-serif;
+	font-weight: 600;
+	color: #44545E;
+}
+
+/* ----------------------------------------
+Typography
+------------------------------------------- */
+a {
+	text-decoration: none;
+	text-transform: uppercase;
+}
+h1 {
+	font-size: 37px;
+	letter-spacing: 12px;
+	text-transform: uppercase;
+}
+h2 {
+	font-size: 23px;
+	text-transform: uppercase;
+}
+h3 {
+	font-size: 18px;
+	text-transform: uppercase;
+}
+section {
+	padding-top: 80px;
+}
+p {
+	font-size: 15px;
+	font-family: Lato, sans-serif;
+	font-weight: 400;
+}
+button {
+	height: 35px;
+	width: 200px;
+	border-color: #44545E;
+	font-size: 13px;
+	word-spacing: 5px;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-family: Raleway, sans-serif;
+	font-weight: 600;
+}
+/* ----------------------------------------
+Nav
+------------------------------------------- */
+nav {
+	padding: 15px 0;
+	position: sticky;
+	top: 0;
+	background: white;
+	z-index: 2;
+
+}
+nav a {
+	font-size: 16px;
+	color: #7B98AA;
+	margin: 0 50px;
+	background: white;
+}
+nav a:hover{
+	transition: color 1s ease;
+	color:#44545E;
+}
+.hamburger {
+	display: none;
+	padding: 0 20px;
+	font-size: 25px;
+	margin: 0;
+	text-align: right;
+}
+
+/* ----------------------------------------
+Header
+------------------------------------------- */
+header {
+	background-image: url("../images/home_header_bg.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 600px;
+	padding: 200px 0 0 0;
+	color: white;
+}
+
+/* ----------------------------------------
+Articles
+------------------------------------------- */
+#archive {
+	margin: 0 0 80px 0;
+}
+#archive h2 {
+	margin: 0 0 40px 0;
+}
+#archivegrid {
+	margin : 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+article {
+	margin: 0 5%;
+}
+article img {
+	width: 90%;
+	margin: 0 auto;
+}
+article button {
+	background-color: white;
+}
+article button:hover {
+	transition: color .5s ease, background-color .5s ease;
+	background-color: #44545E;
+	color: white;
+}
+
+/* ----------------------------------------
+About
+------------------------------------------- */
+#about {
+	background-color: #CDF3F6;
+	padding: 80px 20%;
+}
+#about h3 {
+	margin-bottom: 30px;
+}
+
+/* ----------------------------------------
+Gallery
+------------------------------------------- */
+#gallery {
+	margin: 0 15%;
+}
+#gallery h2, #gallery h3 {
+	margin-bottom: 50px;
+}
+#gallery h2 {
+	margin-top: 0;
+}
+#gallerygrid {
+	margin : 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 5%;
+}
+#gallery img {
+	margin: 5px 0;
+}
+#gallery img:hover {
+	opacity: .6;
+	cursor: pointer;
+}
+
+
+/* ----------------------------------------
+Footer
+------------------------------------------- */
+footer {
+	margin: 50px 0 0 0;
+	background-color: #CDF3F6;
+	padding: 25px 0 5px 0;
+}
+footer a {
+	font-size: 30px;
+	margin: 0 20px;
+	text-transform: capitalize;
+	color: #44545E;
+}
+footer a:hover {
+	transition: color 1s ease;
+	color: black;
+}
+footer div {
+	margin: 20px 0 40px 0 ;
+}
+input {
+	text-align: center;
+	margin: 0 40px 0 0;
+	border: none;
+	font-size: 13px;
+	height: 35px;
+	width: 350px;
+	word-spacing: 5px;
+
+}
+footer button {
+	background-color: #CDF3F6;
+	border: 2px solid #44545E;
+}
+footer button:hover {
+	transition: color .5s ease, background-color .5s ease;
+	background-color: #44545E;
+	color: white;
+}
+hr {
+	border-color: #44545E;
+	margin: 50px 0 15px 0;
+}
+#sarah {
+	font-size: 15px;
+	margin: 0 0 20px 0;
+}
+
+@media screen and (max-width: 1100px) {
+	#archivegrid {
+		grid-template-columns: 1fr;
+	}
+	article {
+		margin: 0 20%;
+	}
+	#archive img {
+		width: 50%;
+	}
+	#archive button {
+		margin: 0 0 50px 0;
+	}
+	#gallerygrid {
+		grid-template-columns: 1fr;
+	}
+}
+@media screen and (max-width: 800px) {
+	nav {
+		height: 49px;
+		padding: 10px 0;
+	}
+	.hamburger {
+		display: block;
+	}
+	.links {
+		display: none;
+	}
+	#archive img {
+		width: 80%;
+	}
+	footer input {
+		margin: 0 auto 40px auto;
+		display: block;
+	}
+}
