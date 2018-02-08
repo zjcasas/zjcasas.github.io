@@ -21,7 +21,7 @@ $(document).ready(function(){
 	(function($) {
 		formatNav = function() {
 			var width =$(document).width();
-			if (width > 800) {
+			if (width > 783) { // I think these are 783 and not 800 because the scrollbar is 17px wide
 				$('nav').css('padding', '15px');
 				$('.hamburger').css('display', 'none');
 				$('.links').css('display', 'inline');
@@ -29,7 +29,7 @@ $(document).ready(function(){
 				$('.links').css('padding', '0');
 				$('.links').css('margin', '50px');
 			}
-			if (width <= 800) {
+			if (width <= 783) {
 				$('nav').css('height', '49px');
 				$('nav').css('padding', '10px 0');
 				$('.hamburger').css('display', 'block');
