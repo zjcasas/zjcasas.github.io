@@ -162,7 +162,7 @@ Gallery
 	margin : 0;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-column-gap: 5%;
+	grid-gap: 5%;
 }
 #gallery img {
 	margin: 5px 0;
@@ -250,8 +250,14 @@ hr {
 	.links {
 		display: none;
 	}
+	article, #gallery {
+		margin: 0 5%;
+	}
 	#archive img {
 		width: 80%;
+	}
+	#about {
+		padding: 80px 5%;
 	}
 	footer input {
 		margin: 0 auto 40px auto;
