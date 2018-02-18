@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="../scripts/scripts.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Eagle+Lake|Tangerine" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="shortcut icon" type="image/x-icon" href="../images/favicon/favicon.ico">
+	<link rel="stylesheet" href="../css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<title>D&D Tools - Spells</title>
+</head>
+<body>
+	<header>
+		<h1>
+			<a href="../">
+				D&D Tools
+			</a>
+		</h1>
+		<nav>
+			<a href="../Races/">
+				Races
+			</a>
+			<a href="../Classes/">
+				Classes
+			</a>
+			<a href="javascript:window.location.reload()">
+				Spells
+			</a>
+			<a href="../Feats/">
+				Feats
+			</a>
+			<a href="../Level Up/">
+				Level Up
+			</a>
+		</nav>
+	</header>
+	<main>
+		<h2>
+			Spells
+		</h2>
+		<span id="filters">
+			<span class="filter">
+				Filter by:
+			</span>
+			<div class="filter">
+				<span>
+					Class
+				</span>
+				<div class="filterlist">
+					<div id="bardspells">
+						Bard
+					</div>
+					<div id="clericspells">
+						Cleric
+					</div>
+					<div id="druidspells">
+						Druid
+					</div>
+					<div id="paladinspells">
+						Paladin
+					</div>
+					<div id="rangerspells">
+						Ranger
+					</div>
+					<div id="sorcerorspells">
+						Sorceror
+					</div>
+					<div id="warlockspells">
+						Warlock
+					</div>
+					<div id="wizardspells">
+						Wizard
+					</div>
+				</div>
+			</div>
+			<span class="filter">
+				<span>
+					School
+				</span>
+				<div class="filterlist">
+					<div id="abjurationspells">
+						Abjuration
+					</div>
+					<div id="conjurationspells">
+						Conjuration
+					</div>
+					<div id="divinationspells">
+						Divination
+					</div>
+					<div id="enchantmentspells">
+						Enchantment
+					</div>
+					<div id="evocationspells">
+						Evocation
+					</div>
+					<div id="illusionspells">
+						Illusion
+					</div>
+					<div id="necromancyspells">
+						Necromancy
+					</div>
+					<div id="transmutationspells">
+						Transmutation
+					</div>
+				</div>
+			</span>
+			<span class="filter">
+				<span>
+					Level
+				</span>
+				<div class="levelfilterlist">
+					<div>
+						Cantrips <input type="checkbox" id="cantripspells" checked>
+					</div>
+					<div>
+						1st <input type="checkbox" id="level1spells" checked>
+					</div>
+					<div>
+						2nd <input type="checkbox" id="level2spells" checked>
+					</div>
+					<div>
+						3rd <input type="checkbox" id="level3spells" checked>
+					</div>
+					<div>
+						4th <input type="checkbox" id="level4spells" checked>
+					</div>
+					<div>
+						5th <input type="checkbox" id="level5spells" checked>
+					</div>
+					<div>
+						6th  <input type="checkbox" id="level6spells" checked>
+					</div>
+					<div>
+						7th <input type="checkbox" id="level7spells" checked>
+					</div>
+					<div>
+						8th <input type="checkbox" id="level8spells" checked>
+					</div>
+					<div>
+						9th<input type="checkbox" id="level9spells" checked>
+					</div>
+				</div>
+			</span>
+		</span>
+		<section class='spells'>
+			<div class="cantrip conjuration sorceror wizard">
+				<span class="classhidevar"></span>
+				<span class="levelhidevar"></span>
+				<span class="schoolhidevar"></span>
+				<h4>
+					Acid Splash
+				</h4>
+				<section>
+					<span>
+						<p>
+							<span class='dark'>Conjuration Cantrip</span>
+						</p>
+						<p>
+							<span class='dark'>Classes</span> &mdash; Sorceror, Wizard
+						</p>
+						<p>
+							<span class='dark'>Casting Time</span> &mdash; 1 action
+						</p>
+						<p>
+							<span class='dark'>Range</span> &mdash; 60 feet
+						</p>
+						<p>
+							<span class='dark'>Components</span> &mdash; Verbal, Somatic
+						</p>
+						<p>
+							<span class='dark'>Duration</span> &mdash; Instantaneous
+						</p>
+					</span>
+					<p>
+						You hurl a bubble of acid.
+						Choose one creature within range, or choose two creatures within range that are within 5 feet of each other.
+						A target myst succeed on a Wexterity saving throw or take 1d6 acid damage.
+					</p>
+					<p>
+						This spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).
+					</p>
+				</section>
+			</div>
+			<div class="level2 abjuration cleric paladin">
+				<span class="classhidevar"></span>
+				<span class="levelhidevar"></span>
+				<span class="schoolhidevar"></span>
+				<h4>
+					Aid
+				</h4>
+				<section>
+					<span>
+						<p>
+							<span class='dark'>2nd Level Abjuration</span>
+						</p>
+						<p>
+							<span class='dark'>Classes</span> &mdash; Cleric, Paladin
+						</p>
+						<p>
+							<span class='dark'>Casting Time</span> &mdash; 1 action
+						</p>
+						<p>
+							<span class='dark'>Range</span> &mdash; 30 feet
+						</p>
+						<p>
+							<span class='dark'>Components</span> &mdash; Verbal, Somatic, Material (a tiny strip of white cloth)
+						</p>
+						<p>
+							<span class='dark'>Duration</span> &mdash; 8 hours
+						</p>
+					</span>
+					<p>
+						Your spell bolsters your allies with toughness and resolve.
+						Choose up to three creatures within range.
+						Each target's hit point maximum and current hit points increase by 5 for the duration.
+					</p>
+					<p>
+						<span class="dark">At Higher Levels</span> &mdash;
+						When you cast this spell using a spell slot of 3rd level or higher, a target's hit points increase by an additional 5 for each slot level above 2nd.
+					</p>
+				</section>
+			</div>
+			<div class="level1 abjuration ranger wizard">
+				<span class="classhidevar"></span>
+				<span class="levelhidevar"></span>
+				<span class="schoolhidevar"></span>
+				<h4>
+					Alarm
+				</h4>
+				<section>
+					<span>
+						<p>
+							<span class='dark'>1st Level Abjuration</span>
+						</p>
+						<p>
+							<span class='dark'>Classes</span> &mdash; Ranger, Wizard
+						</p>
+						<p>
+							<span class='dark'>Casting Time</span> &mdash; 1 minute or ritual
+						</p>
+						<p>
+							<span class='dark'>Range</span> &mdash; 30 feet
+						</p>
+						<p>
+							<span class='dark'>Components</span> &mdash; Verbal, Somatic, Material (a tiny bell and a piece of
+							fine silver wire)
+						</p>
+						<p>
+							<span class='dark'>Duration</span> &mdash; 8 hours
+						</p>
+					</span>
+					<p>
+						You set an alarm against unwanted intrusion.
+						Choose a door, a window, or an area within range that is no larger than a 20-foot cube.
+						Until the spell ends, an alarm alerts you whenever a Tiny or larger creature touches or enters the warded area.
+						When you cast the spell, you can designate creatures that won't set off the alarm.
+						You also choose whether the alarm is mental or audible.
+					</p>
+					<p>
+						A mental alarm alerts you with a ping in your mind if you are within 1 mile of the warded area.
+						This ping awakens you if you are sleeping.
+					</p>
+					<p>
+						An audible alarm produces the sound of a hand bell for 10 seconds within 60 feet.
+					</p>
+				</section>
+			</div>
+			<div class="level2 transmutation sorceror wizard">
+				<span class="classhidevar"></span>
+				<span class="levelhidevar"></span>
+				<span class="schoolhidevar"></span>
+				<h4>
+					Alter Self
+				</h4>
+				<section>
+					<span>
+						<p>
+							<span class='dark'>2nd Level Transmutation</span>
+						</p>
+						<p>
+							<span class='dark'>Classes</span> &mdash; Sorceror, Wizard
+						</p>
+						<p>
+							<span class='dark'>Casting Time</span> &mdash; 1 action
+						</p>
+						<p>
+							<span class='dark'>Range</span> &mdash; Self
+						</p>
+						<p>
+							<span class='dark'>Components</span> &mdash; Verbal, Somatic
+						</p>
+						<p>
+							<span class='dark'>Duration</span> &mdash; Concentration up to 1 hour
+						</p>
+					</span>
+					<p>
+						You assume a different form.
+						When you cast the spell, choose one of the following options, the effects of which	last for the duralion of the spell.
+						While the spell lasts, you can end one option as an action to gain the benefits of a different one.
+					</p>
+					<p>
+						<span class="dark">Aquatic Adaptation</span> &mdash;
+						You adapt your body to an aquatic environment, sprouting gills and growing webbing belween your fingers.
+						You can breathe underwater and gain a swimming speed equal to your walking speed.
+					</p>
+					<p>
+						<span class="dark">Change Appearance</span> &mdash;
+						You transform your appearance.
+						You decide what you look like, including your height, weight, facial features, sound of your voice, hair length, coloration, and distinguishing characteristics, if any.
+						You can make yourself appear as a member of another race, though none of your statistics change.
+						You also can't appear as a creature of a different size than you, and your basic shape stays the same; if you're bipedal, you can't use this spell to become quadrupedal, for instance.
+						At any time for the duration of the spell, you can use your action to change your appearance in this way again.
+					</p>
+					<p>
+						<span class="dark">Natural Weapons</span> &mdash;
+						You grow claws, fangs, spines, horns, or a different natural weapon of your choice.
+						Your unarmed strikes deal 1d6 bludgeoning, piercing, or slashing damage, as appropriate to the natural weapon you chose, and you are proficient with your unarmed strikes.
+						Finally, the natural weapon is magic and you have a +1 bonus to the atlack and damage rolls you make using it.
+					</p>
+				</section>
+			</div>
+			<div class="level1 enchantment bard druid ranger">
+				<span class="classhidevar"></span>
+				<span class="levelhidevar"></span>
+				<span class="schoolhidevar"></span>
+				<h4>
+					Animal Friendship
+				</h4>
+				<section>
+					<span>
+						<p>
+							<span class='dark'>1st Level Enchantment</span>
+						</p>
+						<p>
+							<span class='dark'>Classes</span> &mdash; Bard, Druid, Ranger
+						</p>
+						<p>
+							<span class='dark'>Casting Time</span> &mdash;  1 action
+						</p>
+						<p>
+							<span class='dark'>Range</span> &mdash; 30 feet
+						</p>
+						<p>
+							<span class='dark'>Components</span> &mdash; Verbal, Somatic, Material (a morsel of food)
+						</p>
+						<p>
+							<span class='dark'>Duration</span> &mdash; 24 hours
+						</p>
+					</span>
+					<p>
+						This spell lets you convince a beast that you mean it no harm.
+						Choose a beast that you can see within range.
+						It must see and hear you.
+						If the beast's Intelligence is 4 or higher, the spell fails.
+						Otherwise, the beast must succeed on a Wisdom saving throw or be charmed by you for the spell's duration.
+						If you or one of your companions harms the target, the spells ends.
+					</p>
+					<p>
+						<span class="dark">At Higher Levels</span> &mdash;
+						When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional beast for each slot level above 1st.
+					</p>
+				</section>
+			</div>
+			<div class="level2 enchantment bard druid ranger">
+				<span class="classhidevar"></span>
+				<span class="levelhidevar"></span>
+				<span class="schoolhidevar"></span>
+				<h4>
+					Animal Messenger
+				</h4>
+				<section>
+					<span>
+						<p>
+							<span class='dark'>2nd Level Enchament</span>
+						</p>
+						<p>
+							<span class='dark'>Classes</span> &mdash; Bard, Druid, Ranger
+						</p>
+						<p>
+							<span class='dark'>Casting Time</span> &mdash; 1 action or ritual
+						</p>
+						<p>
+							<span class='dark'>Range</span> &mdash; 30 feet
+						</p>
+						<p>
+							<span class='dark'>Components</span> &mdash; Verbal, Somatic, Material (a morsel of food)
+						</p>
+						<p>
+							<span class='dark'>Duration</span> &mdash; 24 hours
+						</p>
+					</span>
+					<p>
+						By means of this spell, you use an animal to deliver a message.
+						Choose a Tiny beast you can see within range, such as a squirrel, a blue jay, or a bat.
+						You specify a location, which you must have visited, and a recipient who matches a general description, such as "a man or woman dressed in the uniform of the town guard" or "a red-haired dwarf wearing a pointed hat."
+						You also speak a message of up to twenty-five words.
+						The target beast travels for the duration of the spell toward the specified location, covering about 50 miles per 24 hours for a flying messenger, or 25 miles for other animals.
+					</p>
+					<p>
+						When the messenger arrives, it delivers your message lo the creature that you described, replicating the sound of your voice.
+						The messenger speaks only lo a creature matching the description you gave.
+						If the messenger doesn’t reach its destination before the spell ends, the message is lost, and the beast makes its way back to where you cast this spell.
+					</p>
+					<p>
+						<span class="dark">At Higher Levels</span> &mdash;
+						If you cast this spell using a spell slot of 3nd level or higher, the duration of the spell increases by 48 hours for each slot level above 2nd.
+					</p>
+				</section>
+			</div>
+			<div class="level8 transmutation druid">
+				<span class="classhidevar"></span>
+				<span class="levelhidevar"></span>
+				<span class="schoolhidevar"></span>
+				<h4>
+					Animal Shapes
+				</h4>
+				<section>
+					<span>
+						<p>
+							<span class='dark'>8th Level Transmutation</span>
+						</p>
+						<p>
+							<span class='dark'>Classes</span> &mdash; Druid
+						</p>
+						<p>
+							<span class='dark'>Casting Time</span> &mdash; 1 action
+						</p>
+						<p>
+							<span class='dark'>Range</span> &mdash; 30 feet
+						</p>
+						<p>
+							<span class='dark'>Components</span> &mdash; Verbal, Somatic
+						</p>
+						<p>
+							<span class='dark'>Duration</span> &mdash; Concentration up to 24 hours
+						</p>
+					</span>
+					<p>
+						Your magic turns others into beasts.
+						Choose any number of willing creatures that you can see within range.
+						You transform each target into the form of a Large or smaller beast with a challenge rating of 4 or lower.
+						On subsequent turns, you can use your action to transform affected creatures into new forms.
+					</p>
+					<p>
+						The transformation lasts for the duration for each target, or until the target drops to 0 hit points or dies.
+						You can choose a different form for each target.
+						A target's game statistics are replaced by the statistics of the chosen beast, though the target retains its alignment and Intelligence, Wisdom, and Charisma scores.
+						The target assums the hit points of its new form and when it reverts to its normal form, it returns to the number of hit points it had before it transformed.
+						If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form.
+						As long as the excess damage doesn't reduce the creature's normal form to 0 hit points, it isn't knocked unconscious.
+						The creature is limited in the actions it can perform by the nature of its new form, and it can't speak or cast spells.
+					</p>
+					<p>
+						The target's gear melds into the new form.
+						The target can't activate, wield, or otherwise benefit from any of its equipment.
+					</p>
+				</section>
+			</div>
+			<div class="">
+				<span class="classhidevar"></span>
+				<span class="levelhidevar"></span>
+				<span class="schoolhidevar"></span>
+				<h4>
+
+				</h4>
+				<section>
+					<span>
+						<p>
+							<span class='dark'></span>
+						</p>
+						<p>
+							<span class='dark'>Classes</span> &mdash;
+						</p>
+						<p>
+							<span class='dark'>Casting Time</span> &mdash;
+						</p>
+						<p>
+							<span class='dark'>Range</span> &mdash;
+						</p>
+						<p>
+							<span class='dark'>Components</span> &mdash; Verbal, Somatic, Material ()
+						</p>
+						<p>
+							<span class='dark'>Duration</span> &mdash;
+						</p>
+					</span>
+					<p>
+
+					</p>
+					<p>
+						<span class="dark"></span> &mdash;
+
+					</p>
+				</section>
+			</div>
+		</section>
+	</main>
+</body>
+</html>
