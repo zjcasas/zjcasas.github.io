@@ -1,0 +1,30 @@
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  /*background-color: #FCFBE3;*/
+  color: #EA6045;
+  margin: 3em;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+a {
+  color: #EA6045;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #EA6045;
+}
+
+img {
+  display: block;
+  margin: 45px auto;
+  width: 400px;
+}
+button {
+    cursor: pointer;
+}
