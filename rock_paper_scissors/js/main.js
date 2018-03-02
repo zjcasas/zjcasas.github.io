@@ -44,7 +44,7 @@ function play(humanPlay) {
         humanScore += 1;
     }
     else {
-        console.log("You lose. :(")
+        console.log("You lose. :(");
         computerScore += 1;
     }
     twoOutOfThree();
