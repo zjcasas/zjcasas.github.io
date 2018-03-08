@@ -15,14 +15,14 @@ $('#openDropDown').on('click', function() {
 $('#question1').on('click', function() {
     $('#answer1').slideDown(400);
     $('#answer2').slideUp(400);
-    $(this).css('background', '#ffd800');
-    $('#question2').css('background', '#e5e5e5');
+    $(this).addClass('active');
+    $('#question2').removeClass('active');
 });
 $('#question2').on('click', function() {
     $('#answer2').slideDown(400);
     $('#answer1').slideUp(400);
-    $(this).css('background', '#ffd800');
-    $('#question1').css('background', '#e5e5e5');
+    $(this).addClass('active');
+    $('#question1').removeClass('active');
 });
 
 //if show only yellow is clicked, blue are hidden and yellow are shown
