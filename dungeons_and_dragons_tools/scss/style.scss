@@ -1,0 +1,793 @@
+$headerhover: rgb(20, 20, 20);
+$dark: rgb(50, 50, 50);
+$light: rgb(85, 85, 85);
+$shadowcolor: rgb(133, 38, 23);
+$shadowcoloropaque: rgba(133, 38, 23, .9);
+$boxcolor: rgb(152, 167, 77);
+$boxcoloropaque: rgba(152, 167, 77, .4);
+
+%headfont {
+    font-family: 'Eagle Lake', sans-serif;
+    font-weight: 600;
+}
+%bodyfont {
+    font-family: "Tangerine", sans-serif;
+    font-weight: 600;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    text-align: center;
+    background: url('../images/parchment.jpg');
+    font-size: 25px;
+    color: $dark;
+    width: 100vw;
+    overflow-x: hidden;
+    @extend %bodyfont;
+}
+header {
+    background: url('../images/dmscreen.jpg');
+    padding: 90px 0 0 0;
+    background-repeat: no-repeat;
+  	background-size: cover;
+    background-attachment: scroll;
+    background-position: 50% 50%;
+  	height: 250px;
+    position: sticky;
+    top: -200px;
+    z-index: 2;
+    h1 {
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        font-size: 50px;
+        margin: 0 0 13px 0;
+        position: sticky;
+        top: 0px;
+        @extend %headfont;
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        a:hover {
+            color: $headerhover;
+        }
+    }
+}
+nav {
+    position: sticky;
+    top: 95px;
+    a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 30px;
+        letter-spacing: 1px;
+
+    }
+    a:hover {
+        color: $headerhover;
+    }
+}
+main {
+    position: relative;
+    margin: 50px 10%;
+    text-align: center;
+}
+h2 {
+    font-size: 45px;
+    margin: 0 0 30px 0;
+    @extend %headfont;
+}
+h3 {
+    font-size: 40px;
+}
+h4 {
+    display: inline;
+    cursor: pointer;
+	text-align: left;
+    font-size: 40px;
+    span {
+        font-size: 25px;
+        display: inline-block;
+        transition: all 300ms ease-in-out;
+    }
+}
+h5 {
+	text-align: left;
+	font-size: 30px;
+	text-decoration: underline;
+    span {
+        font-size: 20px;
+        display: inline-block;
+        transition: all 300ms ease-in-out;
+    }
+}
+h6 {
+	font-size: 25px;
+	text-align: left;
+    text-decoration: underline;
+}
+div {
+    margin: 10px 0;
+}
+p {
+	font-size: 25px;
+	text-align: left;
+	color: $light;
+	text-indent: 40px;
+}
+ol {
+    font-size: 25px;
+	text-align: left;
+	color: $light;
+    margin: 0 0 0 50px;
+    li {
+        margin: 10px 0 0 0;
+    }
+}
+ul {
+    li {
+        list-style-type: disc;
+        text-align: left;
+        color: $light;
+    }
+}
+
+.homegrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.homebox {
+    display: inline-block;
+    border: 1px solid $dark;
+    border-radius: 10px;
+    padding: 0 0 20px 0;
+    box-shadow: 0 0 5px $shadowcolor;
+    background-color: rgba(255, 255, 255, .4);
+    margin: 20px;
+    width: 500px;
+    h2 {
+        font-size: 30px;
+        margin: 0 0 20px 0;
+        padding: 5px 0 5px 20px;
+        text-align: left;
+        background-color: $boxcoloropaque;
+    }
+    h3{
+        span {
+            cursor: pointer;
+        }
+    }
+    div {
+        font-size: 30px;
+    }
+    p {
+        padding: 0 20px;
+    }
+}
+
+input {
+    color: $dark;
+	font-size: 30px;
+	margin: 0 0 0 20px;
+	padding: 3px 2px 3px 10px;
+	width: 140px;
+	border: 1px solid $dark;
+	height: 34px;
+    @extend %bodyfont;
+}
+input[type='number'] {
+	-webkit-appearance: textfield;
+	-moz-appearance: textfield;
+	appearance: textfield;
+}
+input[type='number']::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+input[type='number'], input[type='text'] {
+	border-radius: 5px 0 0 5px;
+}
+.arrows {
+	display: inline-block;
+	margin: 0 0 -10px -4px;
+	height: 34px;
+}
+#diceUp, #diceDown, #modUp, #modDown {
+	margin: 0 0 0 -1px;
+	background-color: white;
+	height: 19.5px;
+	width: 20px;
+	border-right: 1px solid $dark;
+	border-bottom: 1px solid $dark;
+	border-top: 1px solid white;
+	border-radius: 0 0 5px 0;
+}
+#diceUp, #modUp {
+	border-top: 1px solid $dark;
+	border-bottom: 1px solid white;
+	margin: -4px 0 -1px -1px;
+	border-radius: 0 5px 0 0;
+}
+.upArrow {
+	margin: 6px auto;
+	height: 0px;
+	width: 0px;
+	border-left: 3px solid transparent;
+	border-right: 3px solid transparent;
+	border-bottom: 6px solid $dark;
+}
+.downArrow {
+	margin: 4px auto;
+	height: 0px;
+	width: 0px;
+	border-left: 3px solid transparent;
+	border-right: 3px solid transparent;
+	border-top: 6px solid $dark;
+}
+select {
+    color: $dark;
+	font-size: 30px;
+	padding: 3px 10px;
+	width: 150px;
+	border: 1px solid $dark;
+	border-radius: 5px;
+    margin: 0 20px 0 15px;
+    @extend %bodyfont;
+}
+input:focus, select:focus {
+	outline: none;
+    box-shadow: none;
+    border: 1px solid $shadowcolor;
+
+}
+button {
+    color: $dark;
+	font-size: 30px;
+    padding: 10px 18px 6px 10px;
+    cursor: pointer;
+    margin: 10px;
+    background: $boxcoloropaque;
+    border: 1px solid black;
+    border-radius: 8px;
+    @extend %bodyfont;
+}
+button:hover {
+    color: white;
+    background: $shadowcoloropaque;
+}
+button:active {
+	box-shadow: 0 0 5px $shadowcolor;
+}
+ button:focus {
+	outline: none;
+}
+#rolls, #rollTotal {
+    margin: 10px 20px 0 20px;
+}
+
+.races {
+    .racesGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 60%;
+        margin: 0 auto;
+        span {
+            position: relative;
+          	height: 206px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            transition: all 150ms ease-in-out;
+        }
+        a:hover {
+            background: rgba(20, 20, 20, .7);
+            font-size: 35px;
+        }
+        #dwarfRace {
+            background: url("../images/dwarf.png");
+            background-repeat: no-repeat;
+            background-position: 85% 5%;
+        }
+        #elfRace {
+            background: url("../images/elf.png");
+            background-repeat: no-repeat;
+            background-position: 50% top;
+        }
+        #halflingRace {
+            background: url("../images/halfling.png");
+            background-repeat: no-repeat;
+            background-position: 40% 5%;
+        }
+        #humanRace {
+            background: url("../images/human.png");
+            background-repeat: no-repeat;
+            background-position: 50% 5%;
+        }
+        #dragonbornRace {
+            background: url("../images/dragonborn.png");
+            background-repeat: no-repeat;
+            background-position: 50% top;
+        }
+        #gnomeRace {
+            background: url("../images/gnome.png");
+            background-repeat: no-repeat;
+            background-position: 40% 15%;
+        }
+        #halfElfRace {
+            background: url("../images/half-elf.png");
+            background-repeat: no-repeat;
+            background-position: 100% top;
+        }
+        #halfOrcRace {
+            background: url("../images/half-orc.png");
+            background-repeat: no-repeat;
+            background-position: 80% 5%;
+        }
+        #tieflingRace {
+            background: url("../images/tiefling.png");
+            background-repeat: no-repeat;
+            background-position: 80% top;
+        }
+    }
+}
+
+.classes {
+    .classesGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        width: 100%;
+        span {
+            position: relative;
+          	height: 308px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            transition: all 150ms ease-in-out;
+        }
+        a:hover {
+            background: rgba(20, 20, 20, .7);
+            font-size: 35px;
+        }
+        #barbarianClass {
+            background: url("../images/barbarian.png");
+            background-repeat: no-repeat;
+            background-position: 50% top;
+        }
+        #bardClass {
+            background: url("../images/bard.png");
+            background-repeat: no-repeat;
+            background-position: 50% top;
+        }
+        #clericClass {
+            background: url("../images/cleric.png");
+            background-repeat: no-repeat;
+            background-position: 75% top;
+        }
+        #druidClass {
+            background: url("../images/druid.png");
+            background-repeat: no-repeat;
+            background-position: 50% top;
+        }
+        #fighterClass {
+            background: url("../images/fighter.png");
+            background-repeat: no-repeat;
+            background-position: 50% top;
+        }
+        #monkClass {
+            background: url("../images/monk.png");
+            background-repeat: no-repeat;
+            background-position: 50% top;
+        }
+        #paladinClass {
+            background: url("../images/paladin.png");
+            background-repeat: no-repeat;
+            background-position: 100% top;
+        }
+        #rangerClass {
+            background: url("../images/ranger.png");
+            background-repeat: no-repeat;
+            background-position: 50% top;
+        }
+        #rogueClass {
+            background: url("../images/rogue.png");
+            background-repeat: no-repeat;
+            background-position: 50% top;
+        }
+        #sorcerorClass {
+            background: url("../images/sorceror.png");
+            background-repeat: no-repeat;
+            background-position: 50% top;
+        }
+        #warlockClass {
+            background: url("../images/warlock.png");
+            background-repeat: no-repeat;
+            background-position: 75% top;
+        }
+        #wizardClass {
+            background: url("../images/wizard.png");
+            background-repeat: no-repeat;
+            background-position: 50% top;
+        }
+    }
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	text-align: center;
+	grid-gap: 40px;
+    a {
+        padding: 0 20px 0 20px;
+        text-decoration: none;
+        color: $dark;
+    }
+}
+.details {
+    position: relative;
+    img {
+        max-width: 35%;
+        margin: 0 0 0 25px;
+        float: right;
+    }
+    div {
+        text-align: left;
+        margin: 15px 0 0 0;
+    }
+    h5 {
+        margin: 15px 0 0 0;
+    }
+    h6 {
+        margin: 15px 0 0 40px;
+    	color: $dark;
+    }
+    p {
+        margin: 10px 0 0 0;
+    }
+    a {
+        text-decoration: none;
+        color: $shadowcolor;
+    }
+    a:hover {
+        color: $light;
+    }
+    ul {
+        margin: 10px 0 0 60px;
+    }
+    .classspecific {
+        h5 {
+            cursor: pointer;
+        }
+    }
+}
+
+
+.hanging {
+    p {
+        text-indent: -40px;
+    	margin: 10px 0 0 80px;
+    }
+}
+.dark {
+	color: $dark;
+	margin: 0;
+	padding: 0;
+}
+.turn {
+    transform: rotateZ(-90deg);
+}
+
+
+.subraces {
+    p {
+        margin: 10px 0 0 40px;
+    }
+    .hanging {
+        p {
+            text-indent: -40px;
+        	margin: 10px 0 0 120px;
+        }
+    }
+}
+
+.levelFeatures {
+    display: grid;
+	grid-template-columns: minmax(65px, 1fr) 1fr 2fr minmax(53px, 1fr) 1fr;
+	margin: 10px 0 0 0;
+	border: 2px solid $dark;
+	border-radius: 5px;
+	box-shadow: 0 0 5px $shadowcolor;
+	padding: 5px 5px 0 5px;
+	background-color: rgba(255, 255, 255, .4);
+    h5, p {
+        margin: 0;
+    	min-height: 32px;
+    	padding: 3px 6px 2px 6px;
+    	text-indent: 0;
+    	text-align: center;
+    	text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .oddrow {
+        background-color: $boxcoloropaque;
+    }
+}
+
+.spellgrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	text-align: center;
+	grid-gap: 40px;
+    a {
+        padding: 0 20px 0 20px;
+        text-decoration: none;
+        color: $dark;
+    }
+}
+#spells {
+    .spelllevels, .spellclasses, .spellschools, #back {
+        display: none;
+    }
+    #back {
+        text-align: left;
+        margin: -20px 0 0 90px;
+        span {
+            cursor: pointer;
+            font-size: 45px;
+        }
+
+    }
+}
+.spells {
+    div {
+        text-align: left;
+        margin: 15px 0 0 0;
+        .classhidevar, .levelhidevar, .schoolhidevar {
+            display: none;
+        }
+        section {
+            p {
+            	text-indent: 40px;
+            	margin: 15px 0 0 20px;
+            }
+            span {
+                p {
+                    margin: 5px 0 0 20px;
+                }
+            }
+        }
+    }
+}
+#filters {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 1fr;
+    margin: 0 auto 30px auto;
+    max-width: 400px;
+    span {
+        cursor: pointer;
+    }
+    #filterHead {
+        cursor: default;
+    }
+}
+.filter, #filterHead {
+    position: relative;
+    font-size: 30px;
+    text-align: center;
+    margin: 0 10px;
+    .filterlist, .levelfilterlist {
+        position: absolute;
+        display: none;
+        border: 1px solid $dark;
+        border-radius: 5px;
+        padding: 0 5px;
+        box-shadow: 0 0 5px $shadowcolor;
+        background-color: rgba(255, 255, 255, .9);
+        top: 20px;
+        left: -10px;
+        z-index: 1;
+        text-align: center;
+        font-size: 25px;
+        width: 90px;
+        div {
+            cursor: pointer;
+        }
+        div:hover {
+            background-color: rgba(133, 38, 23, .2);
+        }
+        input {
+            display: none;
+            height: 12px;
+            width: 12px;
+            margin: 0 0 0 5px;
+        }
+    }
+}
+
+
+.feats {
+    div {
+        text-align: left;
+        margin: 15px 0 0 0;
+        section {
+            p {
+            	text-indent: 40px;
+            	margin: 15px 0 0 20px;
+            }
+            span {
+                p {
+                    text-indent: -40px;
+                    margin: 15px 0 0 60px;
+                }
+            }
+            ul {
+                color: $light;
+                margin: 15px 0 0 80px;
+            }
+        }
+    }
+}
+
+.levelup {
+    .levelupGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        width: 100%;
+        span {
+            position: relative;
+          	height: 308px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            transition: all 150ms ease-in-out;
+            color: white;
+            text-decoration: none;
+        }
+        a:hover {
+            background: rgba(20, 20, 20, .7);
+            font-size: 35px;
+        }
+        #barbarianLevelUp {
+            background: url("../images/barbarian.png");
+            background-repeat: no-repeat;
+            background-position: 50% top;
+        }
+        #bardLevelUp {
+            background: url("../images/bard.png");
+            background-repeat: no-repeat;
+            background-position: 50% top;
+        }
+        #clericLevelUp {
+            background: url("../images/cleric.png");
+            background-repeat: no-repeat;
+            background-position: 75% top;
+        }
+        #druidLevelUp {
+            background: url("../images/druid.png");
+            background-repeat: no-repeat;
+            background-position: 50% top;
+        }
+        #fighterLevelUp {
+            background: url("../images/fighter.png");
+            background-repeat: no-repeat;
+            background-position: 50% top;
+        }
+        #monkLevelUp {
+            background: url("../images/monk.png");
+            background-repeat: no-repeat;
+            background-position: 50% top;
+        }
+        #paladinLevelUp {
+            background: url("../images/paladin.png");
+            background-repeat: no-repeat;
+            background-position: 100% top;
+        }
+        #rangerLevelUp {
+            background: url("../images/ranger.png");
+            background-repeat: no-repeat;
+            background-position: 50% top;
+        }
+        #rogueLevelUp {
+            background: url("../images/rogue.png");
+            background-repeat: no-repeat;
+            background-position: 50% top;
+        }
+        #sorcerorLevelUp {
+            background: url("../images/sorceror.png");
+            background-repeat: no-repeat;
+            background-position: 50% top;
+        }
+        #warlockLevelUp {
+            background: url("../images/warlock.png");
+            background-repeat: no-repeat;
+            background-position: 75% top;
+        }
+        #wizardLevelUp {
+            background: url("../images/wizard.png");
+            background-repeat: no-repeat;
+            background-position: 50% top;
+        }
+    }
+}
+
+.levels {
+    #forMoreInfo {
+        display: block;
+    }
+    img {
+        max-width: 35%;
+        margin: 10px 0 0 25px;
+        float: right;
+    }
+    div {
+        text-align: left;
+        margin: 15px 0 0 0;
+        section {
+            display: none;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: $shadowcolor;
+    }
+    a:hover {
+        color: $dark;
+    }
+    ul {
+        margin: 0 0 0 40px;
+        li {
+            margin: 0;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    width: 22px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(50, 50, 50, .3);
+    border: 5px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(50, 50, 50, .5);
+}
