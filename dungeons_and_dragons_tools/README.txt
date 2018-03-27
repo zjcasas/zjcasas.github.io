@@ -1,6 +1,7 @@
 To Do
 General:
     May want to improve readability with a new font
+    the website on mobile isn't quite how I'd like it. I'll have to fix it in the future.
 Race Pages:
     Add content to other pages. (Currently only Dwarf is populated)
 Class Pages:

@@ -2,51 +2,24 @@ $(window).ready(function(){
 
 	//if home page, scroll down slowly. else. just start scrolled down
 	if ( $(document).find("title").text() === 'D&D Tools') {
-        // The home page will scroll down upon the page loading
-        var scrollDown = 1;
-        window.setInterval(function() {
-            // only if width > 560 px
-            var width = $(window).width();
-            if (width > 538) {
-                var scroll = $(window).scrollTop();
-                if (scroll < 5 && scrollDown === 1){
-                    window.scrollBy(0, 1);
-                }
-                else if (scroll < 15 && scrollDown === 1) {
-                    window.scrollBy(0, 2);
-                }
-                else if (scroll < 24 && scrollDown === 1) {
-                    window.scrollBy(0, 3);
-                }
-                else if (scroll < 32 && scrollDown === 1){
-                    window.scrollBy(0, 4);
-                }
-                else if (scroll < 165 && scrollDown === 1){
-                    window.scrollBy(0, 6);
-                }
-                else if (scroll < 171 && scrollDown === 1){
-                    window.scrollBy(0, 4);
-                }
-                else if (scroll < 182 && scrollDown === 1){
-                    window.scrollBy(0, 3);
-                }
-                else if (scroll < 191 && scrollDown === 1){
-                    window.scrollBy(0, 2);
-                }
-                else if (scroll < 201 && scrollDown === 1) {
-                    window.scrollBy(0, 1);
-                }
-                else {
-                    scrollDown = 0;
-                }
-            }
-        }, 40);
-    }
+		// The home page will scroll down upon the page loading
+		// only if width > 800 px
+		var width = $(window).width();
+		if (width > 778) {
+			var page = $("html, body");
+			page.on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
+				page.stop();
+			});
+			page.animate({scrollTop: "201px"}, 2500, 'swing', function(){
+				page.off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
+			});
+		}
+	}
     else {
         //all pages except the home page will load already scrolled
         var width = $(window).width();
         var scroll =$(window).scrollTop();
-        if (scroll < 201 && width > 538){
+        if (scroll < 201 && width > 778){
             window.scrollBy(0, 201);
         }
     }
@@ -55,9 +28,9 @@ $(window).ready(function(){
 	// This is necessary for the auto scroll to work.
 	// If user scrolls past 201, the position is remembered.
 	$(window).on('scroll', function() {
-		// only if width > 560 px
+		// only if width > 800 px
 		var width = $(window).width();
-		if (width > 538) {
+		if (width > 778) {
 			var scroll =$(window).scrollTop();
 			if (scroll <= 201) {
 				if ('scrollRestoration' in history) {
@@ -76,7 +49,6 @@ $(window).ready(function(){
     // image
     function ajustBackground() {
         var newScroll =$(window).scrollTop();
-		console.log(newScroll);
         if (newScroll <= 200 && newScroll >= 90) {
             $('header').css('background-position', '50% ' + 'calc(50% + ' + (newScroll - 90) + 'px)');
         }
@@ -91,7 +63,7 @@ $(window).ready(function(){
 	// when resizing window, adjust header background
     $(window).on('resize', function(){
         var width = $(window).width();
-        if (width <= 538) {
+        if (width <= 778) {
             $('header').css('background-position', '50% 50%');
         }
         else {
@@ -101,10 +73,10 @@ $(window).ready(function(){
 
 	// Call adjust header when scrolling
 	$(window).on ('scroll', function() {
-		// only if width > 560 px
-		// why is it 538? I've seen this before
+		// only if width > 800 px
+		// why is it 778? I've seen this before
         var width = $(window).width();
-        if (width > 538) {
+        if (width > 778) {
             ajustBackground();
         }
 	});
@@ -238,7 +210,7 @@ $(window).ready(function(){
 		$('.filterlist').hide();
 		$('.levelfilterlist').hide();
 		var width = $(window).width();
-		if (width <=538) {
+		if (width <=778) {
 			$('.links').hide();
 		}
 	});
@@ -253,13 +225,13 @@ $(window).ready(function(){
 	});
 	$('.hamburger').click(function(event){
 		var width = $(window).width();
-		if (width <=538) {
+		if (width <=778) {
 	    event.stopPropagation();
 		}
 	});
 	$('.links').click(function(event){
 		var width = $(window).width();
-		if (width <=538) {
+		if (width <=778) {
 	    event.stopPropagation();
 		}
 	});

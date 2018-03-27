@@ -39,10 +39,11 @@ $(window).ready(function(){
         // third rule drops the lowest roll, adds the rest and adds the modifier
         else if (rule === "drop") {
             var min = Math.min.apply(Math, rolls);
-            rolls.splice($.inArray(min, rolls), 1);
+            var tempRolls = rolls.slice(); //creates a copy of rolls so you can still print out all of them
+            tempRolls.splice($.inArray(min, tempRolls), 1);
             var rollstotal = 0;
-            for (i = 0; i < rolls.length; i++) {
-                rollstotal = rollstotal + rolls[i];
+            for (i = 0; i < tempRolls.length; i++) {
+                rollstotal = rollstotal + tempRolls[i];
             }
             modrolls = rollstotal + modNum;
         }

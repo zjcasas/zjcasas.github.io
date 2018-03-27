@@ -60,7 +60,7 @@ header {
         display: none;
         font-size: 35px;
         color: white;
-        margin: 50px 20px 0 0;
+        margin: 15px 20px 0 0;
         cursor: pointer;
     }
     .hamburger:hover {
@@ -884,42 +884,9 @@ ul {
     main {
         margin: 10px 5% 50px 5%;
     }
-	.homegrid {
-        margin: 10px 5% 50px 5%;
-    }
-    .classes {
-        .classesGrid {
-            grid-template-columns: 1fr 1fr 1fr;
-            span {
-                height: 154px;
-            }
-        }
-    }
-    .levelFeatures {
-        h5, p {
-            padding: 3px 0 2px 0;
-        }
-    }
-}
-@media screen and (max-width: 560px) {
-    body {
-        min-height: 880px;
-    }
-    main {
-        margin: 10px 1% 48px 1%;
-    }
-    .homegrid {
-        margin: 10px 0 50px 0;
-    }
-    .homebox {
-        width: 400px;
-    }
-    .grid {
-        grid-gap: 10px;
-    }
     header {
         padding: 0;
-        height: 140px;
+        height: 70px;
         display: grid;
         grid-template-columns: 1fr 55px;
         text-align: left;
@@ -952,9 +919,50 @@ ul {
             }
         }
         h1 {
-            margin: 43px 0 0 20px;
+            margin: 8px 0 0 20px;
             font-size: 30px;
         }
+    }
+	.homegrid {
+        margin: 10px 5% 50px 5%;
+    }
+    .classes {
+        .classesGrid {
+            grid-template-columns: 1fr 1fr 1fr;
+            span {
+                height: 154px;
+            }
+        }
+    }
+    .levelup {
+        .levelupGrid {
+            grid-template-columns: 1fr 1fr 1fr;
+            span {
+                height: 154px;
+            }
+        }
+    }
+    .levelFeatures {
+        h5, p {
+            padding: 3px 0 2px 0;
+        }
+    }
+}
+@media screen and (max-width: 560px) {
+    body {
+        min-height: 880px;
+    }
+    main {
+        margin: 10px 1% 48px 1%;
+    }
+    .homegrid {
+        margin: 10px 0 50px 0;
+    }
+    .homebox {
+        width: 400px;
+    }
+    .grid {
+        grid-gap: 10px;
     }
     h2 {
         margin: 0 0 10px 0;
@@ -979,7 +987,6 @@ ul {
                 position: absolute;
                 left: calc(50% - 200px);
                 top: 172px;
-
             }
         }
     }
@@ -1001,10 +1008,13 @@ ul {
     .homegrid {
         margin: 10px 0 50px 0;
     }
+    .homebox {
+        width: 400px;
+    }
     header {
         h1 {
             font-size: 25px;
-            margin: 48px 0 0 20px;
+            margin: 12px 0 0 20px;
         }
     }
     .races {
@@ -1086,6 +1096,52 @@ ul {
                 background-position: 100% 8%;
             }
             #wizardClass {
+                background-position: 100% 15%;
+            }
+        }
+    }
+    .levelup {
+        .levelupGrid {
+            grid-template-columns: 1fr;
+            width: 80%;
+            margin: 0 auto;
+            span {
+                height: 75px;
+            }
+            #barbarianLevelUp {
+                background-position: 100% 5%;
+            }
+            #bardLevelUp {
+                background-position: 100% 10%;
+            }
+            #clericLevelUp {
+                background-position: 100% 17%;
+            }
+            #druidLevelUp {
+                background-position: 50% 10%;
+            }
+            #fighterLevelUp {
+                background-position: 100% 7%;
+            }
+            #monkLevelUp {
+                background-position: 100% 7%;
+            }
+            #paladinLevelUp {
+                background-position: 100% 10%;
+            }
+            #rangerLevelUp {
+                background-position: 100% 7%;
+            }
+            #rogueLevelUp {
+                background-position: 100% 8%;
+            }
+            #sorcerorLevelUp {
+                background-position: 100% 7%;
+            }
+            #warlockLevelUp {
+                background-position: 100% 8%;
+            }
+            #wizardLevelUp {
                 background-position: 100% 15%;
             }
         }
