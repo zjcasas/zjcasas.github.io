@@ -3,6 +3,7 @@
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="../scripts/scripts.js"></script>
+	<script src="../scripts/spells.js"></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Eagle+Lake|Tangerine" rel="stylesheet">
 	<meta charset="UTF-8">
@@ -21,21 +22,26 @@
 			</a>
 		</h1>
 		<nav>
-			<a href="../races/">
-				Races
-			</a>
-			<a href="../classes/">
-				Classes
-			</a>
-			<a href="javascript:window.location.reload()">
-				Spells
-			</a>
-			<a href="../feats/">
-				Feats
-			</a>
-			<a href="../level_up/">
-				Level Up
-			</a>
+			<span class="hamburger">
+				<i class="fas fa-bars"></i>
+			</span>
+			<span class="links">
+				<a href="../races/">
+					Races
+				</a>
+				<a href="../classes/">
+					Classes
+				</a>
+				<a href="javascript:window.location.reload()">
+					Spells
+				</a>
+				<a href="../feats/">
+					Feats
+				</a>
+				<a href="../level_up/">
+					Level Up
+				</a>
+			</span>
 		</nav>
 	</header>
 	<main>
@@ -147,6 +153,14 @@
 			</span>
 		</span>
 		<section class='spells'>
+			<div id="expandcollapse">
+				<button id="collapse">
+					Collapse All
+				</button>
+				<button id="expand">
+					Expand All
+				</button>
+			</div>
 			<div class="cantrip conjuration sorceror wizard">
 				<span class="classhidevar"></span>
 				<span class="levelhidevar"></span>
@@ -482,46 +496,46 @@
 				</section>
 			</div>
 			<!-- <div class="">
-				<span class="classhidevar"></span>
-				<span class="levelhidevar"></span>
-				<span class="schoolhidevar"></span>
-				<h4>
-					<span class="turn">
-						<i class="fas fa-angle-down"></i>
-					</span>
+			<span class="classhidevar"></span>
+			<span class="levelhidevar"></span>
+			<span class="schoolhidevar"></span>
+			<h4>
+			<span class="turn">
+			<i class="fas fa-angle-down"></i>
+		</span>
 
-				</h4>
-				<section>
-					<span>
-						<p>
-							<span class='dark'></span>
-						</p>
-						<p>
-							<span class='dark'>Classes</span> &mdash;
-						</p>
-						<p>
-							<span class='dark'>Casting Time</span> &mdash;
-						</p>
-						<p>
-							<span class='dark'>Range</span> &mdash;
-						</p>
-						<p>
-							<span class='dark'>Components</span> &mdash; Verbal, Somatic, Material ()
-						</p>
-						<p>
-							<span class='dark'>Duration</span> &mdash;
-						</p>
-					</span>
-					<p>
+	</h4>
+	<section>
+	<span>
+	<p>
+	<span class='dark'></span>
+</p>
+<p>
+<span class='dark'>Classes</span> &mdash;
+</p>
+<p>
+<span class='dark'>Casting Time</span> &mdash;
+</p>
+<p>
+<span class='dark'>Range</span> &mdash;
+</p>
+<p>
+<span class='dark'>Components</span> &mdash; Verbal, Somatic, Material ()
+</p>
+<p>
+<span class='dark'>Duration</span> &mdash;
+</p>
+</span>
+<p>
 
-					</p>
-					<p>
-						<span class="dark"></span> &mdash;
+</p>
+<p>
+<span class="dark"></span> &mdash;
 
-					</p>
-				</section>
-			</div> -->
-		</section>
-	</main>
+</p>
+</section>
+</div> -->
+</section>
+</main>
 </body>
 </html>

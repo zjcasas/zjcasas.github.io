@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/*!
+Timeline - v0.0.1
+ilker Yılmaz
+https://github.com/ilkeryilmaz/timeline
+*/
+.timeline-container {
+    position: relative;
+    display: none;
+}
+
+.timeline {
+    width: 100%;
+}
+
+.timeline-list {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    border: 1px solid #323232;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgb(133, 38, 23);
+    background-color: rgba(255, 255, 255, .4);
+    width: 500px;
+}
+.timeline-list-wrap {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    transform: translate3d(0, 0, 0);
+    transition: transform 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    margin: 0;
+}
+
+.timeline-item {
+    margin: 0;
+    float: left;
+    width: 460px;
+    padding: 20px;
+    height: 360px;
+}
+
+.timeline-dots-wrap {
+    position: absolute;
+    overflow: hidden;
+}
+.timeline-horizontal .timeline-dots-wrap {
+    width: 100%;
+
+}
+.timeline-vertical .timeline-dots-wrap {
+    width: 65px;
+    height: 100%;
+    top: 0;
+}
+.timeline-dots-wrap.top {
+    top: -50px;
+}
+.timeline-dots-wrap.left {
+    left: -65px;
+}
+.timeline-dots-wrap.right {
+    right: -70px;
+}
+
+.timeline-dots {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.timeline-horizontal .timeline-dots {
+    background: url("../img/timeline-bg.png") bottom repeat-x;
+}
+.timeline-vertical .timeline-dots {
+    background: url("../img/timeline-vertical-bg.png") left repeat-y;
+}
+.timeline-dots li {
+    transition: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    list-style: none;
+    overflow: hidden;
+}
+.timeline-horizontal .timeline-dots li {
+    float: left;
+    width: 70px;
+    text-align: center;
+}
+.timeline-vertical .timeline-dots li {
+    width: 100%;
+}
+.timeline-dots li.slide-active button {
+    color: rgb(133, 38, 23);
+    font-size: 35px;
+    height: 51px;
+}
+.timeline-dots button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #333;
+    font-size: 25px;
+    height: 40px;
+    transition: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.timeline-horizontal .timeline-dots button {
+    background: url("../img/date-icon.png") bottom no-repeat;
+    padding-bottom: 15px;
+}
+
+.timeline-container {
+    width: 500px;
+    margin: 0 auto;
+}

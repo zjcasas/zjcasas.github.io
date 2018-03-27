@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../../timelinejs-master/dist/js/timeline.js"></script>
 	<script src="../../scripts/scripts.js"></script>
+	<script src="../../scripts/levelup.js"></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Eagle+Lake|Tangerine" rel="stylesheet">
 	<meta charset="UTF-8">
@@ -10,6 +12,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="shortcut icon" type="image/x-icon" href="../../images/favicon/favicon.ico">
 	<link rel="stylesheet" href="../../css/normalize.css">
+	<link rel="stylesheet" href="../../timelinejs-master/dist/css/timeline.css">
 	<link rel="stylesheet" type="text/css" href="../../css/style.css">
 	<title>D&D Tools - Level Up Barbarian</title>
 </head>
@@ -21,21 +24,26 @@
 			</a>
 		</h1>
 		<nav>
-			<a href="../../races/">
-				Races
-			</a>
-			<a href="../">
-				Classes
-			</a>
-			<a href="../../spells/">
-				Spells
-			</a>
-			<a href="../../feats/">
-				Feats
-			</a>
-			<a href="../../level_up/">
-				Level Up
-			</a>
+			<span class="hamburger">
+				<i class="fas fa-bars"></i>
+			</span>
+			<span class="links">
+				<a href="../../races/">
+					Races
+				</a>
+				<a href="../">
+					Classes
+				</a>
+				<a href="../../spells/">
+					Spells
+				</a>
+				<a href="../../feats/">
+					Feats
+				</a>
+				<a href="../../level_up/">
+					Level Up
+				</a>
+			</span>
 		</nav>
 	</header>
 	<main>
@@ -46,638 +54,759 @@
 			<span id="forMoreInfo">
 				For more detailed information on Barbarian features, see the <a href="../../classes/barbarian" target="blank">Barbarian</a> class page.
 			</span>
-			<img src="../../images/barbarian.png" alt="barbarian human man">
 			<div>
-				<h4>
-					<span>
-						<i class="fas fa-angle-down"></i>
-					</span>
-					Level 1
-				</h4>
-				<section>
-					<ol>
-						<li>
-							Choose your <a href="../../races/" target="blank">Race</a>.
-						</li>
-						<li>
-							Roll your ability scores.
-							<a href="../../" target="blank">Roll 4d6 and subtract the lowest</a>.
-							Do this 6 times and then assign each of these values to the desired Ability.
-							For Barbarians, it is recommended that STR is the highest ability score and CON is the next highest.
-
-						</li>
-						<li>
+				Select the level you are leveling up to:
+			</div>
+			<span id="filters" class="filter">
+				<span>
+					Level
+				</span>
+				<div class="filterlist">
+					<div>
+						1
+					</div>
+					<div>
+						2
+					</div>
+					<div>
+						3
+					</div>
+					<div>
+						4
+					</div>
+					<div>
+						5
+					</div>
+					<div>
+						6
+					</div>
+					<div>
+						7
+					</div>
+					<div>
+						8
+					</div>
+					<div>
+						9
+					</div>
+					<div>
+						10
+					</div>
+					<div>
+						11
+					</div>
+					<div>
+						12
+					</div>
+					<div>
+						13
+					</div>
+					<div>
+						14
+					</div>
+					<div>
+						15
+					</div>
+					<div>
+						16
+					</div>
+					<div>
+						17
+					</div>
+					<div>
+						18
+					</div>
+					<div>
+						19
+					</div>
+					<div>
+						20
+					</div>
+				</div>
+			</span>
+			<div id="level1" class="timeline-container">
+				<div class="timeline js-timeline timeline-1">
+					<div data-time="Step 1">
+						<div class="timelineflex">
+							<span>
+								Choose your <a href="../../races/" target="blank">Race</a>.
+							</span>
+						</div>
+					</div>
+					<div data-time="Step 2">
+						<div class="timelineflex">
+							<span>
+								Roll your ability scores.
+								<a href="../../" target="blank">Roll 4d6 and subtract the lowest</a>.
+								Do this 6 times and then assign each of these values to the desired Ability.
+								For Barbarians, it is recommended that STR is the highest ability score and CON is the next highest.
+							</span>
+						</div>
+					</div>
+					<div data-time="Step 3">
+						<div class="timelineflex">
 							Add any ability score increases that your Race and/or Subrace specify.
-						</li>
-						<li>
+						</div>
+					</div>
+
+					<div data-time="Step 4">
+						<div class="timelineflex">
 							Fill in each ability modifier.
 							You can calculate each ability modifier by subtracting 10 from the ability score.
 							Then divide by 2 and round down.
-						</li>
-						<li>
+						</div>
+					</div>
+
+					<div data-time="Step 5">
+						<div class="timelineflex">
 							Your Proficiency Bonus is +2.
-						</li>
-						<li>
+						</div>
+					</div>
+
+					<div data-time="Step 6">
+						<div class="timelineflex">
 							You are proficient in Strength and Consitution saving throws.
-						</li>
-						<li>
-							Choose two skill proficiencies from the following:
-							<ul>
-								<li>
-									Animal Handling
-								</li>
-								<li>
-									Athletics
-								</li>
-								<li>
-									Intimidation
-								</li>
-								<li>
-									Nature
-								</li>
-								<li>
-									Perception
-								</li>
-								<li>
-									Survival
-								</li>
-							</ul>
-						</li>
-						<li>
+						</div>
+
+					</div>
+					<div data-time="Step 7">
+						<div class="timelineflex">
+							<span>
+								Choose two skill proficiencies from the following:
+								<ul>
+									<li>
+										Animal Handling
+									</li>
+									<li>
+										Athletics
+									</li>
+									<li>
+										Intimidation
+									</li>
+									<li>
+										Nature
+									</li>
+									<li>
+										Perception
+									</li>
+									<li>
+										Survival
+									</li>
+								</ul>
+							</span>
+						</div>
+					</div>
+					<div data-time="Step 8">
+						<div class="timelineflex">
 							Calculate your saving throw and skill modifiers by taking the associated ability modifier and adding any applicable proficiencies.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 9">
+						<div class="timelineflex">
 							Your Passive Wisdom (Perception) score is equal to 10 plus your Perception modifier.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 10">
+						<div class="timelineflex">
 							Your Initiative is equal to your DEX modifier.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 11">
+						<div class="timelineflex">
 							Your maximum hit points is equal to 12 plus your CON modifier.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 12">
+						<div class="timelineflex">
 							Your hit dice is 1d12
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 13">
+						<div class="timelineflex">
 							Your speed is determined by your Race.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 14">
+						<div class="timelineflex">
 							You have the Rage feature.
 							This allows you to enter a Rage on your turn, as a bonus action.
-							See the <a href="../../classes/barbarian" target="blank">Barbarian</a> class page fore more information on Raging.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 15">
+						<div class="timelineflex">
 							You have the Unarmored Defense feature.
 							While you are not wearing any armor, your Armor Class is equal to 10 plus your DEX modifier plus your CON modifier.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 16">
+						<div class="timelineflex">
 							Write down any abilities, proficiencies, or langauges granted to you by your Race or Subrace.
-						</li>
-						<li>
-							Describe your character.
-							When choosing the following, keep in mind a backstory that you'd like for your character to have.
-							This backstory should also take your proficiencies into account.
-							Choose the following character details:
-							<ul>
-								<li>
-									Name
-								</li>
-								<li>
-									Alignment
-								</li>
-								<li>
-									Background
-								</li>
-								<li>
-									Personality Traits
-								</li>
-								<li>
-									Ideals
-								</li>
-								<li>
-									Bonds
-								</li>
-								<li>
-									Flaws
-								</li>
-							</ul>
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 17">
+						<div class="timelineflex">
+							<span>
+								Describe your character.
+								When choosing the following, keep in mind a backstory that you'd like for your character to have.
+								This backstory should also take your proficiencies into account.
+								Choose the following character details:
+								<ul>
+									<li>
+										Name
+									</li>
+									<li>
+										Alignment
+									</li>
+									<li>
+										Background (For Barbarians, Outlander is recommended)
+									</li>
+									<li>
+										Personality Traits
+									</li>
+									<li>
+										Ideals
+									</li>
+									<li>
+										Bonds
+									</li>
+									<li>
+										Flaws
+									</li>
+								</ul>
+							</span>
+						</div>
+					</div>
+					<div data-time="Step 18">
+						<div class="timelineflex">
 							Write down any proficiencies or equipment granted to you by your Background.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 19">
+						<div class="timelineflex">
 							You are proficient with light armor, medium armor, and shields.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 20">
+						<div class="timelineflex">
 							You are proficient with simple weapons and martial weapons.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 21">
+						<div class="timelineflex">
 							You are not proficient with any tools unless you race or background grants it.
-						</li>
-						<li>
-							In addition to any equipement you are granted by your race or background, you also start with:
-							<ul>
-								<li>
-									A greataxe or any martial melee weapon
-								</li>
-								<li>
-									Two handaxes or any simple weapon
-								</li>
-								<li>
-									An explorer's pack and four javelins
-								</li>
-							</ul>
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 22">
+						<div class="timelineflex">
+							<span>
+								In addition to any equipement you are granted by your race or background, you also start with:
+								<ul>
+									<li>
+										A greataxe or any martial melee weapon
+									</li>
+									<li>
+										Two handaxes or any simple weapon
+									</li>
+									<li>
+										An explorer's pack and four javelins
+									</li>
+								</ul>
+							</span>
+						</div>
+					</div>
+					<div data-time="Step 23">
+						<div class="timelineflex">
 							Because you are unarmored, your Armor Class is equal to 10 plus your DEX modifier plus your CON modifier.
-						</li>
-						<li>
-							Fill in the attack bonuses and damages for each weapon.
-							<ul>
-								<li>
-									The attack bonus for melee weapons is your STR modifier plus any applicable proficiency bonus.
-								</li>
-								<li>
-									The attack bonus for ranged weapons is your DEX modifier plus any applicable proficiency bonus.
-								</li>
-								<li>
-									The damage for a melee weapon is its dice damage plus your STR modifier plus any applicable proficiency bonus.
-								</li>
-								<li>
-									The damage for a ranged weapon is its dice damage plus your DEX modifier plus any applicable proficiency bonus.
-								</li>
-							</ul>
-						</li>
-					</ol>
-				</section>
+						</div>
+					</div>
+					<div data-time="Step 24">
+						<div class="timelineflex">
+							<span>
+								Fill in the attack bonuses and damages for each weapon.
+								<ul>
+									<li>
+										The attack bonus for melee weapons is your STR modifier plus any applicable proficiency bonus.
+									</li>
+									<li>
+										The attack bonus for ranged weapons is your DEX modifier plus any applicable proficiency bonus.
+									</li>
+									<li>
+										The damage for a melee weapon is its dice damage plus your STR modifier plus any applicable proficiency bonus.
+									</li>
+									<li>
+										The damage for a ranged weapon is its dice damage plus your DEX modifier plus any applicable proficiency bonus.
+									</li>
+								</ul>
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div>
-				<h4>
-					<span>
-						<i class="fas fa-angle-down"></i>
-					</span>
-					Level 2
-				</h4>
-				<section>
-					<ol>
-						<li>
+			<div id="level2" class="timeline-container">
+				<div class="timeline js-timeline timeline-2">
+					<div data-time="Step 1">
+						<div class="timelineflex">
 							At level 2, you gain the Reckless Attack feature.
 							This allows you to gain advantage on your attacks this turn.
 							However, attacks against you will also have advantage until your next turn.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 2">
+						<div class="timelineflex">
 							At level 2, you gain the Danger Sense feature.
 							This allows you to gain advantage on Dexterity saving throws against effects that you can see, such as traps and spells.
 							However, you don't get this benefit if you are blinded, deafened, or incapacitated.
-						</li>
-						<li>
-							Roll 1d12 (or 7) + your CON modifier and add it to your hit point maxium.
-							You also gain 1 additional d12 hit dice.
-						</li>
-					</ol>
-				</section>
+						</div>
+					</div>
+					<div data-time="Step 3">
+						<div class="timelineflex">
+							<span>
+								<a href="../../" target="blank">Roll 1d12 (or 7) + your CON modifier</a> and add it to your hit point maximum.
+								You also gain 1 additional d12 hit dice.
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div>
-				<h4>
-					<span>
-						<i class="fas fa-angle-down"></i>
-					</span>
-					Level 3
-				</h4>
-				<section>
-					<ol>
-						<li>
+			<div id="level3" class="timeline-container">
+				<div class="timeline js-timeline timeline-3">
+					<div data-time="Step 1">
+						<div class="timelineflex">
 							At level 3, you get to choose a Primal Path.
 							Choose Path of the Berserker or Path of the Totem Warrior.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 2">
+						<div class="timelineflex">
 							If you chose Path of the Berserker, you gain the Frenzy feature.
 							During a Rage, this allows you to make a single melee weapon attack as a bonus action on each of your turns.
 							Once the Rage ends, you suffer one level of exhaustion.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 3">
+						<div class="timelineflex">
 							If you chose Path of the Totem Warrior, you gain the ability to case the Beast Sense and Speak with Animals spells, but only as rituals.
 							You also gain the Totem Spirit feature, which grants a magical ability.
 							You may choose Bear, Eagle, or Wolf.
 							Alternatively, you may adapt a different animal to the already suggested ones.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 4">
+						<div class="timelineflex">
 							At level 3, you gain 1 additional Rage per long rest.
 							Now you can Rage 3 times a day.
-						</li>
-						<li>
-							Roll 1d12 (or 7) + your CON modifier and add it to your hit point maxium.
-							You also gain 1 additional d12 hit dice.
-						</li>
-					</ol>
-				</section>
+						</div>
+					</div>
+					<div data-time="Step 5">
+						<div class="timelineflex">
+							<span>
+								<a href="../../" target="blank">Roll 1d12 (or 7) + your CON modifier</a> and add it to your hit point maximum.
+								You also gain 1 additional d12 hit dice.
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div>
-				<h4>
-					<span>
-						<i class="fas fa-angle-down"></i>
-					</span>
-					Level 4
-				</h4>
-				<section>
-					<ol>
-						<li>
+			<div id="level4" class="timeline-container">
+				<div class="timeline js-timeline timeline-4">
+					<div data-time="Step 1">
+						<div class="timelineflex">
 							At level 4, you gain an Ability Score Improvement.
 							Add 1 point to two ability scores, or 2 points to one ability score.
-						</li>
-						<li>
-							Roll 1d12 (or 7) + your CON modifier and add it to your hit point maxium.
-							You also gain 1 additional d12 hit dice.
-						</li>
-					</ol>
-				</section>
+						</div>
+					</div>
+					<div data-time="Step 2">
+						<div class="timelineflex">
+							<span>
+								<a href="../../" target="blank">Roll 1d12 (or 7) + your CON modifier</a> and add it to your hit point maximum.
+								You also gain 1 additional d12 hit dice.
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div>
-				<h4>
-					<span>
-						<i class="fas fa-angle-down"></i>
-					</span>
-					Level 5
-				</h4>
-				<section>
-					<ol>
-						<li>
+			<div id="level5" class="timeline-container">
+				<div class="timeline js-timeline timeline-5">
+					<div data-time="Step 1">
+						<div class="timelineflex">
 							At level 5, you gain +1 to your Proficiency Bonus.
 							Your Proficiency Bonus is now +3.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 2">
+						<div class="timelineflex">
 							At level 5, you gain the Extra Attack feature.
 							This allows you to attack twice whenever you take the Attack action on your turn.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 3">
+						<div class="timelineflex">
 							At level 5, you gain the Fast Movement feature.
 							This increases your movement speed by 10 feet while you aren't wearing heavy armor.
-						</li>
-						<li>
-							Roll 1d12 (or 7) + your CON modifier and add it to your hit point maxium.
-							You also gain 1 additional d12 hit dice.
-						</li>
-					</ol>
-				</section>
+						</div>
+					</div>
+					<div data-time="Step 4">
+						<div class="timelineflex">
+							<span>
+								<a href="../../" target="blank">Roll 1d12 (or 7) + your CON modifier</a> and add it to your hit point maximum.
+								You also gain 1 additional d12 hit dice.
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div>
-				<h4>
-					<span>
-						<i class="fas fa-angle-down"></i>
-					</span>
-					Level 6
-				</h4>
-				<section>
-					<ol>
-						<li>
+			<div id="level6" class="timeline-container">
+				<div class="timeline js-timeline timeline-6">
+					<div data-time="Step 1">
+						<div class="timelineflex">
 							At level 6, you gain a Path of the Berserker feature.
 							You gain the Mindless Rage feature.
 							During a Rage, you are immune to being charmed or frightened.
 							If you are charmed or frightened when you enter the Rage, the effect is suspended until the Rage ends.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 2">
+						<div class="timelineflex">
 							At level 6, you gain a Path of the Totem Warrior feature.
 							You gain the Aspect of the Beast feature, which grants a magical ability.
 							You may choose Bear, Eagle, or Wolf.
 							Alternatively, you may adapt a different animal to the already suggested ones.
 							You do not have to choose the same animal as your Totem Spirit.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 3">
+						<div class="timelineflex">
 							At level 6, you gain 1 additional Rage per long rest.
 							Now you can Rage 4 times a day.
-						</li>
-						<li>
-							Roll 1d12 (or 7) + your CON modifier and add it to your hit point maxium.
-							You also gain 1 additional d12 hit dice.
-						</li>
-					</ol>
-				</section>
+						</div>
+					</div>
+					<div data-time="Step 4">
+						<div class="timelineflex">
+							<span>
+								<a href="../../" target="blank">Roll 1d12 (or 7) + your CON modifier</a> and add it to your hit point maximum.
+								You also gain 1 additional d12 hit dice.
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div>
-				<h4>
-					<span>
-						<i class="fas fa-angle-down"></i>
-					</span>
-					Level 7
-				</h4>
-				<section>
-					<ol>
-						<li>
+			<div id="level7" class="timeline-container">
+				<div class="timeline js-timeline timeline-7">
+					<div data-time="Step 1">
+						<div class="timelineflex">
 							At level 7, you gain the Feral Instinct feature.
 							If you are surprised at the beginning of combat and aren't incapacitated, this allows you to act normally on your first turn, but only if you enter a Rage before doing anything else on that turn.
-						</li>
-						<li>
-							Roll 1d12 (or 7) + your CON modifier and add it to your hit point maxium.
-							You also gain 1 additional d12 hit dice.
-						</li>
-					</ol>
-				</section>
+						</div>
+					</div>
+					<div data-time="Step 2">
+						<div class="timelineflex">
+							<span>
+								<a href="../../" target="blank">Roll 1d12 (or 7) + your CON modifier</a> and add it to your hit point maximum.
+								You also gain 1 additional d12 hit dice.
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div>
-				<h4>
-					<span>
-						<i class="fas fa-angle-down"></i>
-					</span>
-					Level 8
-				</h4>
-				<section>
-					<ol>
-						<li>
+			<div id="level8" class="timeline-container">
+				<div class="timeline js-timeline timeline-8">
+					<div data-time="Step 1">
+						<div class="timelineflex">
 							At level 8, you gain an Ability Score Improvement.
 							Add 1 point to two ability scores, or 2 points to one ability score.
-						</li>
-						<li>
-							Roll 1d12 (or 7) + your CON modifier and add it to your hit point maxium.
-							You also gain 1 additional d12 hit dice.
-						</li>
-					</ol>
-				</section>
+						</div>
+					</div>
+					<div data-time="Step 2">
+						<div class="timelineflex">
+							<span>
+								<a href="../../" target="blank">Roll 1d12 (or 7) + your CON modifier</a> and add it to your hit point maximum.
+								You also gain 1 additional d12 hit dice.
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div>
-				<h4>
-					<span>
-						<i class="fas fa-angle-down"></i>
-					</span>
-					Level 9
-				</h4>
-				<section>
-					<ol>
-						<li>
+			<div id="level9" class="timeline-container">
+				<div class="timeline js-timeline timeline-9">
+					<div data-time="Step 1">
+						<div class="timelineflex">
 							At level 9, you gain +1 to your Proficiency Bonus.
 							Your Proficiency Bonus is now +4.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 2">
+						<div class="timelineflex">
 							At level 9, you gain the Brutal Critical feature.
 							This allows you to roll one additional weapon damage die when determining damage on a critical hit with a melee attack.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 3">
+						<div class="timelineflex">
 							At level 9, you gain +1 to your Rage Damage.
 							Now your Rage Damage is +3.
-						</li>
-						<li>
-							Roll 1d12 (or 7) + your CON modifier and add it to your hit point maxium.
-							You also gain 1 additional d12 hit dice.
-						</li>
-					</ol>
-				</section>
+						</div>
+					</div>
+					<div data-time="Step 4">
+						<div class="timelineflex">
+							<span>
+								<a href="../../" target="blank">Roll 1d12 (or 7) + your CON modifier</a> and add it to your hit point maximum.
+								You also gain 1 additional d12 hit dice.
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div>
-				<h4>
-					<span>
-						<i class="fas fa-angle-down"></i>
-					</span>
-					Level 10
-				</h4>
-				<section>
-					<ol>
-						<li>
+			<div id="level10" class="timeline-container">
+				<div class="timeline js-timeline timeline-10">
+					<div data-time="Step 1">
+						<div class="timelineflex">
 							At level 10, you gain a Path of the Berserker feature.
 							You gain the Intimidating Presence feature.
 							This allows you to use your action to frighten someone.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 2">
+						<div class="timelineflex">
 							At level 10, you gain a Path of the Totem Warrior feature.
 							You gain the Spirit Walker feature.
 							This allows you to case the Commune with Nature spell, but only as a ritual.
-						</li>
-						<li>
-							Roll 1d12 (or 7) + your CON modifier and add it to your hit point maxium.
-							You also gain 1 additional d12 hit dice.
-						</li>
-					</ol>
-				</section>
+						</div>
+					</div>
+					<div data-time="Step 3">
+						<div class="timelineflex">
+							<span>
+								<a href="../../" target="blank">Roll 1d12 (or 7) + your CON modifier</a> and add it to your hit point maximum.
+								You also gain 1 additional d12 hit dice.
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div>
-				<h4>
-					<span>
-						<i class="fas fa-angle-down"></i>
-					</span>
-					Level 11
-				</h4>
-				<section>
-					<ol>
-						<li>
+			<div id="level11" class="timeline-container">
+				<div class="timeline js-timeline timeline-11">
+					<div data-time="Step 1">
+						<div class="timelineflex">
 							At level 11, you gain the Relentless Rage feature.
 							If you drop to 0 hit points while Raging and don't die outright, this allows you to make a Constitution saving throw to instead drop to 1 hit point.
-						</li>
-						<li>
-							Roll 1d12 (or 7) + your CON modifier and add it to your hit point maxium.
-							You also gain 1 additional d12 hit dice.
-						</li>
-					</ol>
-				</section>
+						</div>
+					</div>
+					<div data-time="Step 2">
+						<div class="timelineflex">
+							<span>
+								<a href="../../" target="blank">Roll 1d12 (or 7) + your CON modifier</a> and add it to your hit point maximum.
+								You also gain 1 additional d12 hit dice.
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div>
-				<h4>
-					<span>
-						<i class="fas fa-angle-down"></i>
-					</span>
-					Level 12
-				</h4>
-				<section>
-					<ol>
-						<li>
+			<div id="level12" class="timeline-container">
+				<div class="timeline js-timeline timeline-12">
+					<div data-time="Step 1">
+						<div class="timelineflex">
 							At level 12, you gain an Ability Score Improvement.
 							Add 1 point to two ability scores, or 2 points to one ability score.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 2">
+						<div class="timelineflex">
 							At level 12, you gain 1 additional Rage per long rest.
 							Now you can Rage 5 times a day.
-						</li>
-						<li>
-							Roll 1d12 (or 7) + your CON modifier and add it to your hit point maxium.
-							You also gain 1 additional d12 hit dice.
-						</li>
-					</ol>
-				</section>
+						</div>
+					</div>
+					<div data-time="Step 3">
+						<div class="timelineflex">
+							<span>
+								<a href="../../" target="blank">Roll 1d12 (or 7) + your CON modifier</a> and add it to your hit point maximum.
+								You also gain 1 additional d12 hit dice.
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div>
-				<h4>
-					<span>
-						<i class="fas fa-angle-down"></i>
-					</span>
-					Level 13
-				</h4>
-				<section>
-					<ol>
-						<li>
+			<div id="level13" class="timeline-container">
+				<div class="timeline js-timeline timeline-13">
+					<div data-time="Step 1">
+						<div class="timelineflex">
 							At level 13, you gain +1 to your Proficiency Bonus.
 							Your Proficiency Bonus is now +5.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 2">
+						<div class="timelineflex">
 							At level 13, you gain 1 additional Brutal Critical die.
 							You may roll two additional weapon damage dice when determining damage on a critical hit with a melee attack.
-						</li>
-						<li>
-							Roll 1d12 (or 7) + your CON modifier and add it to your hit point maxium.
-							You also gain 1 additional d12 hit dice.
-						</li>
-					</ol>
-				</section>
+						</div>
+					</div>
+					<div data-time="Step 3">
+						<div class="timelineflex">
+							<span>
+								<a href="../../" target="blank">Roll 1d12 (or 7) + your CON modifier</a> and add it to your hit point maximum.
+								You also gain 1 additional d12 hit dice.
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div>
-				<h4>
-					<span>
-						<i class="fas fa-angle-down"></i>
-					</span>
-					Level 14
-				</h4>
-				<section>
-					<ol>
-						<li>
+			<div id="level14" class="timeline-container">
+				<div class="timeline js-timeline timeline-14">
+					<div data-time="Step 1">
+						<div class="timelineflex">
 							At level 14, you gain a Path of the Berserker feature.
 							You gain the Retaliation feature.
 							When you take damage from a creature within 5 feet of you, this allows you to use your reaction to make a melee weapon attack against them.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 2">
+						<div class="timelineflex">
 							At level 14, you gain a Path of the Totem Warrior feature.
 							You gain the Totemic Attunement feature, which grants a magical ability.
 							You may choose Bear, Eagle, or Wolf.
 							Alternatively, you may adapt a different animal to the already suggested ones.
 							You do not have to choose the same animal as your Totem Spirit or Aspect of the Beast.
-						</li>
-						<li>
-							Roll 1d12 (or 7) + your CON modifier and add it to your hit point maxium.
-							You also gain 1 additional d12 hit dice.
-						</li>
-					</ol>
-				</section>
+						</div>
+					</div>
+					<div data-time="Step 3">
+						<div class="timelineflex">
+							<span>
+								<a href="../../" target="blank">Roll 1d12 (or 7) + your CON modifier</a> and add it to your hit point maximum.
+								You also gain 1 additional d12 hit dice.
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div>
-				<h4>
-					<span>
-						<i class="fas fa-angle-down"></i>
-					</span>
-					Level 15
-				</h4>
-				<section>
-					<ol>
-						<li>
+			<div id="level15" class="timeline-container">
+				<div class="timeline js-timeline timeline-15">
+					<div data-time="Step 1">
+						<div class="timelineflex">
 							At level 15, you gain the Persistent Rage feature.
 							This allows your Rage to end only if you fall unconscious or if you choose to end it.
-						</li>
-						<li>
-							Roll 1d12 (or 7) + your CON modifier and add it to your hit point maxium.
-							You also gain 1 additional d12 hit dice.
-						</li>
-					</ol>
-				</section>
+						</div>
+					</div>
+					<div data-time="Step 2">
+						<div class="timelineflex">
+							<span>
+								<a href="../../" target="blank">Roll 1d12 (or 7) + your CON modifier</a> and add it to your hit point maximum.
+								You also gain 1 additional d12 hit dice.
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div>
-				<h4>
-					<span>
-						<i class="fas fa-angle-down"></i>
-					</span>
-					Level 16
-				</h4>
-				<section>
-					<ol>
-						<li>
+			<div id="level16" class="timeline-container">
+				<div class="timeline js-timeline timeline-16">
+					<div data-time="Step 1">
+						<div class="timelineflex">
 							At level 16, you gain an Ability Score Improvement.
 							Add 1 point to two ability scores, or 2 points to one ability score.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 2">
+						<div class="timelineflex">
 							At level 16, you gain +1 to your Rage Damage.
 							Now your Rage Damage is +4.
-						</li>
-						<li>
-							Roll 1d12 (or 7) + your CON modifier and add it to your hit point maxium.
-							You also gain 1 additional d12 hit dice.
-						</li>
-					</ol>
-				</section>
+						</div>
+					</div>
+					<div data-time="Step 3">
+						<div class="timelineflex">
+							<span>
+								<a href="../../" target="blank">Roll 1d12 (or 7) + your CON modifier</a> and add it to your hit point maximum.
+								You also gain 1 additional d12 hit dice.
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div>
-				<h4>
-					<span>
-						<i class="fas fa-angle-down"></i>
-					</span>
-					Level 17
-				</h4>
-				<section>
-					<ol>
-						<li>
+			<div id="level17" class="timeline-container">
+				<div class="timeline js-timeline timeline-17">
+					<div data-time="Step 1">
+						<div class="timelineflex">
 							At level 17, you gain +1 to your Proficiency Bonus.
 							Your Proficiency Bonus is now +6.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 2">
+						<div class="timelineflex">
 							At level 17, you gain 1 additional Brutal Critical die.
 							You may roll three additional weapon damage dice when determining damage on a critical hit with a melee attack.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 3">
+						<div class="timelineflex">
 							At level 17, you gain 1 additional Rage per long rest.
 							Now you can Rage 6 times a day.
-						</li>
-						<li>
-							Roll 1d12 (or 7) + your CON modifier and add it to your hit point maxium.
-							You also gain 1 additional d12 hit dice.
-						</li>
-					</ol>
-				</section>
+						</div>
+					</div>
+					<div data-time="Step 4">
+						<div class="timelineflex">
+							<span>
+								<a href="../../" target="blank">Roll 1d12 (or 7) + your CON modifier</a> and add it to your hit point maximum.
+								You also gain 1 additional d12 hit dice.
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div>
-				<h4>
-					<span>
-						<i class="fas fa-angle-down"></i>
-					</span>
-					Level 18
-				</h4>
-				<section>
-					<ol>
-						<li>
+			<div id="level18" class="timeline-container">
+				<div class="timeline js-timeline timeline-18">
+					<div data-time="Step 1">
+						<div class="timelineflex">
 							At level 18, you gain the Indomitable Might feature.
 							When making a Strength check, if your total is less than your STR score, you can use that score instead of the total.
-						</li>
-						<li>
-							Roll 1d12 (or 7) + your CON modifier and add it to your hit point maxium.
-							You also gain 1 additional d12 hit dice.
-						</li>
-					</ol>
-				</section>
+						</div>
+					</div>
+					<div data-time="Step 2">
+						<div class="timelineflex">
+							<span>
+								<a href="../../" target="blank">Roll 1d12 (or 7) + your CON modifier</a> and add it to your hit point maximum.
+								You also gain 1 additional d12 hit dice.
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div>
-				<h4>
-					<span>
-						<i class="fas fa-angle-down"></i>
-					</span>
-					Level 19
-				</h4>
-				<section>
-					<ol>
-						<li>
+			<div id="level19" class="timeline-container">
+				<div class="timeline js-timeline timeline-19">
+					<div data-time="Step 1">
+						<div class="timelineflex">
 							At level 19, you gain an Ability Score Improvement.
 							Add 1 point to two ability scores, or 2 points to one ability score.
-						</li>
-						<li>
-							Roll 1d12 (or 7) + your CON modifier and add it to your hit point maxium.
-							You also gain 1 additional d12 hit dice.
-						</li>
-					</ol>
-				</section>
+						</div>
+					</div>
+					<div data-time="Step 2">
+						<div class="timelineflex">
+							<span>
+								<a href="../../" target="blank">Roll 1d12 (or 7) + your CON modifier</a> and add it to your hit point maximum.
+								You also gain 1 additional d12 hit dice.
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div>
-				<h4>
-					<span>
-						<i class="fas fa-angle-down"></i>
-					</span>
-					Level 20
-				</h4>
-				<section>
-					<ol>
-						<li>
+			<div id="level20" class="timeline-container">
+				<div class="timeline js-timeline timeline-20">
+					<div data-time="Step 1">
+						<div class="timelineflex">
 							At level 20, you gain the Primal Champion Feature.
 							This allows you to increase your STR and CON scores by 4.
 							The maximum for these scores is now 24.
-						</li>
-						<li>
+						</div>
+					</div>
+					<div data-time="Step 2">
+						<div class="timelineflex">
 							At level 20, you can now Rage an Unlimited number of times per long rest.
-						</li>
-						<li>
-							Roll 1d12 (or 7) + your CON modifier and add it to your hit point maxium.
-							You also gain 1 additional d12 hit dice.
-						</li>
-					</ol>
-				</section>
+						</div>
+					</div>
+					<div data-time="Step 3">
+						<div class="timelineflex">
+							<span>
+								<a href="../../" target="blank">Roll 1d12 (or 7) + your CON modifier</a> and add it to your hit point maximum.
+								You also gain 1 additional d12 hit dice.
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 	</main>
