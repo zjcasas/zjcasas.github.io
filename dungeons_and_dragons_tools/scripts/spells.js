@@ -1,37 +1,62 @@
 $(window).ready(function(){
-
+    var spells;
     // attempting to use ajax to pull info from csv
-    $('h2').click(function(){
-        $.ajax({
-            url:"spells.csv",
-            dataType:"text",
-            success:function(data) {
-                var spells = data.split(/\r?\n|\r/);
-                console.log(spells);
-                // for(var i = 0; i < spells.length; count++) {
-                //     var cell_data = employee_data[count].split(",");
-                //     table_data += '<tr>';
-                //     for(var cell_count=0; cell_count<cell_data.length; cell_count++)
-                //     {
-                //         if(count === 0)
-                //         {
-                //             table_data += '<th>'+cell_data[cell_count]+'</th>';
-                //         }
-                //         else
-                //         {
-                //             table_data += '<td>'+cell_data[cell_count]+'</td>';
-                //         }
-                //     }
-                //     table_data += '</tr>';
-                // }
-                // table_data += '</table>';
-                // $('#employee_table').html(table_data);
-            },
-            fail: function(error) {
-                console.log(error);
-            }
-        });
+
+    $.ajax({
+        url:"spells.csv",
+        dataType: 'text',
+        success:function(data) {
+            spells = data.split(/\r?\n|\r/);
+        },
+        fail: function(error) {
+            console.log(error);
+        }
     });
+
+    $('h2').click(function(){
+        for (var i = 0; i < spells.length; i++) {
+            console.log(spells);
+            var html = `<div class="${spells[i].classes}">
+                            <span class="classhidevar"></span>
+                            <span class="levelhidevar"></span>
+                            <span class="schoolhidevar"></span>
+                            <h4>
+                                <span class="turn">
+                                    <i class="fas fa-angle-down"></i>
+                                </span>
+                                ${spells[i].name}
+                            </h4>
+                            <section>
+                                <span>
+                                    <p>
+                                        <span class='dark'>${spells[i].school} ${spells[i].level}</span>
+                                    </p>
+                                    <p>
+                                        <span class='dark'>Classes</span> &mdash; ${spells[i].classes}
+                                    </p>
+                                    <p>
+                                        <span class='dark'>Casting Time</span> &mdash; ${spells[i].time}
+                                    </p>
+                                    <p>
+                                        <span class='dark'>Range</span> &mdash; ${spells[i].range}
+                                    </p>
+                                    <p>
+                                        <span class='dark'>Components</span> &mdash; ${spells[i].components}
+                                    </p>
+                                    <p>
+                                        <span class='dark'>Duration</span> &mdash; ${spells[i].duration}
+                                    </p>
+                                </span>
+                                <p>
+                                    ${spells[i].description}
+                                </p>
+                            </section>
+                        </div>`
+            $('.spells').append(html);
+        }
+    });
+
+
 
 
     // This function checks each spell's filter spans for text and hides or
