@@ -1,60 +1,86 @@
 $(window).ready(function(){
-    var spells;
     // attempting to use ajax to pull info from csv
-
-    $.ajax({
-        url:"spells.csv",
-        dataType: 'text',
-        success:function(data) {
-            spells = data.split(/\r?\n|\r/);
-        },
-        fail: function(error) {
-            console.log(error);
-        }
-    });
-
-    $('h2').click(function(){
-        for (var i = 0; i < spells.length; i++) {
-            console.log(spells);
-            var html = `<div class="${spells[i].classes}">
-                            <span class="classhidevar"></span>
-                            <span class="levelhidevar"></span>
-                            <span class="schoolhidevar"></span>
-                            <h4>
-                                <span class="turn">
-                                    <i class="fas fa-angle-down"></i>
-                                </span>
-                                ${spells[i].name}
-                            </h4>
-                            <section>
-                                <span>
-                                    <p>
-                                        <span class='dark'>${spells[i].school} ${spells[i].level}</span>
-                                    </p>
-                                    <p>
-                                        <span class='dark'>Classes</span> &mdash; ${spells[i].classes}
-                                    </p>
-                                    <p>
-                                        <span class='dark'>Casting Time</span> &mdash; ${spells[i].time}
-                                    </p>
-                                    <p>
-                                        <span class='dark'>Range</span> &mdash; ${spells[i].range}
-                                    </p>
-                                    <p>
-                                        <span class='dark'>Components</span> &mdash; ${spells[i].components}
-                                    </p>
-                                    <p>
-                                        <span class='dark'>Duration</span> &mdash; ${spells[i].duration}
-                                    </p>
-                                </span>
-                                <p>
-                                    ${spells[i].description}
-                                </p>
-                            </section>
-                        </div>`
-            $('.spells').append(html);
-        }
-    });
+    // it worked, but it isn't perfect so I'll have to come back to it
+    // var spells;
+    // var spells2 = [];
+    // var spells3 = [];
+    // $.ajax({
+    //     url:"spells.csv",
+    //     dataType: 'text',
+    //     success:function(data) {
+    //         spells = data.split(/\r?\n|\r/);
+    //     },
+    //     fail: function(error) {
+    //         console.log(error);
+    //     }
+    // });
+    //
+    // $('h2').click(function(){
+    //     for (var i = 0; i < spells.length; i++) {
+    //         spells2.push(spells[i].split(","));
+    //
+    //     }
+    //     for (var i = 1; i < (spells2.length - 1); i++) {
+    //         for (var j = 0; j <spells2[i].length; j++){
+    //             if (j === 0) {
+    //                 spells3[(i-1)] = '{ "' + spells2[0][0] + '":';
+    //                 spells3[(i-1)] = spells3[(i-1)] + '"' + spells2[i][0] + '", ';
+    //             }
+    //             else if (j === (spells2[i].length -1)) {
+    //                 spells3[(i-1)] = spells3[(i-1)] + '"' + spells2[0][j] + '":';
+    //                 spells3[(i-1)] = spells3[(i-1)] + '"' + spells2[i][j] + '"}';
+    //             }
+    //             else {
+    //                 spells3[(i-1)] = spells3[(i-1)] + '"' + spells2[0][j] + '":';
+    //                 spells3[(i-1)] = spells3[(i-1)] + '"' + spells2[i][j] + '", ';
+    //             }
+    //
+    //         }
+    //     }
+    //     for (var i = 0; i < spells3.length; i++) {
+    //         console.log("Spells[3] = " + spells3[i]);
+    //         spells3[i] = JSON.parse(spells3[i]);
+    //     }
+    //     for (var i = 0; i < spells3.length; i++) {
+    //         var html = `<div class="${spells3[i].classes} ${spells3[i].level} ${spells3[i].school}">
+    //                     <span class="classhidevar"></span>
+    //                     <span class="levelhidevar"></span>
+    //                     <span class="schoolhidevar"></span>
+    //                     <h4>
+    //                         <span class="turn">
+    //                             <i class="fas fa-angle-down"></i>
+    //                         </span>
+    //                         ${spells3[i].name}
+    //                     </h4>
+    //                     <section>
+    //                         <span>
+    //                             <p>
+    //                                 <span class='dark'>${spells3[i].level} Level ${spells3[i].school}</span>
+    //                             </p>
+    //                             <p>
+    //                                 <span class='dark'>Classes</span> &mdash; ${spells3[i].classes}
+    //                             </p>
+    //                             <p>
+    //                                 <span class='dark'>Casting Time</span> &mdash; ${spells3[i].time}
+    //                             </p>
+    //                             <p>
+    //                                 <span class='dark'>Range</span> &mdash; ${spells3[i].range}
+    //                             </p>
+    //                             <p>
+    //                                 <span class='dark'>Components</span> &mdash; ${spells3[i].components}
+    //                             </p>
+    //                             <p>
+    //                                 <span class='dark'>Duration</span> &mdash; ${spells3[i].duration}
+    //                             </p>
+    //                         </span>
+    //                         <p>
+    //                             ${spells3[i].description}
+    //                         </p>
+    //                     </section>
+    //                 </div>`
+    //         $('.spells').append(html);
+    //     }
+    // });
 
 
 

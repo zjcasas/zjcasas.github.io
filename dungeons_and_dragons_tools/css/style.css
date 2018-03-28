@@ -471,6 +471,8 @@ ul li {
     margin: 15px 0 0 20px; }
   .spells div section span p {
     margin: 5px 0 0 20px; }
+  .spells div section ul li {
+    margin-left: 80px; }
 
 #filters {
   display: grid;

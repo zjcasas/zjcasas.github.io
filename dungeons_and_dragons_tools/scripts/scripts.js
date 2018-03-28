@@ -116,7 +116,7 @@ $(window).ready(function(){
 			$(this).find('span').removeClass('turn');
 		}
 	});
-	$('.spells h4').on('click', function() {
+	$('.spells').on('click',' h4', function() {
 		var shown = $(this).next('section').css('display');
 		if (shown === "none") {
 			$(this).next('section').slideDown();
