@@ -420,6 +420,8 @@ ul li {
 .subraces .hanging p {
   text-indent: -40px;
   margin: 10px 0 0 120px; }
+.subraces ul li {
+  margin-left: 40px; }
 
 .levelFeatures {
   display: grid;
