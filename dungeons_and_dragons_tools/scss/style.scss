@@ -40,6 +40,7 @@ header {
     position: sticky;
     top: -200px;
     z-index: 2;
+    box-shadow: 0 0 5px $shadowcolor;
     h1 {
         text-transform: uppercase;
         letter-spacing: 10px;
@@ -883,9 +884,6 @@ ul {
     }
 }
 @media screen and (max-width: 800px) {
-    body {
-        min-height: 1100px;
-    }
     main {
         margin: 10px 5% 50px 5%;
     }
@@ -904,7 +902,7 @@ ul {
                 display: none;
                 position: fixed;
                 left: calc(50% - 190px);
-                top: 140px;
+                top: 70px;
                 width: 120px;
                 text-align: center;
                 border: 1px solid $dark;
@@ -954,9 +952,6 @@ ul {
     }
 }
 @media screen and (max-width: 560px) {
-    body {
-        min-height: 880px;
-    }
     main {
         margin: 10px 1% 48px 1%;
     }

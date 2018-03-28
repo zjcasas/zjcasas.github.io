@@ -29,7 +29,8 @@ header {
   height: 250px;
   position: sticky;
   top: -200px;
-  z-index: 2; }
+  z-index: 2;
+  box-shadow: 0 0 5px #852617; }
   header h1 {
     text-transform: uppercase;
     letter-spacing: 10px;
@@ -687,9 +688,6 @@ ul li {
   .races .racesGrid {
     width: 100%; } }
 @media screen and (max-width: 800px) {
-  body {
-    min-height: 1100px; }
-
   main {
     margin: 10px 5% 50px 5%; }
 
@@ -706,7 +704,7 @@ ul li {
       display: none;
       position: fixed;
       left: calc(50% - 190px);
-      top: 140px;
+      top: 70px;
       width: 120px;
       text-align: center;
       border: 1px solid #323232;
@@ -741,9 +739,6 @@ ul li {
   .levelFeatures h5, .levelFeatures p {
     padding: 3px 0 2px 0; } }
 @media screen and (max-width: 560px) {
-  body {
-    min-height: 880px; }
-
   main {
     margin: 10px 1% 48px 1%; }
 

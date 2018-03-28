@@ -161,20 +161,6 @@ $(window).ready(function(){
 		$('h4').find('span').addClass('turn');
 	});
 
-	// The next large section of code (the rest of the document as of 2/18/18)
-	// here deals with the filter that I created for the Spells page. I am not
-	// sure it is the best way to do it. For each of the 3 filters, I gave each
-	// spell an empty span. When a filter was selected, it would add text to
-	// that span indicating which filter was set. When a filter was deselected,
-	// it would remove that text from the span. If all 3 spans for a spell are
-	// empty, then the spell is shown. If any of them have any text, the spell
-	// is hidden. I did this because my original filters were overwriting each
-	// other. I'd select the desired Class filter, but when I clicked the
-	// desired School filter, it would show all of the spells from that school,
-	// and not the spells from that school that my desired Class could perform.
-	// This way, there is a tag on each spell that keeps track of what is
-	// filtering it.
-
 	// this click function displays the filter options for each filter
 	$('.filter').on('click', function() {
 		var shown = $(this).find('.filterlist').css('display');
