@@ -1,0 +1,128 @@
+$hovercolor: gray;
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Calibri;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+nav {
+    position: sticky;
+    background-color: rgba(255, 255, 255, .9);
+    top: 0;
+    padding: 15px 0 15px 0;
+    a {
+        text-decoration: none;
+        font-size: 20px;
+        text-transform: uppercase;
+        margin: 0 40px;
+        color: black;
+    }
+}
+header {
+    background: url('../images/home/home.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: 50% 10%;
+    height: 150px;
+    padding-top: 550px;
+    h1 {
+        color: white;
+        font-size: 80px;
+    }
+}
+main {
+    section {
+        margin: 20px 0;
+        padding: 80px 0;
+        font-size: 16px;
+        h2 {
+            font-size: 35px;
+        }
+        div {
+            margin: 25px 0 0 12.5%;
+            width: 75%;
+            a {
+                color: $hovercolor;
+                text-decoration: none;
+            }
+            a:hover {
+                color: black;
+            }
+            img {
+                margin: 0;
+                height: 200px;
+                border: 2px solid;
+                border-radius: 15px;
+            }
+        }
+        #membersGrid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 20px;
+            div {
+                margin: 0;
+                width: 100%;
+            }
+        }
+        #repertoireGrid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 20px;
+            background-color: lightgray;
+            padding: 15px;
+            border-radius: 15px;
+            div {
+                margin: 0;
+                width: 100%;
+            }
+            :nth-child(-n+4) {
+                font-weight: bold;
+                font-size: 20px;
+            }
+
+        }
+    }
+    #About {
+        background-color: lightblue;
+    }
+    #Repertoire {
+        background-color: lightblue;
+    }
+}
+
+
+footer {
+    background-color: white;
+    height: 60px;
+    font-size: 30px;
+    padding: 20px;
+    a {
+        color: black;
+        text-decoration: none;
+        margin: 0 20px;
+    }
+}
+a:hover {
+    color: $hovercolor;
+}
+
+::-webkit-scrollbar {
+    width: 22px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(50, 50, 50, .3);
+    border: 5px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(50, 50, 50, .5);
+}

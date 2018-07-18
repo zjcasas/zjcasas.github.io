@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Calibri; }
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  text-align: center; }
+
+nav {
+  position: sticky;
+  background-color: rgba(255, 255, 255, 0.9);
+  top: 0;
+  padding: 15px 0 15px 0; }
+  nav a {
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 0 40px;
+    color: black; }
+
+header {
+  background: url("../images/home/home.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: 50% 10%;
+  height: 150px;
+  padding-top: 550px; }
+  header h1 {
+    color: white;
+    font-size: 80px; }
+
+main section {
+  margin: 20px 0;
+  padding: 80px 0;
+  font-size: 16px; }
+  main section h2 {
+    font-size: 35px; }
+  main section div {
+    margin: 25px 0 0 12.5%;
+    width: 75%; }
+    main section div a {
+      color: gray;
+      text-decoration: none; }
+    main section div a:hover {
+      color: black; }
+    main section div img {
+      margin: 0;
+      height: 200px;
+      border: 2px solid;
+      border-radius: 15px; }
+  main section #membersGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px; }
+    main section #membersGrid div {
+      margin: 0;
+      width: 100%; }
+  main section #repertoireGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    background-color: lightgray;
+    padding: 15px;
+    border-radius: 15px; }
+    main section #repertoireGrid div {
+      margin: 0;
+      width: 100%; }
+    main section #repertoireGrid :nth-child(-n+4) {
+      font-weight: bold;
+      font-size: 20px; }
+main #About {
+  background-color: lightblue; }
+main #Repertoire {
+  background-color: lightblue; }
+
+footer {
+  background-color: white;
+  height: 60px;
+  font-size: 30px;
+  padding: 20px; }
+  footer a {
+    color: black;
+    text-decoration: none;
+    margin: 0 20px; }
+
+a:hover {
+  color: gray; }
+
+::-webkit-scrollbar {
+  width: 22px; }
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(50, 50, 50, 0.3);
+  border: 5px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 15px; }
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(50, 50, 50, 0.5); }
+
+/*# sourceMappingURL=styles.css.map */
