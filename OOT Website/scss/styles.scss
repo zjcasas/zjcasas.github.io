@@ -1,15 +1,14 @@
-$hovercolor: gray;
-
 * {
     padding: 0;
     margin: 0;
-    font-family: Calibri;
+    z-index: 0;
 }
 
 body {
     width: 100vw;
     overflow-x: hidden;
     text-align: center;
+    font-family: Open Sans;
 }
 
 nav {
@@ -17,12 +16,35 @@ nav {
     background-color: rgba(255, 255, 255, .9);
     top: 0;
     padding: 15px 0 15px 0;
-    a {
-        text-decoration: none;
-        font-size: 20px;
-        text-transform: uppercase;
-        margin: 0 40px;
-        color: black;
+    z-index: 1;
+    div {
+        a {
+            text-decoration: none;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin: 0 40px;
+            color: black;
+            display: inline;
+        }
+        a:nth-child(1) {
+            color: red;
+        }
+        a:nth-child(2) {
+            color: orange;
+        }
+        a:nth-child(3) {
+            color: blue;
+        }
+        a:nth-child(4) {
+            color: purple;
+        }
+        a:hover {
+            color: black;
+        }
+    }
+    span {
+        display: none;
+        height: 30px;
     }
 }
 header {
@@ -35,7 +57,9 @@ header {
     padding-top: 550px;
     h1 {
         color: white;
-        font-size: 80px;
+        font-size: 100px;
+        font-family: Chela One;
+        font-weight: 200;
     }
 }
 main {
@@ -45,28 +69,24 @@ main {
         font-size: 16px;
         h2 {
             font-size: 35px;
+            font-family: Montserrat;
         }
         div {
-            margin: 25px 0 0 12.5%;
-            width: 75%;
+            margin: 25px auto 0 auto;
+            width: 60%;
             a {
-                color: $hovercolor;
                 text-decoration: none;
-            }
-            a:hover {
-                color: black;
-            }
-            img {
-                margin: 0;
-                height: 200px;
-                border: 2px solid;
-                border-radius: 15px;
             }
         }
         #membersGrid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-gap: 20px;
+            img {
+                max-width: 95%;
+                border: 2px solid;
+                border-radius: 15px;
+            }
             div {
                 margin: 0;
                 width: 100%;
@@ -75,26 +95,54 @@ main {
         #repertoireGrid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-gap: 20px;
-            background-color: lightgray;
-            padding: 15px;
-            border-radius: 15px;
-            div {
-                margin: 0;
-                width: 100%;
+            background-color: rgba( 255, 255, 255, .7);
+            padding: 15px 15px;
+            border-radius: 10px;
+            span {
+                padding: 10px;
             }
             :nth-child(-n+4) {
+                margin: 0;
                 font-weight: bold;
-                font-size: 20px;
+                font-size: 18px;
             }
-
+            :nth-child(-8n+101), :nth-child(-8n+102), :nth-child(-8n+103), :nth-child(-8n+104) {
+                background-color: rgba(230, 230, 230, .8);
+            }
+            :nth-child(-4n+100) {
+                border-radius: 0 5px 5px 0;
+            }
+            :nth-child(-4n+101) {
+                 border-radius: 5px 0 0 5px;
+                 border-right: 1px solid black;
+            }
+            :nth-child(-4n+99) {
+                border-right: 1px solid black;
+                border-left: 1px solid black;
+            }
+        }
+    }
+    #Events {
+        h2 {
+            color: red;
         }
     }
     #About {
         background-color: lightblue;
+        h2 {
+            color: orange;
+        }
+    }
+    #Members {
+        h2 {
+            color: blue;
+        }
     }
     #Repertoire {
         background-color: lightblue;
+        h2{
+            color: purple;
+        }
     }
 }
 
@@ -109,9 +157,12 @@ footer {
         text-decoration: none;
         margin: 0 20px;
     }
-}
-a:hover {
-    color: $hovercolor;
+    #fb:hover {
+        color: rgb(66,103,178);
+    }
+    #yt:hover {
+        color: rgb(255,0,0);
+    }
 }
 
 ::-webkit-scrollbar {
@@ -125,4 +176,93 @@ a:hover {
 }
 ::-webkit-scrollbar-thumb:hover {
     background-color: rgba(50, 50, 50, .5);
+}
+
+@media only screen and (max-width: 1200px) {
+    header {
+        padding-top: 250px;
+    }
+    main {
+        section {
+            div {
+                width: 80%;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 800px) {
+    nav {
+        position: static;
+        height: 27px;
+        div {
+            display: none;
+            grid-template-columns: 1fr;
+            position: absolute;
+            top: 57px;
+            left: 10%;
+            background-color: white;
+            width: 80%;
+            padding: 12px 0px;
+            border: 2px solid lightblue;
+            border-radius: 10px;
+            a {
+                margin: 12px 40px;
+            }
+        }
+        span {
+            display: inline;
+            position: absolute;
+            top: 7px;
+            right: 25px;
+            font-size: 30px;
+            color: black;
+        }
+        #hamburger {
+            z-index: 2;
+            position: absolute;
+            top: 16px;
+            right: 25px;
+            display: block;
+            width: 26.5px;
+            height: 23.5px;
+        }
+        #hamburger:hover {
+            cursor: pointer;
+        }
+    }
+    header {
+        padding-top: 150px;
+        h1 {
+            font-size: 70px;
+        }
+    }
+    main {
+        section {
+            div {
+                width: 90%;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 500px) {
+    main {
+        section {
+            #repertoireGrid {
+                grid-template-columns: 1fr 1fr;
+                :nth-child(4n+3) {
+                    display: none;
+                }
+                :nth-child(4n+4) {
+                    display: none;
+                }
+                :nth-child(-4n+102) {
+                    border-radius: 0 5px 5px 0;
+                }
+                :nth-child(-4n+101) {
+                     border-radius: 5px 0 0 5px;
+                     border-right: 1px solid black;
+                }
+            }
+        }
+    }
 }

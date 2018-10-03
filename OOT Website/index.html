@@ -3,7 +3,8 @@
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="scripts/scripts.js"></script>
-	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" data-auto-replace-svg="nest"></script>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Chela+One" rel="stylesheet">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -13,10 +14,21 @@
 </head>
 <body>
 	<nav>
-		<a href="#News">News</a>
-		<a href="#About">About</a>
-		<a href="#Members">Members</a>
-		<a href="#Repertoire">Repertoire</a>
+		<div>
+			<a href="#Events">Events</a>
+			<a href="#About">About</a>
+			<a href="#Members">Members</a>
+			<a href="#Repertoire">Repertoire</a>
+		</div>
+		<span id="hamburger">
+			<!--This span is because will be inivisible but on top of the
+			following span. So now, the mouseover for the hamburger color change
+			will be based on hovering over this span-->
+		</span>
+		<span>
+			<i class="fas fa-bars"></i>
+		</span>
+
 	</nav>
 	<header>
 		<h1>
@@ -25,12 +37,12 @@
 	</header>
 
 	<main>
-		<section id="News">
+		<section id="Events">
 			<h2>
-				News
+				Events
 			</h2>
 			<div>
-				The Out of Toons are excited to announce that we will be holding our first solo concert at the Center for the Arts at the Armory in Sommerville on September 30th, 2018. For more information, check out the Armory's
+				The Out of Toons are excited to announce that we will be holding our first solo concert at the Center for the Arts at the Armory in Somerville on September 30th, 2018. For more information, check out the Armory's
 				<a href="http://artsatthearmory.org/events/out-of-toons-acappella/" target="blank">
 				event page</a>!
 			</div>
@@ -40,16 +52,12 @@
 				About
 			</h2>
 			<div>
-				When we were in college, we were all members of an a cappella group called The MIT/Wellesley Toons. After graduating, we all missed singing so much that
+				When we were in college, we were all members of an a cappella group called <a href="http://web.mit.edu/toons" target="blank">
+				The MIT/Wellesley Toons</a>. After graduating, we all missed singing so much that
 				we decided to start an alum group called the Out of Toons in September 2014. We are born out of a pure love for singing together in harmony. None of us
 				are professional musicians; as a matter of fact, our professions could not be more different. Our members consist of engineers, computer programmers,
 				and arts professionals, but we are united under our passion for music, performance, and colorful bow ties. We arrange our own songs and have fun
 				supporting each other’s experimentation in musical arrangements. We are eager to share our love of acappella music with the Boston area!
-			</div>
-			<div>
-				For more information on The MIT/Wellesley Toons, check them out
-				<a href="http://web.mit.edu/toons" target="blank">
-				here</a>!
 			</div>
 		</section>
 		<section id="Members">
@@ -188,7 +196,7 @@
 					Ian Osborn
 				</span>
 				<span>
-					Sruthi Naryanan
+					Sruthi Narayanan
 				</span>
 				<span>
 					The Hymn of Acxiom
@@ -197,7 +205,7 @@
 					Vienna Teng
 				</span>
 				<span>
-					Dana Greton
+					Dana Gretton
 				</span>
 				<span>
 
@@ -206,10 +214,9 @@
 					It-Splay Out The Back Way
 				</span>
 				<span>
-
+					Dana Gretton and Ariella Prosch Newman
 				</span>
 				<span>
-					Dana Gretton and Ariella Prosch Newman
 				</span>
 				<span>
 					Dana Gretton and Vannessa Greenleaf
@@ -245,7 +252,7 @@
 					Kishi Bashi
 				</span>
 				<span>
-					Sruthi Naryanan
+					Sruthi Narayanan
 				</span>
 				<span>
 					Dana Gretton
@@ -326,11 +333,11 @@
 		</section>
 	</main>
 	<footer>
-		<div id="contact">
-			<a href="https://www.facebook.com/outoftoons" target="blank">
+		<div>
+			<a href="https://www.facebook.com/outoftoons" target="blank" id="fb">
 				<i class="fab fa-facebook-square"></i>
 			</a>
-			<a href="https://www.youtube.com/toonsalums" target="blank">
+			<a href="https://www.youtube.com/toonsalums" target="blank" id="yt">
 				<i class="fab fa-youtube-square"></i>
 			</a>
 		</div>

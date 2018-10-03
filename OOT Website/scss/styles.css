@@ -1,7 +1,6 @@
 * {
   padding: 0;
-  margin: 0;
-  z-index: 0; }
+  margin: 0; }
 
 body {
   width: 100vw;
@@ -13,28 +12,23 @@ nav {
   position: sticky;
   background-color: rgba(255, 255, 255, 0.9);
   top: 0;
-  padding: 15px 0 15px 0;
-  z-index: 1; }
-  nav div a {
+  padding: 15px 0 15px 0; }
+  nav a {
     text-decoration: none;
     font-size: 20px;
     text-transform: uppercase;
     margin: 0 40px;
-    color: black;
-    display: inline; }
-  nav div a:nth-child(1) {
-    color: red; }
-  nav div a:nth-child(2) {
-    color: orange; }
-  nav div a:nth-child(3) {
-    color: blue; }
-  nav div a:nth-child(4) {
-    color: purple; }
-  nav div a:hover {
     color: black; }
-  nav span {
-    display: none;
-    height: 30px; }
+  nav :nth-child(1) {
+    color: red; }
+  nav :nth-child(2) {
+    color: orange; }
+  nav :nth-child(3) {
+    color: blue; }
+  nav :nth-child(4) {
+    color: purple; }
+  nav a:hover {
+    color: black; }
 
 header {
   background: url("../images/home/home.png");
@@ -61,13 +55,18 @@ main section {
     margin: 25px auto 0 auto;
     width: 60%; }
     main section div a {
+      color: gray;
       text-decoration: none; }
+    main section div a:hover {
+      color: black; }
   main section #membersGrid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px; }
     main section #membersGrid img {
-      max-width: 95%;
+      margin: 0;
+      height: auto;
+      max-width: 100%;
       border: 2px solid;
       border-radius: 15px; }
     main section #membersGrid div {
@@ -133,66 +132,5 @@ footer {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgba(50, 50, 50, 0.5); }
-
-@media only screen and (max-width: 1200px) {
-  header {
-    padding-top: 250px; }
-
-  main section div {
-    width: 80%; } }
-@media only screen and (max-width: 800px) {
-  nav {
-    position: static;
-    height: 27px; }
-    nav div {
-      display: none;
-      grid-template-columns: 1fr;
-      position: absolute;
-      top: 57px;
-      left: 10%;
-      background-color: white;
-      width: 80%;
-      padding: 12px 0px;
-      border: 2px solid lightblue;
-      border-radius: 10px; }
-      nav div a {
-        margin: 12px 40px; }
-    nav span {
-      display: inline;
-      position: absolute;
-      top: 7px;
-      right: 25px;
-      font-size: 30px;
-      color: black; }
-    nav #hamburger {
-      z-index: 2;
-      position: absolute;
-      top: 16px;
-      right: 25px;
-      display: block;
-      width: 26.5px;
-      height: 23.5px; }
-    nav #hamburger:hover {
-      cursor: pointer; }
-
-  header {
-    padding-top: 150px; }
-    header h1 {
-      font-size: 70px; }
-
-  main section div {
-    width: 90%; } }
-@media only screen and (max-width: 500px) {
-  main section #repertoireGrid {
-    grid-template-columns: 1fr 1fr; }
-    main section #repertoireGrid :nth-child(4n+3) {
-      display: none; }
-    main section #repertoireGrid :nth-child(4n+4) {
-      display: none; }
-    main section #repertoireGrid :nth-child(-4n+102) {
-      border-radius: 0 5px 5px 0; }
-    main section #repertoireGrid :nth-child(-4n+101) {
-      border-radius: 5px 0 0 5px;
-      border-right: 1px solid black; } }
 
 /*# sourceMappingURL=styles.css.map */
