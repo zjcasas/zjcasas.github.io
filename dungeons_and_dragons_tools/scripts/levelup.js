@@ -83,7 +83,6 @@ $(window).ready(function(){
             $('#level19').show();
         }
         else if (shown.indexOf('20') >= 0) {
-            alert('wtf');
             $(this).parent().siblings().text('Level 20');
             $(this).parent().siblings().addClass('selected');
             $(this).siblings().removeClass('selected');

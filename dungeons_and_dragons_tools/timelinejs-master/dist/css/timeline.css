@@ -93,7 +93,7 @@ https://github.com/ilkeryilmaz/timeline
 }
 .timeline-dots li.slide-active button {
     color: rgb(133, 38, 23);
-    font-size: 35px;
+    font-size: 19px;
     height: 51px;
 }
 .timeline-dots button {
@@ -101,7 +101,7 @@ https://github.com/ilkeryilmaz/timeline
     border: none;
     outline: none;
     color: #333;
-    font-size: 25px;
+    font-size: 15px;
     height: 40px;
     transition: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }

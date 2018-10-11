@@ -2,9 +2,13 @@ header h1, h2 {
   font-family: 'Eagle Lake', sans-serif;
   font-weight: 600; }
 
-body, #dicecalc input, #dicecalc select, #dicecalc button, #expandcollapse button {
-  font-family: "Tangerine", sans-serif;
+nav a, h3, h4, h5, h6, .homebox, #dicecalc input, #dicecalc select, #dicecalc button, #dicecalc #rolls, #dicecalc #rollTotal, .races .racesGrid a, .classes .classesGrid a, .filter, #filterHead, .filter .filterlist div, .filter .levelfilterlist div, #filterHead .filterlist div, #filterHead .levelfilterlist div, #expandcollapse button, .levelup .levelupGrid a {
+  font-family: 'Tangerine', sans-serif;
   font-weight: 600; }
+
+body, .homebox p, .levels .filter, .levels .filter .filterlist div {
+  font-family: "K2D", sans-serif;
+  font-weight: 400; }
 
 * {
   padding: 0;
@@ -13,7 +17,7 @@ body, #dicecalc input, #dicecalc select, #dicecalc button, #expandcollapse butto
 body {
   text-align: center;
   background: url("../images/parchment.jpg");
-  font-size: 25px;
+  font-size: 15px;
   color: #323232;
   width: 100vw;
   min-height: 1110px;
@@ -86,6 +90,9 @@ h4 {
     display: inline-block;
     transition: all 300ms ease-in-out; }
 
+h4:hover {
+  color: #852617; }
+
 h5 {
   text-align: left;
   font-size: 30px;
@@ -104,7 +111,7 @@ div {
   margin: 10px 0; }
 
 p {
-  font-size: 25px;
+  font-size: 15px;
   text-align: left;
   color: #555555;
   text-indent: 40px; }
@@ -402,6 +409,8 @@ ul li {
     margin: 10px 0 0 60px; }
   .details .classspecific h5 {
     cursor: pointer; }
+  .details .classspecific h5:hover {
+    color: #852617; }
 
 .hanging p {
   text-indent: -40px;
@@ -518,6 +527,8 @@ ul li {
       height: 12px;
       width: 12px;
       margin: 0 0 0 5px; }
+  .filter span:hover, #filterHead span:hover {
+    color: #852617; }
 
 #expandcollapse {
   float: right;
@@ -632,7 +643,7 @@ ul li {
 .levels #filters {
   display: inline; }
 .levels div {
-  font-size: 30px; }
+  font-size: 22px; }
 .levels span {
   margin: 0 auto; }
 .levels a {
@@ -654,7 +665,8 @@ ul li {
   height: 100%;
   margin: 0; }
 .levels .filter {
-  margin: 0; }
+  margin: 0;
+  font-size: 22px; }
   .levels .filter div {
     margin: 10px 0 0 0; }
   .levels .filter .filterlist {
@@ -666,6 +678,7 @@ ul li {
     top: 142px;
     padding: 10px; }
     .levels .filter .filterlist div {
+      font-size: 22px;
       padding: 5px 0 0 0;
       margin: 0;
       cursor: pointer; }
