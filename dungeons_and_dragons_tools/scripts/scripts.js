@@ -120,7 +120,6 @@ $(window).ready(function(){
 		var shown = $(this).next('section').css('display');
 		if (shown === "none") {
 			$(this).next('section').slideDown();
-			$(this).next('.levelFeatures').css('display', 'grid');
 			$(this).find('span').addClass('turn');
 		}
 		else {
@@ -128,7 +127,7 @@ $(window).ready(function(){
 			$(this).find('span').removeClass('turn');
 		}
 	});
-	$('.feats h4').on('click', function() {
+	$('.feats').on('click',' h4', function() {
 		var shown = $(this).next('section').css('display');
 		if (shown === "none") {
 			$(this).next('section').slideDown();
