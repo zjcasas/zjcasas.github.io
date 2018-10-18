@@ -194,7 +194,7 @@ ul {
         @extend %bodyfont;
     }
 }
-#dicecalc {
+#diceroll {
     input {
         color: $dark;
         font-size: 30px;
@@ -305,7 +305,7 @@ ul {
         span {
             position: relative;
             height: 206px;
-            font-size: 30px;
+            font-size: 35px;
             cursor: pointer;
         }
         a {
@@ -325,7 +325,7 @@ ul {
         }
         a:hover {
             background: rgba(20, 20, 20, .7);
-            font-size: 35px;
+            font-size: 40px;
         }
         #dwarfRace {
             background: url("../images/dwarf.png");
@@ -383,7 +383,7 @@ ul {
         span {
             position: relative;
             height: 308px;
-            font-size: 30px;
+            font-size: 35px;
             cursor: pointer;
         }
         a {
@@ -403,7 +403,7 @@ ul {
         }
         a:hover {
             background: rgba(20, 20, 20, .7);
-            font-size: 35px;
+            font-size: 40px;
         }
         #barbarianClass {
             background: url("../images/barbarian.png");
@@ -629,6 +629,9 @@ ul {
                     margin-left: 80px;
                 }
             }
+            .capitalize {
+                text-transform: capitalize;
+            }
         }
     }
 }
@@ -829,16 +832,8 @@ ul {
 }
 
 .levels {
-    #forMoreInfo {
-        display: block;
-        text-align: center;
-        margin-bottom: 20px;
-    }
     #filters {
         display: inline;
-    }
-    div {
-        font-size: 22px;
     }
     span {
         margin: 0 auto;
@@ -860,6 +855,9 @@ ul {
     button {
         padding: 0;
     }
+    .timeline-container {
+        font-size: 18px;
+    }
     .timelineflex {
         display: flex;
         align-items: center;
@@ -874,6 +872,10 @@ ul {
         div {
             margin: 10px 0 0 0;
         }
+        span {
+            font-size: 30px;
+            @extend %headfont;
+        }
         .filterlist {
             display: none;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -883,8 +885,8 @@ ul {
             top: 142px;
             padding: 10px;
             div {
-                @extend %bodyfont;
-                font-size: 22px;
+                @extend %headfont;
+                font-size: 30px;
                 padding: 5px 0 0 0;
                 margin: 0;
                 cursor: pointer;
@@ -934,14 +936,15 @@ ul {
             }
             .links {
                 display: none;
+                grid-template-columns: 1fr;
                 position: fixed;
-                left: calc(50% - 190px);
+                left: calc(10% - 10px);
                 top: 70px;
-                width: 120px;
+                width: 80%;
                 text-align: center;
                 border: 1px solid $dark;
                 border-radius: 10px;
-                padding: 20px 140px 20px 140px;
+                padding: 20px;
                 box-shadow: 0 0 5px $shadowcolor;
                 background-color: rgba(255, 255, 255, .95);
                 a {

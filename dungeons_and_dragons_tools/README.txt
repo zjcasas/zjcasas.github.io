@@ -1,19 +1,20 @@
 To Do
 General:
-    May want to improve readability with a new font
+    May want to improve readability with a new font DONE
     the website on mobile isn't quite how I'd like it. I'll have to fix it in the future.
+Home Page:
+    redesign?
 Race Pages:
-    Add content to other pages. (Currently only Dwarf is populated)
+    Double check Race content (Drow, Dragonborn)
 Class Pages:
     Add content to other pages. (Currently only Barbarian is populated)
 Spells Page:
     Add rest of spells.
-    turn into array and use string interpolation
 Feats Page:
     Add content (this will look like the Spells page, but with no filter)
-    turn into array and use string interpolation
 Level Up Pages:
-    Add content (this may take some time.)
+    Add content (Currently only Barbarian is populated)
+    redesign?
 Stretch Goal:
     If time permits, add a system to save character information on this website.
     This will require some backend knowledge.

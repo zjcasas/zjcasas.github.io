@@ -61,16 +61,16 @@ $(window).ready(function(){
                                     ${feats3[i].p1}
                                     <ul>
             							<li>
-                                        ${feats3[i].bullet1}
+                                        ${feats3[i].ul1}
                                         </li>
             							<li>
-                                        ${feats3[i].bullet2}
+                                        ${feats3[i].ul2}
                                         </li>
             							<li>
-                                        ${feats3[i].bullet3}
+                                        ${feats3[i].ul3}
                                         </li>
                                         <li>
-                                        ${feats3[i].bullet4}
+                                        ${feats3[i].ul4}
                                         </li>
             						</ul>
                                 </p>

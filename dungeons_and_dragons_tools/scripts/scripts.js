@@ -87,7 +87,7 @@ $(window).ready(function(){
 			$('.links').css('display', 'none');
 		}
 		else {
-			$('.links').css('display', 'block');
+			$('.links').css('display', 'grid');
 		}
 	});
 
@@ -131,7 +131,6 @@ $(window).ready(function(){
 		var shown = $(this).next('section').css('display');
 		if (shown === "none") {
 			$(this).next('section').slideDown();
-			$(this).next('.levelFeatures').css('display', 'grid');
 			$(this).find('span').addClass('turn');
 		}
 		else {

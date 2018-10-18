@@ -1,4 +1,141 @@
 $(window).ready(function(){
+    //attempting to use ajax to pull info from csv
+    //it worked, but it isn't perfect so I'll have to come back to it
+    var spells;
+    var spells2 = [];
+    var spells3 = [];
+    $.ajax({
+        url:"spells.csv",
+        dataType: 'text',
+        success:function(data) {
+            spells = data.split(/\r?\n|\r/);
+            console.log("success");
+            parseData();
+            displayData();
+        },
+        fail: function(error) {
+            console.log("error");
+            console.log(error);
+        }
+    });
+
+    function parseData() {
+        for (var i = 0; i < spells.length; i++) {
+            spells2.push(spells[i].split(","));
+
+        }
+        for (var i = 1; i < (spells2.length - 1); i++) {
+            for (var j = 0; j <spells2[i].length; j++){
+                if (j === 0) {
+                    spells3[(i-1)] = '{ "' + spells2[0][0] + '":';
+                    spells3[(i-1)] = spells3[(i-1)] + '"' + spells2[i][0] + '", ';
+                }
+                else if (j === (spells2[i].length -1)) {
+                    spells3[(i-1)] = spells3[(i-1)] + '"' + spells2[0][j] + '":';
+                    spells3[(i-1)] = spells3[(i-1)] + '"' + spells2[i][j] + '"}';
+                }
+                else {
+                    spells3[(i-1)] = spells3[(i-1)] + '"' + spells2[0][j] + '":';
+                    spells3[(i-1)] = spells3[(i-1)] + '"' + spells2[i][j] + '", ';
+                }
+
+            }
+        }
+        for (var i = 0; i < spells3.length; i++) {
+            spells3[i] = JSON.parse(spells3[i]);
+        }
+    }
+
+    function displayData() {
+        for (var i = 0; i < spells3.length; i++) {
+            var html1 = `<div class="${spells3[i].classes} ${spells3[i].level} ${spells3[i].school}">
+                        <span class="classhidevar"></span>
+                        <span class="levelhidevar"></span>
+                        <span class="schoolhidevar"></span>
+                        <h4>
+                            <span class="turn">
+                                <i class="fas fa-angle-down"></i>
+                            </span>
+                            ${spells3[i].name}
+                        </h4>`
+            spells3[i].classes = spells3[i].classes.split(" ").join("&#44; ");
+            var html2 = `<section>
+                            <span>
+                                <p class="capitalize">
+                                    <span>${spells3[i].level} Level ${spells3[i].school}</span>
+                                </p>
+                                <p class="capitalize">
+                                    <span>${spells3[i].school} ${spells3[i].cantrip}</span>
+                                </p>
+                                <p class="capitalize">
+                                    <span>Classes</span> &mdash; ${spells3[i].classes}
+                                </p>
+                                <p>
+                                    <span>Casting Time</span> &mdash; ${spells3[i].time}
+                                </p>
+                                <p>
+                                    <span>Range</span> &mdash; ${spells3[i].range}
+                                </p>
+                                <p>
+                                    <span>Components</span> &mdash; ${spells3[i].components}
+                                </p>
+                                <p>
+                                    <span>Duration</span> &mdash; ${spells3[i].duration}
+                                </p>
+                            </span>
+                            <p>
+                                ${spells3[i].p1}
+                            </p>
+                            <p>
+                                ${spells3[i].p2}
+                            </p>
+                            <p>
+                                ${spells3[i].p3}
+                            </p>
+                            <p>
+                                ${spells3[i].p4}
+                            </p>
+                            <ul>
+                                <li>
+                                ${spells3[i].ul1}
+                                </li>
+                                <li>
+                                ${spells3[i].ul2}
+                                </li>
+                                <li>
+                                ${spells3[i].ul3}
+                                </li>
+                                <li>
+                                ${spells3[i].ul4}
+                                </li>
+                                <li>
+                                ${spells3[i].ul5}
+                                </li>
+                            </ul>
+                            <p>
+                                ${spells3[i].p5}
+                            </p>
+                            <p>
+                                ${spells3[i].p6}
+                            </p>
+                            <p>
+                                ${spells3[i].p7}
+                            </p>
+                            <p>
+                                ${spells3[i].p8}
+                            </p>
+                            <p>
+                                ${spells3[i].p9}
+                            </p>
+                        </section>
+                    </div>`
+            var html = html1 + html2;
+            $('.spells').append(html);
+        }
+        $('li:not(:contains("-"))').hide();
+        $('p:contains("cantrip")').hide();
+    }
+
     // The next large section of code (the rest of the document as of 2/18/18)
 	// here deals with the filter that I created for the Spells page. I am not
 	// sure it is the best way to do it. For each of the 3 filters, I gave each

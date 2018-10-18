@@ -2,11 +2,11 @@ header h1, h2 {
   font-family: 'Eagle Lake', sans-serif;
   font-weight: 600; }
 
-nav a, h3, h4, h5, h6, .homebox, #dicecalc input, #dicecalc select, #dicecalc button, #dicecalc #rolls, #dicecalc #rollTotal, .races .racesGrid a, .classes .classesGrid a, .filter, #filterHead, .filter .filterlist div, .filter .levelfilterlist div, #filterHead .filterlist div, #filterHead .levelfilterlist div, #expandcollapse button, .levelup .levelupGrid a {
+nav a, h3, h4, h5, h6, .homebox, #diceroll input, #diceroll select, #diceroll button, #diceroll #rolls, #diceroll #rollTotal, .races .racesGrid a, .classes .classesGrid a, .filter, #filterHead, .filter .filterlist div, .filter .levelfilterlist div, #filterHead .filterlist div, #filterHead .levelfilterlist div, #expandcollapse button, .levelup .levelupGrid a, .levels .filter span, .levels .filter .filterlist div {
   font-family: 'Tangerine', sans-serif;
   font-weight: 600; }
 
-body, .homebox p, .levels .filter, .levels .filter .filterlist div {
+body, .homebox p, .levels .filter {
   font-family: "K2D", sans-serif;
   font-weight: 400; }
 
@@ -156,7 +156,7 @@ ul li {
   .homebox p {
     padding: 0 20px; }
 
-#dicecalc input {
+#diceroll input {
   color: #323232;
   font-size: 30px;
   margin: 0 0 0 20px;
@@ -164,19 +164,19 @@ ul li {
   width: 140px;
   border: 1px solid #323232;
   height: 34px; }
-#dicecalc input[type='number'] {
+#diceroll input[type='number'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield; }
-#dicecalc input[type='number']::-webkit-inner-spin-button, #dicecalc input[type=number]::-webkit-outer-spin-button {
+#diceroll input[type='number']::-webkit-inner-spin-button, #diceroll input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none; }
-#dicecalc input[type='number'], #dicecalc input[type='text'] {
+#diceroll input[type='number'], #diceroll input[type='text'] {
   border-radius: 5px 0 0 5px; }
-#dicecalc .arrows {
+#diceroll .arrows {
   display: inline-block;
   margin: 0 0 -10px -4px;
   height: 34px; }
-#dicecalc #diceUp, #dicecalc #diceDown, #dicecalc #modUp, #dicecalc #modDown {
+#diceroll #diceUp, #diceroll #diceDown, #diceroll #modUp, #diceroll #modDown {
   margin: 0 0 0 -1px;
   background-color: white;
   height: 19.5px;
@@ -185,26 +185,26 @@ ul li {
   border-bottom: 1px solid #323232;
   border-top: 1px solid white;
   border-radius: 0 0 5px 0; }
-#dicecalc #diceUp, #dicecalc #modUp {
+#diceroll #diceUp, #diceroll #modUp {
   border-top: 1px solid #323232;
   border-bottom: 1px solid white;
   margin: -4px 0 -1px -1px;
   border-radius: 0 5px 0 0; }
-#dicecalc .upArrow {
+#diceroll .upArrow {
   margin: 6px auto;
   height: 0px;
   width: 0px;
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
   border-bottom: 6px solid #323232; }
-#dicecalc .downArrow {
+#diceroll .downArrow {
   margin: 4px auto;
   height: 0px;
   width: 0px;
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
   border-top: 6px solid #323232; }
-#dicecalc select {
+#diceroll select {
   color: #323232;
   font-size: 30px;
   padding: 3px 10px;
@@ -212,11 +212,11 @@ ul li {
   border: 1px solid #323232;
   border-radius: 5px;
   margin: 0 20px 0 15px; }
-#dicecalc input:focus, #dicecalc select:focus {
+#diceroll input:focus, #diceroll select:focus {
   outline: none;
   box-shadow: none;
   border: 1px solid #852617; }
-#dicecalc button {
+#diceroll button {
   color: #323232;
   font-size: 30px;
   padding: 10px 18px 6px 10px;
@@ -225,14 +225,14 @@ ul li {
   background: rgba(152, 167, 77, 0.4);
   border: 1px solid black;
   border-radius: 8px; }
-#dicecalc button:hover {
+#diceroll button:hover {
   color: white;
   background: rgba(133, 38, 23, 0.9); }
-#dicecalc button:active {
+#diceroll button:active {
   box-shadow: 0 0 5px #852617; }
-#dicecalc button:focus {
+#diceroll button:focus {
   outline: none; }
-#dicecalc #rolls, #dicecalc #rollTotal {
+#diceroll #rolls, #diceroll #rollTotal {
   margin: 10px 20px 0 20px; }
 
 .races .racesGrid {
@@ -243,7 +243,7 @@ ul li {
   .races .racesGrid span {
     position: relative;
     height: 206px;
-    font-size: 30px;
+    font-size: 35px;
     cursor: pointer; }
   .races .racesGrid a {
     color: white;
@@ -260,7 +260,7 @@ ul li {
     transition: all 150ms ease-in-out; }
   .races .racesGrid a:hover {
     background: rgba(20, 20, 20, 0.7);
-    font-size: 35px; }
+    font-size: 40px; }
   .races .racesGrid #dwarfRace {
     background: url("../images/dwarf.png");
     background-repeat: no-repeat;
@@ -305,7 +305,7 @@ ul li {
   .classes .classesGrid span {
     position: relative;
     height: 308px;
-    font-size: 30px;
+    font-size: 35px;
     cursor: pointer; }
   .classes .classesGrid a {
     color: white;
@@ -322,7 +322,7 @@ ul li {
     transition: all 150ms ease-in-out; }
   .classes .classesGrid a:hover {
     background: rgba(20, 20, 20, 0.7);
-    font-size: 35px; }
+    font-size: 40px; }
   .classes .classesGrid #barbarianClass {
     background: url("../images/barbarian.png");
     background-repeat: no-repeat;
@@ -485,6 +485,8 @@ ul li {
     margin: 5px 0 0 20px; }
   .spells div section ul li {
     margin-left: 80px; }
+  .spells div section .capitalize {
+    text-transform: capitalize; }
 
 #filters {
   display: grid;
@@ -636,14 +638,8 @@ ul li {
     background-repeat: no-repeat;
     background-position: 50% top; }
 
-.levels #forMoreInfo {
-  display: block;
-  text-align: center;
-  margin-bottom: 20px; }
 .levels #filters {
   display: inline; }
-.levels div {
-  font-size: 22px; }
 .levels span {
   margin: 0 auto; }
 .levels a {
@@ -658,6 +654,8 @@ ul li {
     margin: 0; }
 .levels button {
   padding: 0; }
+.levels .timeline-container {
+  font-size: 18px; }
 .levels .timelineflex {
   display: flex;
   align-items: center;
@@ -669,6 +667,8 @@ ul li {
   font-size: 22px; }
   .levels .filter div {
     margin: 10px 0 0 0; }
+  .levels .filter span {
+    font-size: 30px; }
   .levels .filter .filterlist {
     display: none;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -678,7 +678,7 @@ ul li {
     top: 142px;
     padding: 10px; }
     .levels .filter .filterlist div {
-      font-size: 22px;
+      font-size: 30px;
       padding: 5px 0 0 0;
       margin: 0;
       cursor: pointer; }
@@ -717,14 +717,15 @@ ul li {
       display: block; }
     header nav .links {
       display: none;
+      grid-template-columns: 1fr;
       position: fixed;
-      left: calc(50% - 190px);
+      left: calc(10% - 10px);
       top: 70px;
-      width: 120px;
+      width: 80%;
       text-align: center;
       border: 1px solid #323232;
       border-radius: 10px;
-      padding: 20px 140px 20px 140px;
+      padding: 20px;
       box-shadow: 0 0 5px #852617;
       background-color: rgba(255, 255, 255, 0.95); }
       header nav .links a {
