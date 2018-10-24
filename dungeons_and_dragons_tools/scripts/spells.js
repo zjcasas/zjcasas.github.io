@@ -613,83 +613,83 @@ $(window).ready(function(){
         }
 
         if ($('input#level1spells').is(':checked')) {
-            $('.level1 .levelhidevar').empty();
+            $('.1st .levelhidevar').empty();
             displayedLevels.push('1st');
         }
         else {
-            $('.level1 .levelhidevar').append('level1');
+            $('.1st .levelhidevar').append('1st');
             removeFromList('1st');
         }
 
         if ($('input#level2spells').is(':checked')) {
-            $('.level2 .levelhidevar').empty();
+            $('.2nd .levelhidevar').empty();
             displayedLevels.push('2nd');
         }
         else {
-            $('.level2 .levelhidevar').append('level2');
+            $('.2nd .levelhidevar').append('2nd');
             removeFromList('2nd');
         }
 
         if ($('input#level3spells').is(':checked')) {
-            $('.level3 .levelhidevar').empty();
+            $('.3rd .levelhidevar').empty();
             displayedLevels.push('3rd');
         }
         else {
-            $('.level3 .levelhidevar').append('level3');
+            $('.3rd .levelhidevar').append('3rd');
             removeFromList('3rd');
         }
 
         if ($('input#level4spells').is(':checked')) {
-            $('.level4 .levelhidevar').empty();
+            $('.4th .levelhidevar').empty();
             displayedLevels.push('4th');
         }
         else {
-            $('.level4 .levelhidevar').append('level4');
+            $('.4th .levelhidevar').append('4th');
             removeFromList('4th');
         }
 
         if ($('input#level5spells').is(':checked')) {
-            $('.level5 .levelhidevar').empty();
+            $('.5th .levelhidevar').empty();
             displayedLevels.push('5th');
         }
         else {
-            $('.level5 .levelhidevar').append('level5');
+            $('.5th .levelhidevar').append('5th');
             removeFromList('5th');
         }
 
         if ($('input#level6spells').is(':checked')) {
-            $('.level6 .levelhidevar').empty();
+            $('.6th .levelhidevar').empty();
             displayedLevels.push('6th');
         }
         else {
-            $('.level6 .levelhidevar').append('level6');
+            $('.6th .levelhidevar').append('6th');
             removeFromList('6th');
         }
 
         if ($('input#level7spells').is(':checked')) {
-            $('.level7 .levelhidevar').empty();
+            $('.7th .levelhidevar').empty();
             displayedLevels.push('7th');
         }
         else {
-            $('.level7 .levelhidevar').append('level7');
+            $('.7th .levelhidevar').append('7th');
             removeFromList('7th');
         }
 
         if ($('input#level8spells').is(':checked')) {
-            $('.level8 .levelhidevar').empty();
+            $('.8th .levelhidevar').empty();
             displayedLevels.push('8th');
         }
         else {
-            $('.level8 .levelhidevar').append('level8');
+            $('.8th .levelhidevar').append('8th');
             removeFromList('8th');
         }
 
         if ($('input#level9spells').is(':checked')) {
-            $('.level9 .levelhidevar').empty();
+            $('.9th .levelhidevar').empty();
             displayedLevels.push('9th');
         }
         else {
-            $('.level9 .levelhidevar').append('level9');
+            $('.9th .levelhidevar').append('9th');
             removeFromList('9th');
         }
         setLevelsFilterTitle();

@@ -521,8 +521,10 @@ ul {
             color: $shadowcolor;
         }
     }
+    .racespecific {
+        margin: 15px 0 0 40px;
+    }
 }
-
 
 .hanging {
     p {
@@ -557,16 +559,40 @@ ul {
     }
 }
 
+.raceFeatures {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 10px 0 0 40px;
+    border: 2px solid #323232;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #852617;
+    padding: 5px 5px 0 5px;
+    background-color: rgba(255, 255, 255, 0.4);
+    h5, p {
+        margin: 0;
+        min-height: 32px;
+        padding: 3px 6px 2px 6px;
+        text-indent: 0;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .oddrow {
+        background-color: rgba(152, 167, 77, 0.4);
+    }
+}
+
 .levelFeatures {
     display: grid;
-    grid-template-columns: minmax(65px, 1fr) 1fr 2fr minmax(53px, 1fr) 1fr;
     margin: 10px 0 0 0;
     border: 2px solid $dark;
     border-radius: 5px;
     box-shadow: 0 0 5px $shadowcolor;
     padding: 5px 5px 0 5px;
     background-color: rgba(255, 255, 255, .4);
-    h5, p {
+    h5, h6, p {
         margin: 0;
         min-height: 32px;
         padding: 3px 6px 2px 6px;
@@ -580,6 +606,38 @@ ul {
     .oddrow {
         background-color: $boxcoloropaque;
     }
+}
+
+#barbarianLevelFeatures {
+    grid-template-columns: minmax(65px, 1fr) 1fr 2fr minmax(53px, 1fr) 1fr;
+}
+
+#bardLevelFeatures {
+    grid-template-columns: minmax(65px, 1fr) 1fr 2fr;
+}
+
+#bardSpellLevelFeatures {
+    grid-template-columns: minmax(65px, 1fr) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#clericLevelFeatures {
+    grid-template-columns: minmax(65px, 1fr) 1fr 2fr;
+}
+#clericSpellLevelFeatures {
+    grid-template-columns: minmax(65px, 1fr) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+#clericDomainLevelFeatures {
+	grid-template-columns: minmax(65px, 1fr) 1fr;
+	margin: 10px 0 0 40px;
+}
+
+#druidLevelFeatures {
+	grid-template-columns: minmax(65px, 1fr) 1fr 1fr 1fr;
+	margin: 10px 0 0 40px;
+}
+#druidCircleLevelFeatures {
+	grid-template-columns: minmax(65px, 1fr) 1fr;
+	margin: 10px 0 0 40px;
 }
 
 .spellgrid {
@@ -938,13 +996,13 @@ ul {
                 display: none;
                 grid-template-columns: 1fr;
                 position: fixed;
-                left: calc(10% - 10px);
+                left: 10%;
                 top: 70px;
                 width: 80%;
                 text-align: center;
                 border: 1px solid $dark;
                 border-radius: 10px;
-                padding: 20px;
+                padding: 20px 0;
                 box-shadow: 0 0 5px $shadowcolor;
                 background-color: rgba(255, 255, 255, .95);
                 a {
@@ -982,8 +1040,8 @@ ul {
             }
         }
     }
-    .levelFeatures {
-        h5, p {
+    .raceFeatures, .levelFeatures {
+        h5, h6, p {
             padding: 3px 0 2px 0;
         }
     }
