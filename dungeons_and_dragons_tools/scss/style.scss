@@ -162,17 +162,18 @@ ul {
 .homegrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 10px 10% 50px 10%;
+    margin-top: 10px;
+    justify-items: center;
 }
 .homebox {
     display: inline-block;
     border: 1px solid $dark;
     border-radius: 10px;
-    padding: 0 0 20px 0;
     box-shadow: 0 0 5px $shadowcolor;
     background-color: rgba(255, 255, 255, .4);
     width: 500px;
     margin: 40px 0 0 0;
+    padding: 0px 0px 20px 0;
     @extend %headfont;
     h2 {
         font-size: 30px;
@@ -194,16 +195,18 @@ ul {
         @extend %bodyfont;
     }
 }
-#diceroll {
+#diceroll, #encounterXp, #monsterXp {
     input {
         color: $dark;
         font-size: 30px;
-        margin: 0 0 0 20px;
         padding: 3px 2px 3px 10px;
-        width: 140px;
+        width: 180px;
         border: 1px solid $dark;
         height: 34px;
         @extend %headfont;
+    }
+    input[name='numPlayers'], input[name='numMonsters'], input[name='partySize'] {
+        margin: 0 0 0 5px;
     }
     input[type='number'] {
         -webkit-appearance: textfield;
@@ -221,8 +224,8 @@ ul {
         margin: 0 0 -10px -4px;
         height: 34px;
     }
-    #diceUp, #diceDown, #modUp, #modDown {
-        margin: 0 0 0 -1px;
+    #diceUp, #diceDown, #modUp, #modDown, .playerUp, .playerDown, .playerLevelUp, .playerLevelDown, .monsterUp, .monsterDown, .crUp, .crDown, #partyUp, #partyDown {
+        margin: 0 10px 0 -1px;
         background-color: white;
         height: 19.5px;
         width: 20px;
@@ -231,7 +234,7 @@ ul {
         border-top: 1px solid white;
         border-radius: 0 0 5px 0;
     }
-    #diceUp, #modUp {
+    #diceUp, #modUp, .playerUp, .playerLevelUp, .monsterUp, .crUp, #partyUp {
         border-top: 1px solid $dark;
         border-bottom: 1px solid white;
         margin: -4px 0 -1px -1px;
@@ -260,14 +263,12 @@ ul {
         width: 150px;
         border: 1px solid $dark;
         border-radius: 5px;
-        margin: 0 20px 0 15px;
         @extend %headfont;
     }
     input:focus, select:focus {
         outline: none;
         box-shadow: none;
         border: 1px solid $shadowcolor;
-
     }
     button {
         color: $dark;
@@ -279,6 +280,9 @@ ul {
         border: 1px solid black;
         border-radius: 8px;
         @extend %headfont;
+    }
+    button[name='addLevel'], button[name='addMonster'] {
+        margin: 0 10px 0 0;
     }
     button:hover {
         color: white;
@@ -1055,6 +1059,20 @@ ul {
     }
     .homebox {
         width: 400px;
+    }
+    #encounterXp, #monsterXp {
+        input[name='numPlayers'], input[name='numMonsters'] {
+            margin: 0 0 10px 0px;
+        }
+        // button[name='addMonster'] {
+        //     margin: 0 ;
+        // }
+        input[name='partySize'] {
+            margin: 0 0 0 1px;
+        }
+        #partyUp, #partyDown {
+             margin-right: -4px;
+        }
     }
     .grid {
         grid-gap: 10px;

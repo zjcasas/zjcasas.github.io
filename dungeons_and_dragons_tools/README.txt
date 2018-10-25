@@ -3,17 +3,14 @@ General:
     the website on mobile isn't quite how I'd like it. I'll have to fix it in the future.
 	change nav links to show which page you're on
 	limit width so 4k displays don't look weird
-Home Page:
-    redesign?
 Class Pages:
     Add content to other pages. (Currently only Barbarian, Bard, Cleric, and Druid are populated)
 Spells Page:
     Add rest of spells.
 Feats Page:
-    Add content (this will look like the Spells page, but with no filter)
+    Add rest of feats
 Level Up Pages:
     Add content (Currently only Barbarian is populated)
-    redesign?
 Stretch Goal:
     If time permits, add a system to save character information on this website.
     This will require some backend knowledge.

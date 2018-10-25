@@ -2,7 +2,7 @@ header h1, h2 {
   font-family: 'Eagle Lake', sans-serif;
   font-weight: 600; }
 
-nav a, h3, h4, h5, h6, .homebox, #diceroll input, #diceroll select, #diceroll button, #diceroll #rolls, #diceroll #rollTotal, .races .racesGrid a, .classes .classesGrid a, .filter, #filterHead, .filter .filterlist div, .filter .levelfilterlist div, #filterHead .filterlist div, #filterHead .levelfilterlist div, #expandcollapse button, .levelup .levelupGrid a, .levels .filter span, .levels .filter .filterlist div {
+nav a, h3, h4, h5, h6, .homebox, #diceroll input, #encounterXp input, #monsterXp input, #diceroll select, #encounterXp select, #monsterXp select, #diceroll button, #encounterXp button, #monsterXp button, #diceroll #rolls, #diceroll #rollTotal, #encounterXp #rolls, #encounterXp #rollTotal, #monsterXp #rolls, #monsterXp #rollTotal, .races .racesGrid a, .classes .classesGrid a, .filter, #filterHead, .filter .filterlist div, .filter .levelfilterlist div, #filterHead .filterlist div, #filterHead .levelfilterlist div, #expandcollapse button, .levelup .levelupGrid a, .levels .filter span, .levels .filter .filterlist div {
   font-family: 'Tangerine', sans-serif;
   font-weight: 600; }
 
@@ -132,17 +132,18 @@ ul li {
 .homegrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 10px 10% 50px 10%; }
+  margin-top: 10px;
+  justify-items: center; }
 
 .homebox {
   display: inline-block;
   border: 1px solid #323232;
   border-radius: 10px;
-  padding: 0 0 20px 0;
   box-shadow: 0 0 5px #852617;
   background-color: rgba(255, 255, 255, 0.4);
   width: 500px;
-  margin: 40px 0 0 0; }
+  margin: 40px 0 0 0;
+  padding: 0px 0px 20px 0; }
   .homebox h2 {
     font-size: 30px;
     margin: 0 0 20px 0;
@@ -156,28 +157,29 @@ ul li {
   .homebox p {
     padding: 0 20px; }
 
-#diceroll input {
+#diceroll input, #encounterXp input, #monsterXp input {
   color: #323232;
   font-size: 30px;
-  margin: 0 0 0 20px;
   padding: 3px 2px 3px 10px;
-  width: 140px;
+  width: 180px;
   border: 1px solid #323232;
   height: 34px; }
-#diceroll input[type='number'] {
+#diceroll input[name='numPlayers'], #diceroll input[name='numMonsters'], #diceroll input[name='partySize'], #encounterXp input[name='numPlayers'], #encounterXp input[name='numMonsters'], #encounterXp input[name='partySize'], #monsterXp input[name='numPlayers'], #monsterXp input[name='numMonsters'], #monsterXp input[name='partySize'] {
+  margin: 0 0 0 5px; }
+#diceroll input[type='number'], #encounterXp input[type='number'], #monsterXp input[type='number'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield; }
-#diceroll input[type='number']::-webkit-inner-spin-button, #diceroll input[type=number]::-webkit-outer-spin-button {
+#diceroll input[type='number']::-webkit-inner-spin-button, #diceroll input[type=number]::-webkit-outer-spin-button, #encounterXp input[type='number']::-webkit-inner-spin-button, #encounterXp input[type=number]::-webkit-outer-spin-button, #monsterXp input[type='number']::-webkit-inner-spin-button, #monsterXp input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none; }
-#diceroll input[type='number'], #diceroll input[type='text'] {
+#diceroll input[type='number'], #diceroll input[type='text'], #encounterXp input[type='number'], #encounterXp input[type='text'], #monsterXp input[type='number'], #monsterXp input[type='text'] {
   border-radius: 5px 0 0 5px; }
-#diceroll .arrows {
+#diceroll .arrows, #encounterXp .arrows, #monsterXp .arrows {
   display: inline-block;
   margin: 0 0 -10px -4px;
   height: 34px; }
-#diceroll #diceUp, #diceroll #diceDown, #diceroll #modUp, #diceroll #modDown {
-  margin: 0 0 0 -1px;
+#diceroll #diceUp, #diceroll #diceDown, #diceroll #modUp, #diceroll #modDown, #diceroll .playerUp, #diceroll .playerDown, #diceroll .playerLevelUp, #diceroll .playerLevelDown, #diceroll .monsterUp, #diceroll .monsterDown, #diceroll .crUp, #diceroll .crDown, #diceroll #partyUp, #diceroll #partyDown, #encounterXp #diceUp, #encounterXp #diceDown, #encounterXp #modUp, #encounterXp #modDown, #encounterXp .playerUp, #encounterXp .playerDown, #encounterXp .playerLevelUp, #encounterXp .playerLevelDown, #encounterXp .monsterUp, #encounterXp .monsterDown, #encounterXp .crUp, #encounterXp .crDown, #encounterXp #partyUp, #encounterXp #partyDown, #monsterXp #diceUp, #monsterXp #diceDown, #monsterXp #modUp, #monsterXp #modDown, #monsterXp .playerUp, #monsterXp .playerDown, #monsterXp .playerLevelUp, #monsterXp .playerLevelDown, #monsterXp .monsterUp, #monsterXp .monsterDown, #monsterXp .crUp, #monsterXp .crDown, #monsterXp #partyUp, #monsterXp #partyDown {
+  margin: 0 10px 0 -1px;
   background-color: white;
   height: 19.5px;
   width: 20px;
@@ -185,38 +187,37 @@ ul li {
   border-bottom: 1px solid #323232;
   border-top: 1px solid white;
   border-radius: 0 0 5px 0; }
-#diceroll #diceUp, #diceroll #modUp {
+#diceroll #diceUp, #diceroll #modUp, #diceroll .playerUp, #diceroll .playerLevelUp, #diceroll .monsterUp, #diceroll .crUp, #diceroll #partyUp, #encounterXp #diceUp, #encounterXp #modUp, #encounterXp .playerUp, #encounterXp .playerLevelUp, #encounterXp .monsterUp, #encounterXp .crUp, #encounterXp #partyUp, #monsterXp #diceUp, #monsterXp #modUp, #monsterXp .playerUp, #monsterXp .playerLevelUp, #monsterXp .monsterUp, #monsterXp .crUp, #monsterXp #partyUp {
   border-top: 1px solid #323232;
   border-bottom: 1px solid white;
   margin: -4px 0 -1px -1px;
   border-radius: 0 5px 0 0; }
-#diceroll .upArrow {
+#diceroll .upArrow, #encounterXp .upArrow, #monsterXp .upArrow {
   margin: 6px auto;
   height: 0px;
   width: 0px;
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
   border-bottom: 6px solid #323232; }
-#diceroll .downArrow {
+#diceroll .downArrow, #encounterXp .downArrow, #monsterXp .downArrow {
   margin: 4px auto;
   height: 0px;
   width: 0px;
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
   border-top: 6px solid #323232; }
-#diceroll select {
+#diceroll select, #encounterXp select, #monsterXp select {
   color: #323232;
   font-size: 30px;
   padding: 3px 10px;
   width: 150px;
   border: 1px solid #323232;
-  border-radius: 5px;
-  margin: 0 20px 0 15px; }
-#diceroll input:focus, #diceroll select:focus {
+  border-radius: 5px; }
+#diceroll input:focus, #diceroll select:focus, #encounterXp input:focus, #encounterXp select:focus, #monsterXp input:focus, #monsterXp select:focus {
   outline: none;
   box-shadow: none;
   border: 1px solid #852617; }
-#diceroll button {
+#diceroll button, #encounterXp button, #monsterXp button {
   color: #323232;
   font-size: 30px;
   padding: 10px 18px 6px 10px;
@@ -225,14 +226,16 @@ ul li {
   background: rgba(152, 167, 77, 0.4);
   border: 1px solid black;
   border-radius: 8px; }
-#diceroll button:hover {
+#diceroll button[name='addLevel'], #diceroll button[name='addMonster'], #encounterXp button[name='addLevel'], #encounterXp button[name='addMonster'], #monsterXp button[name='addLevel'], #monsterXp button[name='addMonster'] {
+  margin: 0 10px 0 0; }
+#diceroll button:hover, #encounterXp button:hover, #monsterXp button:hover {
   color: white;
   background: rgba(133, 38, 23, 0.9); }
-#diceroll button:active {
+#diceroll button:active, #encounterXp button:active, #monsterXp button:active {
   box-shadow: 0 0 5px #852617; }
-#diceroll button:focus {
+#diceroll button:focus, #encounterXp button:focus, #monsterXp button:focus {
   outline: none; }
-#diceroll #rolls, #diceroll #rollTotal {
+#diceroll #rolls, #diceroll #rollTotal, #encounterXp #rolls, #encounterXp #rollTotal, #monsterXp #rolls, #monsterXp #rollTotal {
   margin: 10px 20px 0 20px; }
 
 .races .racesGrid {
@@ -499,6 +502,7 @@ ul li {
 #druidLevelFeatures {
   grid-template-columns: minmax(65px, 1fr) 1fr 1fr 1fr;
   margin: 10px 0 0 40px; }
+
 #druidCircleLevelFeatures {
   grid-template-columns: minmax(65px, 1fr) 1fr;
   margin: 10px 0 0 40px; }
@@ -801,7 +805,7 @@ ul li {
     .levelup .levelupGrid span {
       height: 154px; }
 
-  .raceFeatures h5, .raceFeatures p, .levelFeatures h5, .levelFeatures h6, .levelFeatures p {
+  .raceFeatures h5, .raceFeatures h6, .raceFeatures p, .levelFeatures h5, .levelFeatures h6, .levelFeatures p {
     padding: 3px 0 2px 0; } }
 @media screen and (max-width: 560px) {
   main {
@@ -812,6 +816,13 @@ ul li {
 
   .homebox {
     width: 400px; }
+
+  #encounterXp input[name='numPlayers'], #encounterXp input[name='numMonsters'], #monsterXp input[name='numPlayers'], #monsterXp input[name='numMonsters'] {
+    margin: 0 0 10px 0px; }
+  #encounterXp input[name='partySize'], #monsterXp input[name='partySize'] {
+    margin: 0 0 0 1px; }
+  #encounterXp #partyUp, #encounterXp #partyDown, #monsterXp #partyUp, #monsterXp #partyDown {
+    margin-right: -4px; }
 
   .grid {
     grid-gap: 10px; }
