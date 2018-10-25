@@ -2,7 +2,7 @@ header h1, h2 {
   font-family: 'Eagle Lake', sans-serif;
   font-weight: 600; }
 
-nav a, h3, h4, h5, h6, .homebox, #diceroll input, #encounterXp input, #monsterXp input, #diceroll select, #encounterXp select, #monsterXp select, #diceroll button, #encounterXp button, #monsterXp button, #diceroll #rolls, #diceroll #rollTotal, #encounterXp #rolls, #encounterXp #rollTotal, #monsterXp #rolls, #monsterXp #rollTotal, .races .racesGrid a, .classes .classesGrid a, .filter, #filterHead, .filter .filterlist div, .filter .levelfilterlist div, #filterHead .filterlist div, #filterHead .levelfilterlist div, #expandcollapse button, .levelup .levelupGrid a, .levels .filter span, .levels .filter .filterlist div {
+nav a, h3, h4, h5, h6, .homebox, #diceroll input, #encounterXp input, #monsterXp input, #diceroll select, #encounterXp select, #monsterXp select, #diceroll button, #encounterXp button, #monsterXp button, #diceroll #rolls, #diceroll #rollTotal, #encounterXp #rolls, #encounterXp #rollTotal, #monsterXp #rolls, #monsterXp #rollTotal, .details .nav2, .races .racesGrid a, .classes .classesGrid a, .filter, #filterHead, .filter .filterlist div, .filter .levelfilterlist div, #filterHead .filterlist div, #filterHead .levelfilterlist div, #expandcollapse button, .levelup .levelupGrid a, .levels .filter span, .levels .filter .filterlist div {
   font-family: 'Tangerine', sans-serif;
   font-weight: 600; }
 
@@ -63,7 +63,7 @@ nav {
     color: white;
     text-decoration: none;
     margin: 0 10px;
-    font-size: 30px;
+    font-size: 35px;
     letter-spacing: 1px; }
   nav a:hover {
     color: #141414; }
@@ -393,9 +393,33 @@ ul li {
     max-width: 35%;
     margin: 0 0 0 25px;
     float: right; }
+  .details .nav2 {
+    float: right;
+    clear: right;
+	display: grid;
+	position: sticky;
+	top: 200px;
+	grid-template-columns: 1fr;
+	width: 200px;
+	text-align: center;
+	border: 1px solid #323232;
+	border-radius: 10px;
+	padding: 20px 0;
+	box-shadow: 0 0 5px #852617;
+	background-color: rgba(255, 255, 255, 0.95);
+    margin: 10px 0 0 0; }
+	.details .nav2 a {
+	  display: inline-block;
+	  color: #852617;
+	  margin: 5px;
+	  font-size: 35px; }
+	.details .nav2 a:hover {
+	  color: #323232; }
   .details div {
     text-align: left;
     margin: 15px 0 0 0; }
+  .details section {
+    margin-right: 225px; }
   .details h5 {
     margin: 15px 0 0 0; }
   .details h6 {
@@ -410,6 +434,8 @@ ul li {
     color: #555555; }
   .details ul {
     margin: 10px 0 0 60px; }
+  .details .classspecific section {
+    margin-right: 0; }
   .details .classspecific h5 {
     cursor: pointer; }
   .details .classspecific h5:hover {
@@ -794,6 +820,11 @@ ul li {
 
   .homegrid {
     margin: 10px 5% 50px 5%; }
+
+  .details .nav2 {
+    display: none; }
+  .details section {
+    margin-right: 0; }
 
   .classes .classesGrid {
     grid-template-columns: 1fr 1fr 1fr; }
