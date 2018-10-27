@@ -78,8 +78,8 @@ nav {
     a {
         color: white;
         text-decoration: none;
-        margin: 0 10px;
-        font-size: 30px;
+        margin: 0 20px;
+        font-size: 40px;
         letter-spacing: 1px;
         @extend %headfont;
     }
@@ -205,8 +205,8 @@ ul {
         height: 34px;
         @extend %headfont;
     }
-    input[name='numPlayers'], input[name='numMonsters'], input[name='partySize'] {
-        margin: 0 0 0 5px;
+    input[name='numPlayers'], input[name='numMonsters'] {
+        margin: 0 0 0 10px;
     }
     input[type='number'] {
         -webkit-appearance: textfield;
@@ -493,10 +493,39 @@ ul {
         margin: 0 0 0 25px;
         float: right;
     }
+	.nav2 {
+		float: right;
+		clear: right;
+		display: grid;
+		position: sticky;
+		top: 200px;
+		grid-template-columns: 1fr;
+		width: 200px;
+		text-align: center;
+		border: 1px solid $dark;
+		border-radius: 10px;
+		padding: 20px 0;
+		box-shadow: 0 0 5px $shadowcolor;
+		background-color: rgba(255, 255, 255, 0.95);
+		margin: 10px 0 0 0;
+		@extend %headfont;
+		a {
+			display: inline-block;
+			color: $dark;
+			margin: 5px;
+			font-size: 30px;
+		}
+		a:hover {
+			color: $shadowcolor;
+		}
+	}
     div {
         text-align: left;
         margin: 15px 0 0 0;
     }
+	section {
+		margin-right: 225px;
+	}
     h5 {
         margin: 15px 0 0 0;
     }
@@ -518,6 +547,9 @@ ul {
         margin: 10px 0 0 60px;
     }
     .classspecific {
+		section {
+			margin-right: 0;
+		}
         h5 {
             cursor: pointer;
         }
@@ -1000,7 +1032,7 @@ ul {
                 display: none;
                 grid-template-columns: 1fr;
                 position: fixed;
-                left: 10%;
+                left: calc(10% - 10px);
                 top: 70px;
                 width: 80%;
                 text-align: center;
@@ -1028,6 +1060,16 @@ ul {
 	.homegrid {
         margin: 10px 5% 50px 5%;
     }
+
+	.details {
+		.nav2 {
+			display: none;
+		}
+		section {
+			margin-right: 0;
+		}
+	}
+
     .classes {
         .classesGrid {
             grid-template-columns: 1fr 1fr 1fr;
@@ -1062,16 +1104,13 @@ ul {
     }
     #encounterXp, #monsterXp {
         input[name='numPlayers'], input[name='numMonsters'] {
-            margin: 0 0 10px 0px;
+            margin: 0 0 10px 10px;
         }
-        // button[name='addMonster'] {
-        //     margin: 0 ;
-        // }
-        input[name='partySize'] {
-            margin: 0 0 0 1px;
+        input[name='level'], input[name='cr'] {
+            margin: 0 0 0 10px;
         }
         #partyUp, #partyDown {
-             margin-right: -4px;
+             margin-right: -1px;
         }
     }
     .grid {
@@ -1259,4 +1298,23 @@ ul {
             }
         }
     }
+}
+@media screen and (max-height: 800px) {
+	.details {
+		#classNav2 {
+			a {
+				font-size: 25px;
+			}
+		}
+	}
+}
+
+@media screen and (max-height: 675px) {
+	.details {
+		#raceNav2 {
+			a {
+				font-size: 25px;
+			}
+		}
+	}
 }

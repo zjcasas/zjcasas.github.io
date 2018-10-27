@@ -32,7 +32,7 @@ $(window).ready(function(){
 		var width = $(window).width();
 		if (width > 778) {
 			var scroll =$(window).scrollTop();
-			if (scroll <= 201) {
+			if (scroll <= 201 || $(document).find("title").text() === 'D&D Tools') {
 				if ('scrollRestoration' in history) {
 					history.scrollRestoration = 'manual';
 				}
@@ -90,6 +90,23 @@ $(window).ready(function(){
 			$('.links').css('display', 'grid');
 		}
 	});
+
+	var pageName = $(document).find("title").text();
+	if (pageName.indexOf("Races") > 0 || pageName.indexOf("Dragonborn") > 0 || pageName.indexOf("Dwarf") > 0 || pageName.indexOf("Elf") > 0 || pageName.indexOf("Gnome") > 0 || pageName.indexOf("Half-Elf") > 0 || pageName.indexOf("Half-Orc") > 0 || pageName.indexOf("Halfling") > 0 || pageName.indexOf("Human") > 0 || pageName.indexOf("Tiefling") > 0) {
+		$(".links a:contains('Races')").css("color", "#141414");
+	}
+	else if (pageName.indexOf("Classes") > 0 || pageName.indexOf("Barbarian") > 0 || pageName.indexOf("Bard") > 0 || pageName.indexOf("Cleric") > 0 || pageName.indexOf("Druid") > 0 || pageName.indexOf("Fighter") > 0 || pageName.indexOf("Monk") > 0 || pageName.indexOf("Paladin") > 0 || pageName.indexOf("Ranger") > 0 || pageName.indexOf("Rogue") > 0 || pageName.indexOf("Sorceror") > 0 || pageName.indexOf("Warlock") > 0 || pageName.indexOf("Wizard") > 0) {
+		$(".links a:contains('Classes')").css("color", "#141414");
+	}
+	else if (pageName.indexOf("Spells") > 0) {
+		$(".links a:contains('Spells')").css("color", "#141414");
+	}
+	else if (pageName.indexOf("Feats") > 0) {
+		$(".links a:contains('Feats')").css("color", "#141414");
+	}
+	else if (pageName.indexOf("Level Up") > 0) {
+		$(".links a:contains('Level Up')").css("color", "#141414");
+	}
 
 	// The next 4 click functions are for showing and hiding information when
 	// headers are clicked on the Races, Classes, and Spells pages

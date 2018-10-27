@@ -2,11 +2,11 @@ header h1, h2 {
   font-family: 'Eagle Lake', sans-serif;
   font-weight: 600; }
 
-nav a, h3, h4, h5, h6, .homebox, #diceroll input, #encounterXp input, #monsterXp input, #diceroll select, #encounterXp select, #monsterXp select, #diceroll button, #encounterXp button, #monsterXp button, #diceroll #rolls, #diceroll #rollTotal, #encounterXp #rolls, #encounterXp #rollTotal, #monsterXp #rolls, #monsterXp #rollTotal, .races .racesGrid a, .classes .classesGrid a, .details .nav2, .filter, #filterHead, .filter .filterlist div, .filter .levelfilterlist div, #filterHead .filterlist div, #filterHead .levelfilterlist div, #expandcollapse button, .levelup .levelupGrid a, .levels .filter span, .levels .filter .filterlist div {
+h3, h4, h5, h6, .homebox, #diceroll input, #encounterXp input, #monsterXp input, #diceroll select, #encounterXp select, #monsterXp select, #diceroll button, #encounterXp button, #monsterXp button, #diceroll #rolls, #diceroll #rollTotal, #encounterXp #rolls, #encounterXp #rollTotal, #monsterXp #rolls, #monsterXp #rollTotal, .races .racesGrid a, .classes .classesGrid a, .details .nav2, .filter, #filterHead, .filter .filterlist div, .filter .levelfilterlist div, #filterHead .filterlist div, #filterHead .levelfilterlist div, #expandcollapse button, .levelup .levelupGrid a, .levels .filter span, .levels .filter .filterlist div {
   font-family: 'Tangerine', sans-serif;
   font-weight: 600; }
 
-body, .homebox p, .levels .filter {
+body, nav a, .homebox p, .levels .filter {
   font-family: "K2D", sans-serif;
   font-weight: 400; }
 
@@ -62,8 +62,8 @@ nav {
   nav a {
     color: white;
     text-decoration: none;
-    margin: 0 20px;
-    font-size: 40px;
+    margin: 0 10px;
+    font-size: 30px;
     letter-spacing: 1px; }
   nav a:hover {
     color: #141414; }
@@ -164,8 +164,8 @@ ul li {
   width: 180px;
   border: 1px solid #323232;
   height: 34px; }
-#diceroll input[name='numPlayers'], #diceroll input[name='numMonsters'], #encounterXp input[name='numPlayers'], #encounterXp input[name='numMonsters'], #monsterXp input[name='numPlayers'], #monsterXp input[name='numMonsters'] {
-  margin: 0 0 0 10px; }
+#diceroll input[name='numPlayers'], #diceroll input[name='numMonsters'], #diceroll input[name='partySize'], #encounterXp input[name='numPlayers'], #encounterXp input[name='numMonsters'], #encounterXp input[name='partySize'], #monsterXp input[name='numPlayers'], #monsterXp input[name='numMonsters'], #monsterXp input[name='partySize'] {
+  margin: 0 0 0 5px; }
 #diceroll input[type='number'], #encounterXp input[type='number'], #monsterXp input[type='number'] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -410,11 +410,11 @@ ul li {
     margin: 10px 0 0 0; }
     .details .nav2 a {
       display: inline-block;
-      color: #323232;
+      color: #852617;
       margin: 5px;
       font-size: 30px; }
     .details .nav2 a:hover {
-      color: #852617; }
+      color: #323232; }
   .details div {
     text-align: left;
     margin: 15px 0 0 0; }
@@ -798,7 +798,7 @@ ul li {
       display: none;
       grid-template-columns: 1fr;
       position: fixed;
-      left: calc(10% - 10px);
+      left: 10%;
       top: 70px;
       width: 80%;
       text-align: center;
@@ -849,11 +849,11 @@ ul li {
     width: 400px; }
 
   #encounterXp input[name='numPlayers'], #encounterXp input[name='numMonsters'], #monsterXp input[name='numPlayers'], #monsterXp input[name='numMonsters'] {
-    margin: 0 0 10px 10px; }
-  #encounterXp input[name='level'], #encounterXp input[name='cr'], #monsterXp input[name='level'], #monsterXp input[name='cr'] {
-    margin: 0 0 0 10px; }
+    margin: 0 0 10px 0px; }
+  #encounterXp input[name='partySize'], #monsterXp input[name='partySize'] {
+    margin: 0 0 0 1px; }
   #encounterXp #partyUp, #encounterXp #partyDown, #monsterXp #partyUp, #monsterXp #partyDown {
-    margin-right: -1px; }
+    margin-right: -4px; }
 
   .grid {
     grid-gap: 10px; }
@@ -987,11 +987,8 @@ ul li {
       background-position: 100% 8%; }
     .levelup .levelupGrid #wizardLevelUp {
       background-position: 100% 15%; } }
-@media screen and (max-height: 800px) {
-  .details #classNav2 a {
-    font-size: 25px; } }
-@media screen and (max-height: 675px) {
-  .details #raceNav2 a {
+@media screen and (max-height: 720px) {
+  .details .nav2 a {
     font-size: 25px; } }
 
 /*# sourceMappingURL=style.css.map */

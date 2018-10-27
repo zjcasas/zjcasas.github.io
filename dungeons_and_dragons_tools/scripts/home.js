@@ -106,6 +106,7 @@ $(window).ready(function(){
             </span>
         </div>`
         $('#allPlayers').append(html);
+        window.scrollBy(0, 52);
     });
 
     // button to add another monster level to the Monster XP Calculator
@@ -131,6 +132,7 @@ $(window).ready(function(){
             </span>
         </div>`
         $('#allMonsters').append(html);
+        window.scrollBy(0, 52);
     });
 
     //  This button is for calculating the encounter xp
@@ -148,6 +150,7 @@ $(window).ready(function(){
             var level = $(this).val();
             levels.push(level)
         })
+
         if (difficulty.length === 0 || playerCount.length === 0 || levels.length === 0) {
         }
         else {
@@ -157,252 +160,265 @@ $(window).ready(function(){
                     if (levels[i] == 1) {
                         levelXp = 25 * playerCount[i];
                     }
-                    if (levels[i] == 2) {
+                    else if (levels[i] == 2) {
                         levelXp = 50 * playerCount[i];
                     }
-                    if (levels[i] == 3) {
+                    else if (levels[i] == 3) {
                         levelXp = 75 * playerCount[i];
                     }
-                    if (levels[i] == 4) {
+                    else if (levels[i] == 4) {
                         levelXp = 125 * playerCount[i];
                     }
-                    if (levels[i] == 5) {
+                    else if (levels[i] == 5) {
                         levelXp = 250 * playerCount[i];
                     }
-                    if (levels[i] == 6) {
+                    else if (levels[i] == 6) {
                         levelXp = 300 * playerCount[i];
                     }
-                    if (levels[i] == 7) {
+                    else if (levels[i] == 7) {
                         levelXp = 350 * playerCount[i];
                     }
-                    if (levels[i] == 8) {
+                    else if (levels[i] == 8) {
                         levelXp = 450 * playerCount[i];
                     }
-                    if (levels[i] == 9) {
+                    else if (levels[i] == 9) {
                         levelXp = 550 * playerCount[i];
                     }
-                    if (levels[i] == 10) {
+                    else if (levels[i] == 10) {
                         levelXp = 600 * playerCount[i];
                     }
-                    if (levels[i] == 11) {
+                    else if (levels[i] == 11) {
                         levelXp = 800 * playerCount[i];
                     }
-                    if (levels[i] == 12) {
+                    else if (levels[i] == 12) {
                         levelXp = 1000 * playerCount[i];
                     }
-                    if (levels[i] == 13) {
+                    else if (levels[i] == 13) {
                         levelXp = 1100 * playerCount[i];
                     }
-                    if (levels[i] == 14) {
+                    else if (levels[i] == 14) {
                         levelXp = 1250 * playerCount[i];
                     }
-                    if (levels[i] == 15) {
+                    else if (levels[i] == 15) {
                         levelXp = 1400 * playerCount[i];
                     }
-                    if (levels[i] == 16) {
+                    else if (levels[i] == 16) {
                         levelXp = 1600 * playerCount[i];
                     }
-                    if (levels[i] == 17) {
+                    else if (levels[i] == 17) {
                         levelXp = 2000 * playerCount[i];
                     }
-                    if (levels[i] == 18) {
+                    else if (levels[i] == 18) {
                         levelXp = 2100 * playerCount[i];
                     }
-                    if (levels[i] == 19) {
+                    else if (levels[i] == 19) {
                         levelXp = 2400 * playerCount[i];
                     }
-                    if (levels[i] == 20) {
+                    else if (levels[i] == 20) {
                         levelXp = 2800 * playerCount[i];
+                    }
+                    else {
+                        levelXp = 0;
                     }
                 }
                 if (difficulty == "medium") {
                     if (levels[i] == 1) {
                         levelXp = 50 * playerCount[i];
                     }
-                    if (levels[i] == 2) {
+                    else if (levels[i] == 2) {
                         levelXp = 100 * playerCount[i];
                     }
-                    if (levels[i] == 3) {
+                    else if (levels[i] == 3) {
                         levelXp = 150 * playerCount[i];
                     }
-                    if (levels[i] == 4) {
+                    else if (levels[i] == 4) {
                         levelXp = 250 * playerCount[i];
                     }
-                    if (levels[i] == 5) {
+                    else if (levels[i] == 5) {
                         levelXp = 500 * playerCount[i];
                     }
-                    if (levels[i] == 6) {
+                    else if (levels[i] == 6) {
                         levelXp = 600 * playerCount[i];
                     }
-                    if (levels[i] == 7) {
+                    else if (levels[i] == 7) {
                         levelXp = 750 * playerCount[i];
                     }
-                    if (levels[i] == 8) {
+                    else if (levels[i] == 8) {
                         levelXp = 900 * playerCount[i];
                     }
-                    if (levels[i] == 9) {
+                    else if (levels[i] == 9) {
                         levelXp = 1100 * playerCount[i];
                     }
-                    if (levels[i] == 10) {
+                    else if (levels[i] == 10) {
                         levelXp = 1200 * playerCount[i];
                     }
-                    if (levels[i] == 11) {
+                    else if (levels[i] == 11) {
                         levelXp = 1600 * playerCount[i];
                     }
-                    if (levels[i] == 12) {
+                    else if (levels[i] == 12) {
                         levelXp = 2000 * playerCount[i];
                     }
-                    if (levels[i] == 13) {
+                    else if (levels[i] == 13) {
                         levelXp = 2200 * playerCount[i];
                     }
-                    if (levels[i] == 14) {
+                    else if (levels[i] == 14) {
                         levelXp = 2500 * playerCount[i];
                     }
-                    if (levels[i] == 15) {
+                    else if (levels[i] == 15) {
                         levelXp = 2800 * playerCount[i];
                     }
-                    if (levels[i] == 16) {
+                    else if (levels[i] == 16) {
                         levelXp = 3200 * playerCount[i];
                     }
-                    if (levels[i] == 17) {
+                    else if (levels[i] == 17) {
                         levelXp = 3900 * playerCount[i];
                     }
-                    if (levels[i] == 18) {
+                    else if (levels[i] == 18) {
                         levelXp = 4200 * playerCount[i];
                     }
-                    if (levels[i] == 19) {
+                    else if (levels[i] == 19) {
                         levelXp = 4900 * playerCount[i];
                     }
-                    if (levels[i] == 20) {
+                    else if (levels[i] == 20) {
                         levelXp = 5700 * playerCount[i];
+                    }
+                    else {
+                        levelXp = 0;
                     }
                 }
                 if (difficulty == "hard") {
                     if (levels[i] == 1) {
                         levelXp = 75 * playerCount[i];
                     }
-                    if (levels[i] == 2) {
+                    else if (levels[i] == 2) {
                         levelXp = 150 * playerCount[i];
                     }
-                    if (levels[i] == 3) {
+                    else if (levels[i] == 3) {
                         levelXp = 225 * playerCount[i];
                     }
-                    if (levels[i] == 4) {
+                    else if (levels[i] == 4) {
                         levelXp = 375 * playerCount[i];
                     }
-                    if (levels[i] == 5) {
+                    else if (levels[i] == 5) {
                         levelXp = 750 * playerCount[i];
                     }
-                    if (levels[i] == 6) {
+                    else if (levels[i] == 6) {
                         levelXp = 900 * playerCount[i];
                     }
-                    if (levels[i] == 7) {
+                    else if (levels[i] == 7) {
                         levelXp = 1100 * playerCount[i];
                     }
-                    if (levels[i] == 8) {
+                    else if (levels[i] == 8) {
                         levelXp = 1400 * playerCount[i];
                     }
-                    if (levels[i] == 9) {
+                    else if (levels[i] == 9) {
                         levelXp = 1600 * playerCount[i];
                     }
-                    if (levels[i] == 10) {
+                    else if (levels[i] == 10) {
                         levelXp = 1900 * playerCount[i];
                     }
-                    if (levels[i] == 11) {
+                    else if (levels[i] == 11) {
                         levelXp = 2400 * playerCount[i];
                     }
-                    if (levels[i] == 12) {
+                    else if (levels[i] == 12) {
                         levelXp = 3000 * playerCount[i];
                     }
-                    if (levels[i] == 13) {
+                    else if (levels[i] == 13) {
                         levelXp = 3400 * playerCount[i];
                     }
-                    if (levels[i] == 14) {
+                    else if (levels[i] == 14) {
                         levelXp = 3800 * playerCount[i];
                     }
-                    if (levels[i] == 15) {
+                    else if (levels[i] == 15) {
                         levelXp = 4300 * playerCount[i];
                     }
-                    if (levels[i] == 16) {
+                    else if (levels[i] == 16) {
                         levelXp = 4800 * playerCount[i];
                     }
-                    if (levels[i] == 17) {
+                    else if (levels[i] == 17) {
                         levelXp = 5900 * playerCount[i];
                     }
-                    if (levels[i] == 18) {
+                    else if (levels[i] == 18) {
                         levelXp = 6300 * playerCount[i];
                     }
-                    if (levels[i] == 19) {
+                    else if (levels[i] == 19) {
                         levelXp = 7300 * playerCount[i];
                     }
-                    if (levels[i] == 20) {
+                    else if (levels[i] == 20) {
                         levelXp = 8500 * playerCount[i];
+                    }
+                    else {
+                        levelXp = 0;
                     }
                 }
                 if (difficulty == "deadly") {
                     if (levels[i] == 1) {
                         levelXp = 100 * playerCount[i];
                     }
-                    if (levels[i] == 2) {
+                    else if (levels[i] == 2) {
                         levelXp = 200 * playerCount[i];
                     }
-                    if (levels[i] == 3) {
+                    else if (levels[i] == 3) {
                         levelXp = 400 * playerCount[i];
                     }
-                    if (levels[i] == 4) {
+                    else if (levels[i] == 4) {
                         levelXp = 500 * playerCount[i];
                     }
-                    if (levels[i] == 5) {
+                    else if (levels[i] == 5) {
                         levelXp = 1100 * playerCount[i];
                     }
-                    if (levels[i] == 6) {
+                    else if (levels[i] == 6) {
                         levelXp = 1400 * playerCount[i];
                     }
-                    if (levels[i] == 7) {
+                    else if (levels[i] == 7) {
                         levelXp = 1700 * playerCount[i];
                     }
-                    if (levels[i] == 8) {
+                    else if (levels[i] == 8) {
                         levelXp = 2100 * playerCount[i];
                     }
-                    if (levels[i] == 9) {
+                    else if (levels[i] == 9) {
                         levelXp = 2400 * playerCount[i];
                     }
-                    if (levels[i] == 10) {
+                    else if (levels[i] == 10) {
                         levelXp = 2800 * playerCount[i];
                     }
-                    if (levels[i] == 11) {
+                    else if (levels[i] == 11) {
                         levelXp = 3600 * playerCount[i];
                     }
-                    if (levels[i] == 12) {
+                    else if (levels[i] == 12) {
                         levelXp = 4500 * playerCount[i];
                     }
-                    if (levels[i] == 13) {
+                    else if (levels[i] == 13) {
                         levelXp = 5100 * playerCount[i];
                     }
-                    if (levels[i] == 14) {
+                    else if (levels[i] == 14) {
                         levelXp = 5700 * playerCount[i];
                     }
-                    if (levels[i] == 15) {
+                    else if (levels[i] == 15) {
                         levelXp = 6400 * playerCount[i];
                     }
-                    if (levels[i] == 16) {
+                    else if (levels[i] == 16) {
                         levelXp = 7200 * playerCount[i];
                     }
-                    if (levels[i] == 17) {
+                    else if (levels[i] == 17) {
                         levelXp = 8800 * playerCount[i];
                     }
-                    if (levels[i] == 18) {
+                    else if (levels[i] == 18) {
                         levelXp = 9500 * playerCount[i];
                     }
-                    if (levels[i] == 19) {
+                    else if (levels[i] == 19) {
                         levelXp = 10900 * playerCount[i];
                     }
-                    if (levels[i] == 20) {
+                    else if (levels[i] == 20) {
                         levelXp = 12700 * playerCount[i];
+                    }
+                    else {
+                        levelXp = 0;
                     }
                 }
                 xpArray.push(levelXp);
             }
+
             for (var i = 0; i <xpArray.length; i++) {
                 totalXp = totalXp + xpArray[i];
             }
@@ -427,117 +443,126 @@ $(window).ready(function(){
             crs.push(cr)
         })
         for (var i = 0; i < monsterCount.length; i++) {
-            totalMonsters = totalMonsters + parseInt(monsterCount[i]);
+            if (monsterCount[i] > 0 && crs[i] != "") {
+                totalMonsters = totalMonsters + parseInt(monsterCount[i]);
+            }
         }
         if (monsterCount.length === 0 || crs.length === 0) {
         }
         else {
             for (var i = 0; i < monsterCount.length; i++) {
                 var crXp;
-                if (crs[i] == 0) {
+                if(crs[i] == "") {
+                    crXp = 0;
+                }
+                else if (crs[i] == 0) {
                     crXp = 10 * monsterCount[i];
                 }
-                if (crs[i] == .125) {
+                else if (crs[i] == .125) {
                     crXp = 25 * monsterCount[i];
                 }
-                if (crs[i] == .25) {
+                else if (crs[i] == .25) {
                     crXp = 50 * monsterCount[i];
                 }
-                if (crs[i] == .5) {
+                else if (crs[i] == .5) {
                     crXp = 100 * monsterCount[i];
                 }
-                if (crs[i] == 1) {
+                else if (crs[i] == 1) {
                     crXp = 200 * monsterCount[i];
                 }
-                if (crs[i] == 2) {
+                else if (crs[i] == 2) {
                     crXp = 450 * monsterCount[i];
                 }
-                if (crs[i] == 3) {
+                else if (crs[i] == 3) {
                     crXp = 700 * monsterCount[i];
                 }
-                if (crs[i] == 4) {
+                else if (crs[i] == 4) {
                     crXp = 1100 * monsterCount[i];
                 }
-                if (crs[i] == 5) {
+                else if (crs[i] == 5) {
                     crXp = 1800 * monsterCount[i];
                 }
-                if (crs[i] == 6) {
+                else if (crs[i] == 6) {
                     crXp = 2300 * monsterCount[i];
                 }
-                if (crs[i] == 7) {
+                else if (crs[i] == 7) {
                     crXp = 2900 * monsterCount[i];
                 }
-                if (crs[i] == 8) {
+                else if (crs[i] == 8) {
                     crXp = 3900 * monsterCount[i];
                 }
-                if (crs[i] == 9) {
+                else if (crs[i] == 9) {
                     crXp = 5000 * monsterCount[i];
                 }
-                if (crs[i] == 10) {
+                else if (crs[i] == 10) {
                     crXp = 5900 * monsterCount[i];
                 }
-                if (crs[i] == 11) {
+                else if (crs[i] == 11) {
                     crXp = 7200 * monsterCount[i];
                 }
-                if (crs[i] == 12) {
+                else if (crs[i] == 12) {
                     crXp = 8400 * monsterCount[i];
                 }
-                if (crs[i] == 13) {
+                else if (crs[i] == 13) {
                     crXp = 10000 * monsterCount[i];
                 }
-                if (crs[i] == 14) {
+                else if (crs[i] == 14) {
                     crXp = 11500 * monsterCount[i];
                 }
-                if (crs[i] == 15) {
+                else if (crs[i] == 15) {
                     crXp = 13000 * monsterCount[i];
                 }
-                if (crs[i] == 16) {
+                else if (crs[i] == 16) {
                     crXp = 15000 * monsterCount[i];
                 }
-                if (crs[i] == 17) {
+                else if (crs[i] == 17) {
                     crXp = 18000 * monsterCount[i];
                 }
-                if (crs[i] == 18) {
+                else if (crs[i] == 18) {
                     crXp = 20000 * monsterCount[i];
                 }
-                if (crs[i] == 19) {
+                else if (crs[i] == 19) {
                     crXp = 22000 * monsterCount[i];
                 }
-                if (crs[i] == 20) {
+                else if (crs[i] == 20) {
                     crXp = 25000 * monsterCount[i];
                 }
-                if (crs[i] == 21) {
+                else if (crs[i] == 21) {
                     crXp = 33000 * monsterCount[i];
                 }
-                if (crs[i] == 22) {
+                else if (crs[i] == 22) {
                     crXp = 41000 * monsterCount[i];
                 }
-                if (crs[i] == 23) {
+                else if (crs[i] == 23) {
                     crXp = 50000 * monsterCount[i];
                 }
-                if (crs[i] == 24) {
+                else if (crs[i] == 24) {
                     crXp = 62000 * monsterCount[i];
                 }
-                if (crs[i] == 25) {
+                else if (crs[i] == 25) {
                     crXp = 75000 * monsterCount[i];
                 }
-                if (crs[i] == 26) {
+                else if (crs[i] == 26) {
                     crXp = 90000 * monsterCount[i];
                 }
-                if (crs[i] == 27) {
+                else if (crs[i] == 27) {
                     crXp = 105000 * monsterCount[i];
                 }
-                if (crs[i] == 28) {
+                else if (crs[i] == 28) {
                     crXp = 120000 * monsterCount[i];
                 }
-                if (crs[i] == 29) {
+                else if (crs[i] == 29) {
                     crXp = 135000 * monsterCount[i];
                 }
-                if (crs[i] == 30) {
+                else if (crs[i] == 30) {
                     crXp = 155000 * monsterCount[i];
+                }
+                else {
+                    crXp = 0;
                 }
                 xpArray.push(crXp);
             }
+
             for (var i = 0; i <xpArray.length; i++) {
                 totalXp = totalXp + xpArray[i];
             }
@@ -600,7 +625,12 @@ $(window).ready(function(){
                     totalXp = totalXp * 3;
                 }
             }
-            $('#monsterXpTotal').text('Total Monster XP: ' + totalXp);
+            if(partySize > 0) {
+                $('#monsterXpTotal').text('Total Monster XP: ' + totalXp);
+            }
+            else {
+                $('#monsterXpTotal').text('Total Monster XP:');
+            }
         }
     });
 
