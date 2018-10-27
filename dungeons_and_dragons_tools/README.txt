@@ -1,7 +1,6 @@
 To Do
 General:
     the website on mobile isn't quite how I'd like it. I'll have to fix it in the future.
-	change nav links to show which page you're on
 	limit width so 4k displays don't look weird
 Class Pages:
     Add content to other pages. (Currently only Barbarian, Bard, Cleric, and Druid are populated)

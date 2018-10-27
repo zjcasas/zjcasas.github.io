@@ -4,8 +4,7 @@ $(window).ready(function(){
 	if ( $(document).find("title").text() === 'D&D Tools') {
 		// The home page will scroll down upon the page loading
 		// only if width > 800 px
-		var width = $(window).width();
-		if (width > 778) {
+		if (window.matchMedia('(min-width: 801px)').matches) {
 			var page = $("html, body");
 			page.on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function(){
 				page.stop();
@@ -17,9 +16,8 @@ $(window).ready(function(){
 	}
     else {
         //all pages except the home page will load already scrolled
-        var width = $(window).width();
         var scroll =$(window).scrollTop();
-        if (scroll < 201 && width > 778){
+        if (scroll < 201 && window.matchMedia('(min-width: 801px)').matches){
             window.scrollBy(0, 201);
         }
     }
@@ -29,8 +27,7 @@ $(window).ready(function(){
 	// If user scrolls past 201, the position is remembered.
 	$(window).on('scroll', function() {
 		// only if width > 800 px
-		var width = $(window).width();
-		if (width > 778) {
+		if (window.matchMedia('(min-width: 801px)').matches) {
 			var scroll =$(window).scrollTop();
 			if (scroll <= 201 || $(document).find("title").text() === 'D&D Tools') {
 				if ('scrollRestoration' in history) {
@@ -62,8 +59,7 @@ $(window).ready(function(){
 
 	// when resizing window, adjust header background
     $(window).on('resize', function(){
-        var width = $(window).width();
-        if (width <= 778) {
+        if (window.matchMedia('(max-width: 800px)').matches) {
             $('header').css('background-position', '50% 50%');
         }
         else {
@@ -74,9 +70,7 @@ $(window).ready(function(){
 	// Call adjust header when scrolling
 	$(window).on ('scroll', function() {
 		// only if width > 800 px
-		// why is it 778? I've seen this before
-        var width = $(window).width();
-        if (width > 778) {
+        if (window.matchMedia('(min-width: 801px)').matches) {
             ajustBackground();
         }
 	});
@@ -210,8 +204,7 @@ $(window).ready(function(){
 	$(window).click(function() {
 		$('.filterlist').hide();
 		$('.levelfilterlist').hide();
-		var width = $(window).width();
-		if (width <=778) {
+		if (window.matchMedia('(max-width: 800px)').matches) {
 			$('.links').hide();
 		}
 	});
@@ -225,14 +218,12 @@ $(window).ready(function(){
 	    event.stopPropagation();
 	});
 	$('.hamburger').click(function(event){
-		var width = $(window).width();
-		if (width <=778) {
+		if (window.matchMedia('(max-width: 800px)').matches) {
 	    event.stopPropagation();
 		}
 	});
 	$('.links').click(function(event){
-		var width = $(window).width();
-		if (width <=778) {
+		if (window.matchMedia('(max-width: 800px)').matches) {
 	    event.stopPropagation();
 		}
 	});

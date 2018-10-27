@@ -1032,7 +1032,7 @@ ul {
                 display: none;
                 grid-template-columns: 1fr;
                 position: fixed;
-                left: calc(10% - 10px);
+                left: calc(10% + 10px);
                 top: 70px;
                 width: 80%;
                 text-align: center;
@@ -1156,12 +1156,6 @@ ul {
 @media screen and (max-width: 400px) {
     main {
         margin: 0 0 30px 0;
-    }
-    .homegrid {
-        margin: 10px 0 50px 0;
-    }
-    .homebox {
-        width: 400px;
     }
     header {
         h1 {
