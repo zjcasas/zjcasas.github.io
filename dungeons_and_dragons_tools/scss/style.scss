@@ -75,6 +75,7 @@ header {
 nav {
     position: sticky;
     top: 95px;
+    z-index: 1;
     a {
         color: white;
         text-decoration: none;
@@ -493,39 +494,39 @@ ul {
         margin: 0 0 0 25px;
         float: right;
     }
-	.nav2 {
-		float: right;
-		clear: right;
-		display: grid;
-		position: sticky;
-		top: 200px;
-		grid-template-columns: 1fr;
-		width: 200px;
-		text-align: center;
-		border: 1px solid $dark;
-		border-radius: 10px;
-		padding: 20px 0;
-		box-shadow: 0 0 5px $shadowcolor;
-		background-color: rgba(255, 255, 255, 0.95);
-		margin: 10px 0 0 0;
-		@extend %headfont;
-		a {
-			display: inline-block;
-			color: $dark;
-			margin: 5px;
-			font-size: 30px;
-		}
-		a:hover {
-			color: $shadowcolor;
-		}
-	}
+    .nav2 {
+        float: right;
+        clear: right;
+        display: grid;
+        position: sticky;
+        top: 200px;
+        grid-template-columns: 1fr;
+        width: 200px;
+        text-align: center;
+        border: 1px solid $dark;
+        border-radius: 10px;
+        padding: 20px 0;
+        box-shadow: 0 0 5px $shadowcolor;
+        background-color: rgba(255, 255, 255, 0.95);
+        margin: 10px 0 0 0;
+        @extend %headfont;
+        a {
+            display: inline-block;
+            color: $dark;
+            margin: 5px;
+            font-size: 30px;
+        }
+        a:hover {
+            color: $shadowcolor;
+        }
+    }
     div {
         text-align: left;
         margin: 15px 0 0 0;
     }
-	section {
-		margin-right: 225px;
-	}
+    section {
+        margin-right: 225px;
+    }
     h5 {
         margin: 15px 0 0 0;
     }
@@ -547,9 +548,9 @@ ul {
         margin: 10px 0 0 60px;
     }
     .classspecific {
-		section {
-			margin-right: 0;
-		}
+        section {
+            margin-right: 0;
+        }
         h5 {
             cursor: pointer;
         }
@@ -647,33 +648,22 @@ ul {
 #barbarianLevelFeatures {
     grid-template-columns: minmax(65px, 1fr) 1fr 2fr minmax(53px, 1fr) 1fr;
 }
-
-#bardLevelFeatures {
+#bardLevelFeatures, #clericLevelFeatures {
     grid-template-columns: minmax(65px, 1fr) 1fr 2fr;
 }
-
 #bardSpellLevelFeatures {
     grid-template-columns: minmax(65px, 1fr) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-
-#clericLevelFeatures {
-    grid-template-columns: minmax(65px, 1fr) 1fr 2fr;
 }
 #clericSpellLevelFeatures {
     grid-template-columns: minmax(65px, 1fr) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
-#clericDomainLevelFeatures {
-	grid-template-columns: minmax(65px, 1fr) 1fr;
-	margin: 10px 0 0 40px;
+#clericDomainLevelFeatures, #druidCircleLevelFeatures {
+    grid-template-columns: minmax(65px, 1fr) 1fr;
+    margin: 10px 0 0 40px;
 }
-
 #druidLevelFeatures {
-	grid-template-columns: minmax(65px, 1fr) 1fr 1fr 1fr;
-	margin: 10px 0 0 40px;
-}
-#druidCircleLevelFeatures {
-	grid-template-columns: minmax(65px, 1fr) 1fr;
-	margin: 10px 0 0 40px;
+    grid-template-columns: minmax(65px, 1fr) 1fr 1fr 1fr;
+    margin: 10px 0 0 40px;
 }
 
 .spellgrid {
@@ -790,6 +780,7 @@ ul {
         color: $dark;
         font-size: 25px;
         padding: 10px 18px 6px 10px;
+        margin: 0 5px 10px 5px;
         cursor: pointer;
         background: $boxcoloropaque;
         border: 1px solid black;
@@ -1003,7 +994,7 @@ ul {
 }
 
 @media screen and (max-width: 1360px) {
-	.homegrid {
+    .homegrid {
         grid-template-columns: 1fr;
         margin: 10px 15% 50px 15%;
     }
@@ -1057,18 +1048,18 @@ ul {
             font-size: 30px;
         }
     }
-	.homegrid {
+    .homegrid {
         margin: 10px 5% 50px 5%;
     }
 
-	.details {
-		.nav2 {
-			display: none;
-		}
-		section {
-			margin-right: 0;
-		}
-	}
+    .details {
+        .nav2 {
+            display: none;
+        }
+        section {
+            margin-right: 0;
+        }
+    }
 
     .classes {
         .classesGrid {
@@ -1110,7 +1101,7 @@ ul {
             margin: 0 0 0 10px;
         }
         #partyUp, #partyDown {
-             margin-right: -1px;
+            margin-right: -1px;
         }
     }
     .grid {
@@ -1137,7 +1128,7 @@ ul {
         .filter {
             .filterlist {
                 position: absolute;
-                left: calc(50% - 200px);
+                left: calc(50% - 201px);
                 top: 172px;
             }
         }
@@ -1162,6 +1153,9 @@ ul {
             font-size: 25px;
             margin: 12px 0 0 20px;
         }
+    }
+    .homebox {
+        width: 99%;
     }
     .races {
         .racesGrid {
@@ -1292,23 +1286,201 @@ ul {
             }
         }
     }
+    .levels {
+        .filter {
+            .filterlist {
+                left: calc(50% - 136px);
+                width: 250px;
+            }
+        }
+        .timeline-container {
+            font-size: 15px;
+        }
+    }
+    .timeline-container {
+        width: 260px;
+    }
+    .timeline-list {
+        width: 260px;
+    }
+    .timeline-item {
+        width: 220px;
+        height: 350px;
+    }
 }
+
+@media screen and (max-width: 388px) {
+    #monsterXp button[name='addMonster'] {
+        margin: 0 25% 10px 25%;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    #diceroll input[name='numDice'], #diceroll input[name='modNum'] {
+        margin: 0 0 10px 10px;
+    }
+    .levelFeatures {
+        h5 {
+            font-size: 25px;
+        }
+    }
+    #barbarianLevelFeatures {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    #bardLevelFeatures, #clericLevelFeatures {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #bardSpellLevelFeatures {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    #clericSpellLevelFeatures {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    #clericDomainLevelFeatures, #druidCircleLevelFeatures {
+        grid-template-columns: 1fr 1fr;
+    }
+    #druidLevelFeatures {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    header {
+        h1 {
+            font-size: 20px;
+            margin: 20px 0 0 20px;
+        }
+    }
+    #monsterXp button[name='addMonster'] {
+        margin: 0 0 10px 0;
+    }
+    .levelFeatures {
+        h5 {
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .levelFeatures {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    header {
+        h1 {
+            margin: 3px 0 0 20px;
+        }
+    }
+    h2 {
+        font-size: 35px;
+    }
+}
+@media screen and (max-width: 293px) {
+    #encounterXp button[name='addLevel'] {
+        margin: 0 25% 10px 25%;
+    }
+}
+
+@media screen and (max-width: 260px) {
+    #encounterXp button[name='addLevel'] {
+        margin: 0 0 10px 0;
+    }
+}
+
 @media screen and (max-height: 800px) {
-	.details {
-		#classNav2 {
-			a {
-				font-size: 25px;
-			}
+    .details {
+        #classNav2 {
+            a {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 675px) {
+    .details {
+        #raceNav2 {
+            a {
+                font-size: 25px;
+            }
+        }
+        #classNav2 {
+            grid-template-columns: 1fr 1fr;
+            a {
+                // font-size: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .filter {
+        .filterlist, .levelfilterlist {
+            top: 200px;
+        }
+    }
+}
+
+@media screen and (max-height: 580px) {
+    main {
+        margin: 0 0 30% 0;
+    }
+    header {
+        padding: 0;
+        height: 70px;
+        display: grid;
+        grid-template-columns: 1fr 55px;
+        text-align: left;
+        top: 0;
+        nav {
+            .hamburger {
+                display: block;
+            }
+            .links {
+                display: none;
+                grid-template-columns: 1fr;
+                position: fixed;
+                left: calc(10% + 10px);
+                top: 70px;
+                width: 80%;
+                text-align: center;
+                border: 1px solid $dark;
+                border-radius: 10px;
+                padding: 0;
+                box-shadow: 0 0 5px $shadowcolor;
+                background-color: rgba(255, 255, 255, .95);
+                a {
+                    display: inline-block;
+                    color: $shadowcolor;
+                    margin: 15px 5px;
+                    font-size: 25px;
+                }
+                a:hover {
+                    color: $dark;
+                }
+            }
+        }
+        h1 {
+            margin: 20px 0 0 20px;
+            font-size: 20px;
+        }
+    }
+    .details {
+		.nav2 {
+			display: none;
+		}
+		section {
+			margin-right: 0;
 		}
 	}
 }
 
-@media screen and (max-height: 675px) {
-	.details {
-		#raceNav2 {
-			a {
-				font-size: 25px;
-			}
-		}
-	}
+@media screen and (max-height: 540px) {
+    .filter {
+        .filterlist, .levelfilterlist {
+            top: 145px;
+        }
+    }
 }
