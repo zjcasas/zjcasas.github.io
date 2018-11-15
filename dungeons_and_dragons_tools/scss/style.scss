@@ -648,22 +648,29 @@ ul {
 #barbarianLevelFeatures {
     grid-template-columns: minmax(65px, 1fr) 1fr 2fr minmax(53px, 1fr) 1fr;
 }
-#bardLevelFeatures, #clericLevelFeatures {
+#bardLevelFeatures, #clericLevelFeatures, #druidLevelFeatures {
     grid-template-columns: minmax(65px, 1fr) 1fr 2fr;
 }
 #bardSpellLevelFeatures {
     grid-template-columns: minmax(65px, 1fr) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
-#clericSpellLevelFeatures {
+#clericSpellLevelFeatures, #druidSpellLevelFeatures {
     grid-template-columns: minmax(65px, 1fr) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+#fighterSpellLevelFeatures {
+    grid-template-columns: minmax(65px, 1fr) 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 10px 0 0 40px;
 }
 #clericDomainLevelFeatures, #druidCircleLevelFeatures {
     grid-template-columns: minmax(65px, 1fr) 1fr;
     margin: 10px 0 0 40px;
 }
-#druidLevelFeatures {
+#druidBeastFeatures {
     grid-template-columns: minmax(65px, 1fr) 1fr 1fr 1fr;
     margin: 10px 0 0 40px;
+}
+#fighterLevelFeatures {
+    grid-template-columns: minmax(65px, 1fr) 1fr 2fr;
 }
 
 .spellgrid {
@@ -1116,7 +1123,7 @@ ul {
     .filter {
         .filterlist, .levelfilterlist {
             position: fixed;
-            top: 240px;
+            top: 237px;
             left: calc(50% - 40px);
         }
     }
@@ -1327,20 +1334,26 @@ ul {
     #barbarianLevelFeatures {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
-    #bardLevelFeatures, #clericLevelFeatures {
+    #bardLevelFeatures, #clericLevelFeatures, #druidLevelFeatures {
         grid-template-columns: 1fr 1fr 1fr;
     }
     #bardSpellLevelFeatures {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
-    #clericSpellLevelFeatures {
+    #clericSpellLevelFeatures, #druidSpellLevelFeatures {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    #fighterSpellLevelFeatures {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
     #clericDomainLevelFeatures, #druidCircleLevelFeatures {
         grid-template-columns: 1fr 1fr;
     }
-    #druidLevelFeatures {
+    #druidBeastFeatures {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    #fighterLevelFeatures {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
@@ -1397,6 +1410,13 @@ ul {
             }
         }
     }
+    .levels {
+        .filter {
+            .filterlist, .levelfilterlist {
+                top: 50px;
+            }
+        }
+    }
 }
 
 @media screen and (max-height: 675px) {
@@ -1408,9 +1428,6 @@ ul {
         }
         #classNav2 {
             grid-template-columns: 1fr 1fr;
-            a {
-                // font-size: 20px;
-            }
         }
     }
 }

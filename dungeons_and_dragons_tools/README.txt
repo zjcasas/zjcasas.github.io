@@ -1,9 +1,9 @@
 To Do
 General:
-    the website on mobile isn't quite how I'd like it. I'll have to fix it in the future.
+    Ensure mobile responsiveness is good
 	limit width so 4k displays don't look weird
 Class Pages:
-    Add content to other pages. (Currently only Barbarian, Bard, Cleric, and Druid are populated)
+    Add content to other pages. (Currently only Barbarian, Bard, Cleric, Druid, and Fighter are populated)
 Spells Page:
     Add rest of spells.
 Feats Page:
