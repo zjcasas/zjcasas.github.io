@@ -44,6 +44,18 @@ $(window).ready(function(){
         for (var i = 0; i < spells3.length; i++) {
             spells3[i] = JSON.parse(spells3[i]);
         }
+		for (var i = 0; i <spells3.length; i++) {
+			spells3[i].p1 = spells3[i].p1.replace(/\\/g, '');
+			spells3[i].p2 = spells3[i].p2.replace(/\\/g, '');
+			spells3[i].p3 = spells3[i].p3.replace(/\\/g, '');
+			spells3[i].p4 = spells3[i].p4.replace(/\\/g, '');
+			spells3[i].p5 = spells3[i].p5.replace(/\\/g, '');
+			spells3[i].p6 = spells3[i].p6.replace(/\\/g, '');
+			spells3[i].p7 = spells3[i].p7.replace(/\\/g, '');
+			spells3[i].p8 = spells3[i].p8.replace(/\\/g, '');
+			spells3[i].p9 = spells3[i].p9.replace(/\\/g, '');
+		}
+		
     }
 
     function displayData() {
@@ -127,7 +139,7 @@ $(window).ready(function(){
                             <p>
                                 ${spells3[i].p9}
                             </p>
-							<p>
+							<p class="ahl">
 								<span class="dark">At Higher Levels</span> &mdash; ${spells3[i].ahl}
 							</p>
                         </section>
@@ -137,6 +149,7 @@ $(window).ready(function(){
         }
         $('li:not(:contains("-"))').hide();
         $('p:contains("cantrip")').hide();
+		$('.ahl:not(:contains("."))').hide();
     }
 
     // The next large section of code (the rest of the document as of 2/18/18)
