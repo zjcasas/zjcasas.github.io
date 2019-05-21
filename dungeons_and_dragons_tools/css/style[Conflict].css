@@ -362,8 +362,8 @@ ul li {
     background: url("../images/rogue.png");
     background-repeat: no-repeat;
     background-position: 50% top; }
-  .classes .classesGrid #sorcerorClass {
-    background: url("../images/sorceror.png");
+  .classes .classesGrid #sorcererClass {
+    background: url("../images/sorcerer.png");
     background-repeat: no-repeat;
     background-position: 50% top; }
   .classes .classesGrid #warlockClass {
@@ -704,8 +704,8 @@ ul li {
     background: url("../images/rogue.png");
     background-repeat: no-repeat;
     background-position: 50% top; }
-  .levelup .levelupGrid #sorcerorLevelUp {
-    background: url("../images/sorceror.png");
+  .levelup .levelupGrid #sorcererLevelUp {
+    background: url("../images/sorcerer.png");
     background-repeat: no-repeat;
     background-position: 50% top; }
   .levelup .levelupGrid #warlockLevelUp {
@@ -950,7 +950,7 @@ ul li {
       background-position: 100% 7%; }
     .classes .classesGrid #rogueClass {
       background-position: 100% 8%; }
-    .classes .classesGrid #sorcerorClass {
+    .classes .classesGrid #sorcererClass {
       background-position: 100% 7%; }
     .classes .classesGrid #warlockClass {
       background-position: 100% 8%; }
@@ -981,7 +981,7 @@ ul li {
       background-position: 100% 7%; }
     .levelup .levelupGrid #rogueLevelUp {
       background-position: 100% 8%; }
-    .levelup .levelupGrid #sorcerorLevelUp {
+    .levelup .levelupGrid #sorcererLevelUp {
       background-position: 100% 7%; }
     .levelup .levelupGrid #warlockLevelUp {
       background-position: 100% 8%; }

@@ -4,6 +4,10 @@ General:
 	limit width so 4k displays don't look weird
 Class Pages:
     Add content to other pages. (Currently only Barbarian, Bard, Cleric, Druid, and Fighter are populated)
+    Add divs around class specific h5's
+    no hideable  description on PC
+Race Page:
+    no hideable  description on PC
 Spells Page:
     Add rest of spells.
 Feats Page:

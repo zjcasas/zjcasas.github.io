@@ -272,9 +272,9 @@ $(window).ready(function(){
         }
         checkFilter();
     });
-    $('#sorcerorspells').on('click', function() {
+    $('#sorcererspells').on('click', function() {
         var shown = $(this).parent().siblings().text();
-        if (shown.indexOf('Sorceror') >= 0) {
+        if (shown.indexOf('Sorcerer') >= 0) {
             $('.classhidevar').html('');
 
             $(this).parent().siblings().text('Class');
@@ -282,10 +282,10 @@ $(window).ready(function(){
             $(this).removeClass('selected');
         }
         else {
-            $('.classhidevar').html('sorceror');
-            $('.sorceror .classhidevar').html('');
+            $('.classhidevar').html('sorcerer');
+            $('.sorcerer .classhidevar').html('');
 
-            $(this).parent().siblings().text('Sorceror');
+            $(this).parent().siblings().text('Sorcerer');
             $(this).parent().siblings().addClass('selected');
             $(this).addClass('selected');
             $(this).siblings().removeClass('selected');

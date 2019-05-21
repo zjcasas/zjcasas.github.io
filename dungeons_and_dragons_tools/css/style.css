@@ -363,8 +363,8 @@ ul li {
     background: url("../images/rogue.png");
     background-repeat: no-repeat;
     background-position: 50% top; }
-  .classes .classesGrid #sorcerorClass {
-    background: url("../images/sorceror.png");
+  .classes .classesGrid #sorcererClass {
+    background: url("../images/sorcerer.png");
     background-repeat: no-repeat;
     background-position: 50% top; }
   .classes .classesGrid #warlockClass {
@@ -389,17 +389,17 @@ ul li {
     color: #852617; }
 
 .details {
-  position: relative; }
+  position: relative;
+  margin-left: 225px; }
   .details img {
     max-width: 35%;
     margin: 0 0 0 25px;
     float: right; }
   .details .nav2 {
-    float: right;
-    clear: right;
+    float: left;
     display: grid;
     position: sticky;
-    top: 200px;
+    top: 292px;
     grid-template-columns: 1fr;
     width: 200px;
     text-align: center;
@@ -408,7 +408,7 @@ ul li {
     padding: 20px 0;
     box-shadow: 0 0 5px #852617;
     background-color: rgba(255, 255, 255, 0.95);
-    margin: 10px 0 0 0; }
+    margin: 0 0 0 -225px; }
     .details .nav2 a {
       display: inline-block;
       color: #323232;
@@ -419,8 +419,6 @@ ul li {
   .details div {
     text-align: left;
     margin: 15px 0 0 0; }
-  .details section {
-    margin-right: 225px; }
   .details h5 {
     margin: 15px 0 0 0; }
   .details h6 {
@@ -438,7 +436,8 @@ ul li {
   .details .classspecific section {
     margin-right: 0; }
   .details .classspecific h5 {
-    cursor: pointer; }
+    cursor: pointer;
+    display: inline; }
   .details .classspecific h5:hover {
     color: #852617; }
   .details .racespecific {
@@ -510,7 +509,7 @@ ul li {
 #barbarianLevelFeatures {
   grid-template-columns: minmax(65px, 1fr) 1fr 2fr minmax(53px, 1fr) 1fr; }
 
-#bardLevelFeatures, #clericLevelFeatures, #druidLevelFeatures {
+#bardLevelFeatures, #clericLevelFeatures, #druidLevelFeatures, #paladinLevelFeatures {
   grid-template-columns: minmax(65px, 1fr) 1fr 2fr; }
 
 #bardSpellLevelFeatures {
@@ -518,6 +517,9 @@ ul li {
 
 #clericSpellLevelFeatures, #druidSpellLevelFeatures {
   grid-template-columns: minmax(65px, 1fr) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; }
+
+#paladinSpellLevelFeatures {
+  grid-template-columns: minmax(65px, 1fr) 1fr 1fr 1fr 1fr 1fr; }
 
 #fighterSpellLevelFeatures {
   grid-template-columns: minmax(65px, 1fr) 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -533,6 +535,13 @@ ul li {
 
 #fighterLevelFeatures {
   grid-template-columns: minmax(65px, 1fr) 1fr 2fr; }
+
+#monkLevelFeatures {
+  grid-template-columns: minmax(65px, 1fr) 1fr 1fr 1fr 1fr 2fr; }
+
+#monkSpellLevelFeatures {
+  grid-template-columns: minmax(65px, 1fr) 2fr;
+  margin: 10px 0 0 40px; }
 
 .spellgrid {
   display: grid;
@@ -706,8 +715,8 @@ ul li {
     background: url("../images/rogue.png");
     background-repeat: no-repeat;
     background-position: 50% top; }
-  .levelup .levelupGrid #sorcerorLevelUp {
-    background: url("../images/sorceror.png");
+  .levelup .levelupGrid #sorcererLevelUp {
+    background: url("../images/sorcerer.png");
     background-repeat: no-repeat;
     background-position: 50% top; }
   .levelup .levelupGrid #warlockLevelUp {
@@ -783,6 +792,14 @@ ul li {
 
   .races .racesGrid {
     width: 100%; } }
+@media screen and (max-width: 1062px) {
+  .details img {
+    display: none; } }
+@media screen and (max-width: 940px) {
+  .details {
+    margin-left: 0; }
+    .details .nav2 {
+      display: none; } }
 @media screen and (max-width: 800px) {
   main {
     margin: 10px 5% 50px 5%; }
@@ -822,11 +839,6 @@ ul li {
 
   .homegrid {
     margin: 10px 5% 50px 5%; }
-
-  .details .nav2 {
-    display: none; }
-  .details section {
-    margin-right: 0; }
 
   .classes .classesGrid {
     grid-template-columns: 1fr 1fr 1fr; }
@@ -949,7 +961,7 @@ ul li {
       background-position: 100% 7%; }
     .classes .classesGrid #rogueClass {
       background-position: 100% 8%; }
-    .classes .classesGrid #sorcerorClass {
+    .classes .classesGrid #sorcererClass {
       background-position: 100% 7%; }
     .classes .classesGrid #warlockClass {
       background-position: 100% 8%; }
@@ -980,7 +992,7 @@ ul li {
       background-position: 100% 7%; }
     .levelup .levelupGrid #rogueLevelUp {
       background-position: 100% 8%; }
-    .levelup .levelupGrid #sorcerorLevelUp {
+    .levelup .levelupGrid #sorcererLevelUp {
       background-position: 100% 7%; }
     .levelup .levelupGrid #warlockLevelUp {
       background-position: 100% 8%; }
@@ -1015,7 +1027,7 @@ ul li {
   #barbarianLevelFeatures {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
 
-  #bardLevelFeatures, #clericLevelFeatures, #druidLevelFeatures {
+  #bardLevelFeatures, #clericLevelFeatures, #druidLevelFeatures, #paladinLevelFeatures {
     grid-template-columns: 1fr 1fr 1fr; }
 
   #bardSpellLevelFeatures {
@@ -1023,6 +1035,9 @@ ul li {
 
   #clericSpellLevelFeatures, #druidSpellLevelFeatures {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; }
+
+  #paladinSpellLevelFeatures {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; }
 
   #fighterSpellLevelFeatures {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; }
@@ -1034,7 +1049,14 @@ ul li {
     grid-template-columns: 1fr 1fr 1fr 1fr; }
 
   #fighterLevelFeatures {
-    grid-template-columns: 1fr 1fr 1fr; } }
+    grid-template-columns: 1fr 1fr 1fr; }
+
+  #monkLevelFeatures {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr; }
+
+  #monkSpellLevelFeatures {
+    grid-template-columns: 1fr 2fr;
+    margin: 10px 0 0 40px; } }
 @media screen and (max-width: 350px) {
   header h1 {
     font-size: 20px;
@@ -1111,10 +1133,10 @@ ul li {
       margin: 20px 0 0 20px;
       font-size: 20px; }
 
-  .details .nav2 {
-    display: none; }
-  .details section {
-    margin-right: 0; } }
+  .details {
+    margin-left: 0; }
+    .details .nav2 {
+      display: none; } }
 @media screen and (max-height: 540px) {
   .filter .filterlist, .filter .levelfilterlist {
     top: 145px; } }

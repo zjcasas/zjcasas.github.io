@@ -6,11 +6,12 @@ $(window).ready(function(){
 	    $('nav .links').css('left', '10%');
 		$('.filter .filterlist').css('left', 'calc(50% - 62px)');
 		$('.filter .levelfilterlist').css('left', 'calc(50% - 62px)');
-		$('.levels .filter .filterlist').css('left', 'calc(50% - 205px)');
 
 		if ((window.matchMedia('(max-height: 540px)').matches) && (window.matchMedia('(min-width: 400px)').matches)) {
 			$('.filter .filterlist').css('left', 'calc(50% - 210px)');
-			$('.filter .levelfilterlist').css('left', 'calc(50% - 210px)');
+			$('.filter .levelfilterlist').css('left', 'calc(50% - 250px)');
+			$('.filter .filterlist').css('top', '50px');
+			$('.filter .levelfilterlist').css('top', '50px');
 			$('.filter .filterlist').css('width', '400px');
 			$('.filter .levelfilterlist').css('width', '400px');
 			$('.filter .filterlist').css('display', 'grid');
@@ -112,7 +113,10 @@ $(window).ready(function(){
 	if (pageName.indexOf("Races") > 0 || pageName.indexOf("Dragonborn") > 0 || pageName.indexOf("Dwarf") > 0 || pageName.indexOf("Elf") > 0 || pageName.indexOf("Gnome") > 0 || pageName.indexOf("Half-Elf") > 0 || pageName.indexOf("Half-Orc") > 0 || pageName.indexOf("Halfling") > 0 || pageName.indexOf("Human") > 0 || pageName.indexOf("Tiefling") > 0) {
 		$(".links a:contains('Races')").css("color", "#141414");
 	}
-	else if (pageName.indexOf("Classes") > 0 || pageName.indexOf("Barbarian") > 0 || pageName.indexOf("Bard") > 0 || pageName.indexOf("Cleric") > 0 || pageName.indexOf("Druid") > 0 || pageName.indexOf("Fighter") > 0 || pageName.indexOf("Monk") > 0 || pageName.indexOf("Paladin") > 0 || pageName.indexOf("Ranger") > 0 || pageName.indexOf("Rogue") > 0 || pageName.indexOf("Sorceror") > 0 || pageName.indexOf("Warlock") > 0 || pageName.indexOf("Wizard") > 0) {
+	else if (pageName.indexOf("Level Up") > 0 || pageName.indexOf("Level Up Barbarian") > 0 || pageName.indexOf("Level Up Bard") > 0 || pageName.indexOf("Level Up Cleric") > 0 || pageName.indexOf("Level Up Druid") > 0 || pageName.indexOf("Level Up Fighter") > 0 || pageName.indexOf("Level Up Monk") > 0 || pageName.indexOf("Level Up Paladin") > 0 || pageName.indexOf("Level Up Ranger") > 0 || pageName.indexOf("Level Up Rogue") > 0 || pageName.indexOf("Level Up Sorcerer") > 0 || pageName.indexOf("Level Up Warlock") > 0 || pageName.indexOf("Level Up Wizard") > 0) {
+		$(".links a:contains('Level Up')").css("color", "#141414");
+	}
+	else if (pageName.indexOf("Classes") > 0 || pageName.indexOf("Barbarian") > 0 || pageName.indexOf("Bard") > 0 || pageName.indexOf("Cleric") > 0 || pageName.indexOf("Druid") > 0 || pageName.indexOf("Fighter") > 0 || pageName.indexOf("Monk") > 0 || pageName.indexOf("Paladin") > 0 || pageName.indexOf("Ranger") > 0 || pageName.indexOf("Rogue") > 0 || pageName.indexOf("Sorcerer") > 0 || pageName.indexOf("Warlock") > 0 || pageName.indexOf("Wizard") > 0) {
 		$(".links a:contains('Classes')").css("color", "#141414");
 	}
 	else if (pageName.indexOf("Spells") > 0) {
@@ -120,9 +124,6 @@ $(window).ready(function(){
 	}
 	else if (pageName.indexOf("Feats") > 0) {
 		$(".links a:contains('Feats')").css("color", "#141414");
-	}
-	else if (pageName.indexOf("Level Up") > 0) {
-		$(".links a:contains('Level Up')").css("color", "#141414");
 	}
 
 	// The next 4 click functions are for showing and hiding information when
