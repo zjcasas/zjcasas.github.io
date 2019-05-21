@@ -127,6 +127,9 @@ $(window).ready(function(){
                             <p>
                                 ${spells3[i].p9}
                             </p>
+							<p>
+								<span class="dark">At Higher Levels</span> &mdash; ${spells3[i].ahl}
+							</p>
                         </section>
                     </div>`
             var html = html1 + html2;
