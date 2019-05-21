@@ -147,7 +147,7 @@ $(window).ready(function(){
             var html = html1 + html2;
             $('.spells').append(html);
         }
-        $('li:not(:contains("-"))').hide();
+        $('li:contains("---")').hide();
         $('p:contains("cantrip")').hide();
 		$('.ahl:not(:contains("."))').hide();
     }
